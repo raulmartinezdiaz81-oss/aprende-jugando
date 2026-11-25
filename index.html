@@ -29,7 +29,10 @@
       --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.09);
     }
 
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
 
     body {
       margin: 0;
@@ -47,12 +50,13 @@
     .app-container {
       width: 100%;
       max-width: 820px;
-      padding: 12px 14px 40px;
+      padding: 12px 14px 44px;
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
 
+    /* TOPBAR */
     .topbar {
       background: var(--card);
       border-radius: var(--r-xl);
@@ -66,7 +70,11 @@
       flex-wrap: wrap;
     }
 
-    .user-badge { display: flex; align-items: center; gap: 10px; }
+    .user-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
     .user-avatar {
       width: 46px;
@@ -97,7 +105,11 @@
       color: var(--primary);
     }
 
-    .topbar-right { display: flex; align-items: center; gap: 8px; }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
     .points-pill {
       background: #fffbeb;
@@ -138,8 +150,11 @@
       transition: transform 0.1s ease, background 0.15s ease;
     }
 
-    .btn-icon:active { transform: scale(0.95); }
+    .btn-icon:active {
+      transform: scale(0.95);
+    }
 
+    /* NAVEGACIÓN PRINCIPAL */
     .main-nav {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -169,7 +184,12 @@
     }
 
     @media (min-width: 560px) {
-      .nav-btn { flex-direction: row; font-size: 0.88rem; gap: 6px; padding: 11px 10px; }
+      .nav-btn {
+        flex-direction: row;
+        font-size: 0.88rem;
+        gap: 6px;
+        padding: 11px 10px;
+      }
     }
 
     .nav-btn.active {
@@ -178,8 +198,17 @@
       box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
     }
 
-    .view { display: none; flex-direction: column; gap: 14px; animation: fadeSlide 0.22s ease; }
-    .view.active { display: flex; }
+    /* VISTAS */
+    .view {
+      display: none;
+      flex-direction: column;
+      gap: 14px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    .view.active {
+      display: flex;
+    }
 
     @keyframes fadeSlide {
       from { opacity: 0; transform: translateY(6px); }
@@ -201,8 +230,18 @@
     .pop-anim { animation: popIn 0.25s ease; }
     .shake-anim { animation: shakeX 0.3s ease; }
 
-    .modes-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
-    @media (min-width: 600px) { .modes-grid { grid-template-columns: 1fr 1fr; } }
+    /* TARJETAS DE MODOS EN INICIO */
+    .modes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 600px) {
+      .modes-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
     .hero-mode-card {
       border: none;
@@ -220,14 +259,41 @@
       overflow: hidden;
     }
 
-    .hero-mode-card:active { transform: scale(0.97); }
-    .mode-daily { background: linear-gradient(135deg, #fef08a 0%, #fde047 50%, #facc15 100%); color: #422006; }
-    .mode-adventure { background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 50%, #818cf8 100%); color: #1e1b4b; }
-    .mode-hours-quick { background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 50%, #f472b6 100%); color: #500724; }
-    .mode-subjects-quick { background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%); color: #052e16; }
-    .mode-tables-quick { background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%); color: #082f49; }
+    .hero-mode-card:active {
+      transform: scale(0.97);
+    }
 
-    .hero-top { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .mode-daily {
+      background: linear-gradient(135deg, #fef08a 0%, #fde047 50%, #facc15 100%);
+      color: #422006;
+    }
+
+    .mode-adventure {
+      background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 50%, #818cf8 100%);
+      color: #1e1b4b;
+    }
+
+    .mode-hours-quick {
+      background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 50%, #f472b6 100%);
+      color: #500724;
+    }
+
+    .mode-subjects-quick {
+      background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%);
+      color: #052e16;
+    }
+
+    .mode-tables-quick {
+      background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
+      color: #082f49;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     .hero-emoji {
       font-size: 2rem;
@@ -249,11 +315,32 @@
       color: #0f172a;
     }
 
-    .hero-title { margin: 0; font-size: 1.18rem; font-weight: 900; }
-    .hero-desc { margin: 3px 0 0; font-size: 0.84rem; font-weight: 700; opacity: 0.9; line-height: 1.35; }
+    .hero-title {
+      margin: 0;
+      font-size: 1.18rem;
+      font-weight: 900;
+    }
 
-    .subjects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; }
-    @media (min-width: 600px) { .subjects-grid { grid-template-columns: repeat(3, 1fr); } }
+    .hero-desc {
+      margin: 3px 0 0;
+      font-size: 0.84rem;
+      font-weight: 700;
+      opacity: 0.9;
+      line-height: 1.35;
+    }
+
+    /* GRID DE ASIGNATURAS */
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px;
+    }
+
+    @media (min-width: 600px) {
+      .subjects-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     .subject-card {
       border: none;
@@ -270,8 +357,16 @@
       min-height: 112px;
     }
 
-    .subject-card:active { transform: scale(0.96); }
-    .subj-top { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .subject-card:active {
+      transform: scale(0.96);
+    }
+
+    .subj-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     .subj-icon {
       font-size: 1.85rem;
@@ -293,8 +388,19 @@
       color: #0f172a;
     }
 
-    .subj-name { margin: 0; font-size: 1.05rem; font-weight: 900; color: #0f172a; }
-    .subj-desc { margin: 2px 0 0; font-size: 0.74rem; font-weight: 700; color: rgba(15, 23, 42, 0.78); }
+    .subj-name {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .subj-desc {
+      margin: 2px 0 0;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: rgba(15, 23, 42, 0.78);
+    }
 
     .bg-mates { background: linear-gradient(135deg, #fed7aa, #fdba74); }
     .bg-lengua { background: linear-gradient(135deg, #fecdd3, #fda4af); }
@@ -307,6 +413,7 @@
     .bg-religion { background: linear-gradient(135deg, #fde68a, #fcd34d); }
     .bg-lectura { background: linear-gradient(135deg, #c7d2fe, #a5b4fc); }
 
+    /* CARD GENÉRICA */
     .card {
       background: var(--card);
       border-radius: var(--r-xl);
@@ -318,6 +425,7 @@
       gap: 14px;
     }
 
+    /* TOOLBAR MATES */
     .mates-toolbar {
       background: #f8fafc;
       border: 1px solid var(--border);
@@ -328,8 +436,17 @@
       gap: 10px;
     }
 
-    .mates-modes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; }
-    @media (min-width: 560px) { .mates-modes { grid-template-columns: repeat(4, 1fr); } }
+    .mates-modes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px;
+    }
+
+    @media (min-width: 560px) {
+      .mates-modes {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
 
     .mode-btn {
       padding: 9px 6px;
@@ -346,18 +463,60 @@
       gap: 4px;
     }
 
-    .mode-btn.active { background: var(--primary); border-color: var(--primary-dark); color: #ffffff; }
+    .mode-btn.active {
+      background: var(--primary);
+      border-color: var(--primary-dark);
+      color: #ffffff;
+    }
 
-    .table-selector-row { display: none; flex-direction: column; gap: 6px; padding-top: 8px; border-top: 1px dashed #cbd5e1; }
-    .table-selector-row.visible { display: flex; }
+    .table-selector-row {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px dashed #cbd5e1;
+    }
 
-    .table-pills { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
-    @media (min-width: 540px) { .table-pills { grid-template-columns: repeat(11, 1fr); } }
+    .table-selector-row.visible {
+      display: flex;
+    }
 
-    .pill-btn { padding: 7px 2px; border-radius: 9px; border: 1px solid #cbd5e1; background: #ffffff; font-weight: 800; font-size: 0.78rem; cursor: pointer; }
-    .pill-btn.active { background: var(--indigo); color: #ffffff; border-color: #4338ca; }
+    .table-pills {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 5px;
+    }
 
-    .round-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    @media (min-width: 540px) {
+      .table-pills {
+        grid-template-columns: repeat(11, 1fr);
+      }
+    }
+
+    .pill-btn {
+      padding: 7px 2px;
+      border-radius: 9px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    .pill-btn.active {
+      background: var(--indigo);
+      color: #ffffff;
+      border-color: #4338ca;
+    }
+
+    /* ZONA DE JUEGO / PREGUNTAS */
+    .round-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
     .round-badge {
       display: inline-flex;
@@ -383,10 +542,36 @@
       color: #c2410c;
     }
 
-    .progress-wrap { width: 100%; display: flex; flex-direction: column; gap: 4px; }
-    .progress-labels { display: flex; justify-content: space-between; font-size: 0.76rem; font-weight: 800; color: var(--muted); }
-    .progress-track { width: 100%; height: 10px; background: #e2e8f0; border-radius: 99px; overflow: hidden; }
-    .progress-fill { height: 100%; width: 10%; background: linear-gradient(90deg, #3b82f6, #10b981); border-radius: 99px; transition: width 0.3s ease; }
+    .progress-wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 10%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      border-radius: 99px;
+      transition: width 0.3s ease;
+    }
 
     .story-box {
       display: none;
@@ -400,8 +585,18 @@
       color: #1e1b4b;
     }
 
-    .story-box.visible { display: block; }
-    .story-title { font-weight: 900; font-size: 0.8rem; text-transform: uppercase; color: #4338ca; margin-bottom: 4px; display: block; }
+    .story-box.visible {
+      display: block;
+    }
+
+    .story-title {
+      font-weight: 900;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #4338ca;
+      margin-bottom: 4px;
+      display: block;
+    }
 
     .question-box {
       background: #f8fafc;
@@ -427,13 +622,46 @@
       color: #3730a3;
     }
 
-    .clock-visual-wrap { display: none; flex-direction: column; align-items: center; justify-content: center; margin: 4px 0; }
-    .clock-visual-wrap.visible { display: flex; }
-    .clock-legend { font-size: 0.72rem; font-weight: 800; color: var(--muted); margin-top: 4px; display: flex; gap: 12px; }
-    .question-text { margin: 0; font-size: 1.18rem; font-weight: 900; color: #0f172a; line-height: 1.35; }
+    .clock-visual-wrap {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 4px 0;
+    }
 
-    .options-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
-    @media (min-width: 540px) { .options-grid { grid-template-columns: 1fr 1fr; } }
+    .clock-visual-wrap.visible {
+      display: flex;
+    }
+
+    .clock-legend {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--muted);
+      margin-top: 4px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .question-text {
+      margin: 0;
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.35;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 540px) {
+      .options-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
     .option-btn {
       width: 100%;
@@ -454,16 +682,70 @@
       transition: transform 0.08s ease, background 0.15s ease;
     }
 
-    .option-btn:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 #cbd5e1; }
-    .option-letter { width: 28px; height: 28px; border-radius: 9px; background: #f1f5f9; color: #475569; font-weight: 900; font-size: 0.82rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .option-btn.correct { background: var(--success-bg); border-color: var(--success); color: #14532d; box-shadow: 0 3px 0 var(--success); }
-    .option-btn.correct .option-letter { background: var(--success); color: #fff; }
-    .option-btn.wrong { background: var(--danger-bg); border-color: var(--danger); color: #7f1d1d; box-shadow: 0 3px 0 var(--danger); }
-    .option-btn.wrong .option-letter { background: var(--danger); color: #fff; }
+    .option-btn:active:not(:disabled) {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #cbd5e1;
+    }
 
-    .numeric-area { display: none; flex-direction: column; align-items: center; gap: 12px; }
-    .numeric-area.visible { display: flex; }
-    .math-equation { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; font-size: 1.95rem; font-weight: 900; }
+    .option-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      background: #f1f5f9;
+      color: #475569;
+      font-weight: 900;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .option-btn.correct {
+      background: var(--success-bg);
+      border-color: var(--success);
+      color: #14532d;
+      box-shadow: 0 3px 0 var(--success);
+    }
+
+    .option-btn.correct .option-letter {
+      background: var(--success);
+      color: #fff;
+    }
+
+    .option-btn.wrong {
+      background: var(--danger-bg);
+      border-color: var(--danger);
+      color: #7f1d1d;
+      box-shadow: 0 3px 0 var(--danger);
+    }
+
+    .option-btn.wrong .option-letter {
+      background: var(--danger);
+      color: #fff;
+    }
+
+    /* TECLADO NUMÉRICO */
+    .numeric-area {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .numeric-area.visible {
+      display: flex;
+    }
+
+    .math-equation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 1.95rem;
+      font-weight: 900;
+    }
 
     .math-answer-box {
       min-width: 112px;
@@ -484,13 +766,59 @@
     .math-answer-box.correct { background: var(--success-bg); border-color: var(--success); color: #15803d; }
     .math-answer-box.wrong { background: var(--danger-bg); border-color: var(--danger); color: #b91c1c; }
 
-    .keypad-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%; max-width: 370px; }
-    .key-btn { height: 52px; border-radius: var(--r-md); border: 1px solid #cbd5e1; background: #f1f5f9; color: #0f172a; font-size: 1.4rem; font-weight: 900; cursor: pointer; box-shadow: 0 3px 0 #cbd5e1; }
-    .key-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #cbd5e1; }
-    .key-btn.key-del { background: #fee2e2; border-color: #fecaca; color: #b91c1c; font-size: 0.95rem; box-shadow: 0 3px 0 #fca5a5; }
-    .key-btn.key-ok { background: var(--success); border-color: #15803d; color: #ffffff; font-size: 0.95rem; box-shadow: 0 3px 0 #15803d; }
+    .keypad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      width: 100%;
+      max-width: 370px;
+    }
 
-    .feedback-box { display: none; border-radius: var(--r-lg); padding: 13px 15px; font-size: 0.92rem; font-weight: 700; line-height: 1.4; flex-direction: column; gap: 6px; }
+    .key-btn {
+      height: 52px;
+      border-radius: var(--r-md);
+      border: 1px solid #cbd5e1;
+      background: #f1f5f9;
+      color: #0f172a;
+      font-size: 1.4rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 3px 0 #cbd5e1;
+    }
+
+    .key-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #cbd5e1;
+    }
+
+    .key-btn.key-del {
+      background: #fee2e2;
+      border-color: #fecaca;
+      color: #b91c1c;
+      font-size: 0.95rem;
+      box-shadow: 0 3px 0 #fca5a5;
+    }
+
+    .key-btn.key-ok {
+      background: var(--success);
+      border-color: #15803d;
+      color: #ffffff;
+      font-size: 0.95rem;
+      box-shadow: 0 3px 0 #15803d;
+    }
+
+    /* FEEDBACK Y SIGUIENTE */
+    .feedback-box {
+      display: none;
+      border-radius: var(--r-lg);
+      padding: 13px 15px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.4;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .feedback-box.visible { display: flex; }
     .feedback-box.is-correct { background: var(--success-bg); border: 2px solid #86efac; color: #14532d; }
     .feedback-box.is-wrong { background: var(--danger-bg); border: 2px solid #fca5a5; color: #7f1d1d; }
@@ -515,16 +843,57 @@
 
     .btn-next.visible { display: flex; }
 
-    .tables-num-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
-    @media (min-width: 540px) { .tables-num-grid { grid-template-columns: repeat(10, 1fr); } }
+    /* TABLAS DE MULTIPLICAR */
+    .tables-num-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+    }
 
-    .table-num-btn { padding: 10px 4px; border-radius: 12px; border: 2px solid #cbd5e1; background: #f8fafc; font-size: 1rem; font-weight: 900; cursor: pointer; }
-    .table-num-btn.active { background: var(--indigo); border-color: #4338ca; color: #ffffff; }
+    @media (min-width: 540px) {
+      .tables-num-grid {
+        grid-template-columns: repeat(10, 1fr);
+      }
+    }
 
-    .hide-mode-bar { background: #eef2ff; border: 1px solid #c7d2fe; border-radius: var(--r-md); padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .table-num-btn {
+      padding: 10px 4px;
+      border-radius: 12px;
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      font-size: 1rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
 
-    .table-rows-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
-    @media (min-width: 500px) { .table-rows-grid { grid-template-columns: 1fr 1fr; } }
+    .table-num-btn.active {
+      background: var(--indigo);
+      border-color: #4338ca;
+      color: #ffffff;
+    }
+
+    .hide-mode-bar {
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: var(--r-md);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .table-rows-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    @media (min-width: 500px) {
+      .table-rows-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
     .table-row-btn {
       padding: 11px 15px;
@@ -539,41 +908,230 @@
       cursor: pointer;
     }
 
-    .table-result-badge { padding: 4px 12px; border-radius: 10px; background: #ffffff; color: var(--primary-dark); min-width: 48px; text-align: center; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); }
+    .table-result-badge {
+      padding: 4px 12px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: var(--primary-dark);
+      min-width: 48px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
 
-    .summary-box { text-align: center; padding: 12px 6px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    /* RESUMEN Y PUNTOS */
+    .summary-box {
+      text-align: center;
+      padding: 12px 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
     .summary-stars { font-size: 2.3rem; }
-    .summary-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
-    .stat-tile { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--r-md); padding: 12px 8px; }
-    .stat-tile .val { font-size: 1.35rem; font-weight: 900; color: #0f172a; }
-    .stat-tile .lbl { font-size: 0.72rem; font-weight: 800; color: var(--muted); text-transform: uppercase; }
 
-    .points-breakdown-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    @media (min-width: 560px) { .points-breakdown-grid { grid-template-columns: repeat(3, 1fr); } }
+    .summary-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
 
-    .pts-subj-card { background: #f8fafc; border: 1px solid var(--border); border-radius: var(--r-md); padding: 11px 12px; display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 0.88rem; }
+    .stat-tile {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 12px 8px;
+    }
 
-    .medals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; }
-    @media (min-width: 560px) { .medals-grid { grid-template-columns: repeat(3, 1fr); } }
+    .stat-tile .val {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
 
-    .medal-card { border-radius: var(--r-md); padding: 12px; border: 2px solid #e2e8f0; background: #f8fafc; display: flex; flex-direction: column; gap: 4px; opacity: 0.52; }
-    .medal-card.unlocked { opacity: 1; background: #fffbeb; border-color: #fcd34d; }
+    .stat-tile .lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
 
-    .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.55); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 999; }
-    .modal-backdrop.open { display: flex; }
+    .points-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
 
-    .modal-card { background: #ffffff; border-radius: var(--r-xl); width: 100%; max-width: 460px; padding: 20px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22); display: flex; flex-direction: column; gap: 14px; max-height: 90vh; overflow-y: auto; }
-    .modal-title { margin: 0; font-size: 1.2rem; font-weight: 900; color: #0f172a; }
-    .text-input { width: 100%; padding: 12px 14px; border-radius: var(--r-md); border: 2px solid #cbd5e1; font-size: 1rem; font-weight: 800; color: #0f172a; outline: none; }
-    .text-input:focus { border-color: var(--primary); }
+    @media (min-width: 560px) {
+      .points-breakdown-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-    .avatar-choices { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
-    .avatar-opt { height: 44px; border-radius: 12px; border: 2px solid #e2e8f0; background: #f8fafc; font-size: 1.4rem; cursor: pointer; }
-    .avatar-opt.active { border-color: var(--primary); background: #eff6ff; }
+    .pts-subj-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 11px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
 
-    .btn-primary { width: 100%; padding: 12px 14px; border-radius: var(--r-md); border: none; background: var(--primary); color: #ffffff; font-weight: 900; font-size: 0.96rem; cursor: pointer; }
-    .btn-secondary { width: 100%; padding: 11px 14px; border-radius: var(--r-md); border: 2px solid #cbd5e1; background: #ffffff; color: #334155; font-weight: 800; font-size: 0.9rem; cursor: pointer; }
-    .btn-danger { width: 100%; padding: 11px 14px; border-radius: var(--r-md); border: 2px solid #fecaca; background: #fef2f2; color: #b91c1c; font-weight: 900; font-size: 0.9rem; cursor: pointer; }
+    .medals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+    }
+
+    @media (min-width: 560px) {
+      .medals-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .medal-card {
+      border-radius: var(--r-md);
+      padding: 12px;
+      border: 2px solid #e2e8f0;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      opacity: 0.52;
+    }
+
+    .medal-card.unlocked {
+      opacity: 1;
+      background: #fffbeb;
+      border-color: #fcd34d;
+    }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 999;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: var(--r-xl);
+      width: 100%;
+      max-width: 460px;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .status-banner {
+      display: none;
+      padding: 10px 12px;
+      border-radius: var(--r-md);
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .status-banner.visible {
+      display: block;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--r-md);
+      border: 2px solid #cbd5e1;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0f172a;
+      outline: none;
+    }
+
+    .text-input:focus {
+      border-color: var(--primary);
+    }
+
+    .avatar-choices {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    .avatar-opt {
+      height: 44px;
+      border-radius: 12px;
+      border: 2px solid #e2e8f0;
+      background: #f8fafc;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .avatar-opt.active {
+      border-color: var(--primary);
+      background: #eff6ff;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--r-md);
+      border: none;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 0.96rem;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: var(--r-md);
+      border: 2px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-danger {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: var(--r-md);
+      border: 2px solid #fecaca;
+      background: #fef2f2;
+      color: #b91c1c;
+      font-weight: 900;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -605,6 +1163,7 @@
       <button class="nav-btn" data-view="points">🏆 Mis Puntos</button>
     </nav>
 
+    <!-- VISTA INICIO -->
     <section class="view active" id="view-home">
       <div class="modes-grid">
         <button class="hero-mode-card mode-daily" id="btnStartDaily">
@@ -643,11 +1202,11 @@
         <button class="hero-mode-card mode-subjects-quick" id="btnQuickSubjects">
           <div class="hero-top">
             <div class="hero-emoji">🎒</div>
-            <span class="hero-pill">10 materias</span>
+            <span class="hero-pill">11 apartados</span>
           </div>
           <div>
             <h2 class="hero-title">Elegir Asignatura</h2>
-            <p class="hero-desc">Practica Mates, Lengua, Valencià, Inglés, Lectura y más.</p>
+            <p class="hero-desc">Practica Mates, Horas, Lengua, Valencià, Inglés, Lectura y más.</p>
           </div>
         </button>
 
@@ -664,10 +1223,12 @@
       </div>
     </section>
 
+    <!-- VISTA ASIGNATURAS -->
     <section class="view" id="view-subjects">
       <div class="subjects-grid" id="subjectsGrid"></div>
     </section>
 
+    <!-- VISTA TABLAS -->
     <section class="view" id="view-tables">
       <div class="card">
         <div class="round-top">
@@ -686,6 +1247,7 @@
       </div>
     </section>
 
+    <!-- VISTA MIS PUNTOS -->
     <section class="view" id="view-points">
       <div class="card">
         <div class="round-top">
@@ -701,6 +1263,7 @@
       </div>
     </section>
 
+    <!-- VISTA JUEGO ACTIVO -->
     <section class="view" id="view-game">
       <div class="card" id="gameCard">
         <div class="round-top">
@@ -801,12 +1364,15 @@
     </section>
   </div>
 
+  <!-- MODAL PERFIL Y MEMORIA -->
   <div class="modal-backdrop" id="profileModal">
     <div class="modal-card">
       <div style="display:flex;align-items:center;justify-content:space-between">
         <h3 class="modal-title">⚙️ Perfil y Memoria</h3>
-        <button class="btn-icon" id="btnCloseModal">✕</button>
+        <button class="btn-icon" id="btnCloseModal" aria-label="Cerrar">✕</button>
       </div>
+
+      <div class="status-banner" id="modalBanner"></div>
 
       <div>
         <label style="display:block;font-size:0.8rem;font-weight:800;color:var(--muted);margin-bottom:5px">Nombre del alumno/a</label>
@@ -814,16 +1380,16 @@
       </div>
 
       <div>
-        <label style="display:block;font-size:0.8rem;font-weight:800;color:var(--muted);margin-bottom:6px">Elige su mascota</label>
+        <label style="display:block;font-size:0.8rem;font-weight:800;color:var(--muted);margin-bottom:6px">Elige su animal o mascota</label>
         <div class="avatar-choices" id="avatarChoices"></div>
       </div>
 
-      <button class="btn-primary" id="btnSaveProfile">💾 Guardar perfil</button>
+      <button class="btn-primary" id="btnSaveProfile">💾 Guardar perfil y empezar</button>
 
       <hr style="border:none;border-top:1px solid var(--border);margin:2px 0" />
 
       <div>
-        <label style="display:block;font-size:0.8rem;font-weight:800;color:var(--muted);margin-bottom:5px">Copia de seguridad (por si cambias de móvil)</label>
+        <label style="display:block;font-size:0.8rem;font-weight:800;color:var(--muted);margin-bottom:5px">Copia de seguridad (por si cambias de dispositivo)</label>
         <div style="display:flex;gap:8px">
           <button class="btn-secondary" id="btnExportSave">📋 Copiar progreso</button>
           <button class="btn-secondary" id="btnImportSave">📥 Pegar código</button>
@@ -833,531 +1399,574 @@
       </div>
 
       <button class="btn-danger" id="btnResetProgress">🗑️ Restaurar progreso a cero</button>
+      <button class="btn-secondary" id="btnConfirmReset" style="display:none">Confirmar: borrar todo y empezar de cero</button>
     </div>
   </div>
-<script>
-    const STORAGE_KEY = "aprende_jugando_3primaria_v2";
-    const AVATARS = ["🦁", "🦊", "🐼", "🐯", "🐸", "🦄", "🦖", "🐙", "🤖", "🚀", "⚽", "🎸"];
 
-    const SUBJECTS = [
-      { id: "mates", name: "Matemáticas", icon: "🔢", bgClass: "bg-mates", desc: "Sumas, restas, tablas y problemas" },
-      { id: "horas", name: "Las Horas", icon: "🕒", bgClass: "bg-plastica", desc: "Reloj de agujas, 24h y minutos" },
-      { id: "lengua", name: "Lengua", icon: "✏️", bgClass: "bg-lengua", desc: "Sílabas, ortografía y gramática" },
-      { id: "valencia", name: "Valencià", icon: "🍊", bgClass: "bg-valencia", desc: "Vocabulari, dies, mesos i verbs" },
-      { id: "ingles", name: "Inglés", icon: "🇬🇧", bgClass: "bg-ingles", desc: "Days, months, numbers & words" },
-      { id: "cmedio", name: "C. del Medio", icon: "🌍", bgClass: "bg-cmedio", desc: "Cuerpo, salud, naturaleza y entorno" },
-      { id: "musica", name: "Música", icon: "🎵", bgClass: "bg-musica", desc: "Notas, ritmo, compás e instrumentos" },
-      { id: "plastica", name: "Plástica", icon: "🎨", bgClass: "bg-plastica", desc: "Colores, formas, simetría y arte" },
-      { id: "efisica", name: "Educación Física", icon: "🏃", bgClass: "bg-efisica", desc: "Deportes, hábitos y movimiento" },
-      { id: "religion", name: "Religión", icon: "🕊️", bgClass: "bg-religion", desc: "Valores, relatos y convivencia" },
-      { id: "lectura", name: "Lectura", icon: "📖", bgClass: "bg-lectura", desc: "Textos cortos y comprensión" }
-    ];
+  <script>
+    (function () {
+      "use strict";
 
-    const MEDALS = [
-      { id: "first_win", icon: "🌟", name: "Primer Paso", desc: "Consigue tus primeros 50 puntos", check: s => s.points >= 50 },
-      { id: "streak_5", icon: "🔥", name: "En Racha", desc: "Encadena 5 aciertos seguidos", check: s => s.bestStreak >= 5 },
-      { id: "streak_10", icon: "⚡", name: "Imparable", desc: "Encadena 10 aciertos seguidos", check: s => s.bestStreak >= 10 },
-      { id: "clock_master", icon: "🕒", name: "Amo del Reloj", desc: "Suma 100 puntos en Las Horas", check: s => (s.bySubject.horas || 0) >= 100 },
-      { id: "polyglot", icon: "🌍", name: "Bilingüe y Valencià", desc: "Suma 120 pts entre Inglés y Valencià", check: s => ((s.bySubject.ingles || 0) + (s.bySubject.valencia || 0)) >= 120 },
-      { id: "level_5", icon: "👑", name: "Nivel 5", desc: "Alcanza el Nivel 5 (400 puntos)", check: s => s.points >= 400 }
-    ];
+      const STORAGE_KEY = "aprende_jugando_3primaria_v2";
+      const AVATARS = ["🦁", "🦊", "🐼", "🐯", "🐸", "🦄", "🦖", "🐙", "🤖", "🚀", "⚽", "🎸"];
 
-    function defaultState() {
-      const bySubject = {};
-      SUBJECTS.forEach(s => { bySubject[s.id] = 0; });
-      return {
-        profile: { name: "Campeón/a", avatar: "🦁" },
-        points: 0,
-        totalCorrect: 0,
-        totalAnswered: 0,
-        bestStreak: 0,
-        lastDailyDate: "",
-        bySubject
-      };
-    }
-
-    function loadState() {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return defaultState();
-        const parsed = JSON.parse(raw);
-        const base = defaultState();
-        return {
-          ...base,
-          ...parsed,
-          profile: { ...base.profile, ...(parsed.profile || {}) },
-          bySubject: { ...base.bySubject, ...(parsed.bySubject || {}) }
-        };
-      } catch (e) {
-        return defaultState();
-      }
-    }
-
-    let state = loadState();
-    function saveState() {
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
-    }
-
-    function todayKey() {
-      const d = new Date();
-      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-    }
-
-    function randInt(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    function pickRandom(arr) {
-      return arr[Math.floor(Math.random() * arr.length)];
-    }
-
-    function shuffle(arr) {
-      const copy = [...arr];
-      for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
-      }
-      return copy;
-    }
-
-    function getLevelInfo(pts) {
-      const level = Math.floor(pts / 100) + 1;
-      const intoLevel = pts % 100;
-      return { level, intoLevel, needed: 100 - intoLevel };
-    }
-
-    function renderTopbar() {
-      const lv = getLevelInfo(state.points);
-      document.getElementById("topAvatar").textContent = state.profile.avatar || "🦁";
-      document.getElementById("topGreeting").textContent = `¡Hola, ${state.profile.name || "Campeón/a"}!`;
-      document.getElementById("topLevelTag").textContent = `Nivel ${lv.level} · ${lv.intoLevel} / 100 pts para Nivel ${lv.level + 1}`;
-      document.getElementById("topPoints").textContent = state.points;
-      const doneToday = state.lastDailyDate === todayKey();
-      document.getElementById("dailyStatusPill").textContent = doneToday ? "✅ Completado hoy" : "🔥 +50 pts extra";
-    }
-
-    function showView(viewId) {
-      document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
-      document.getElementById(`view-${viewId}`).classList.add("active");
-      document.querySelectorAll(".nav-btn").forEach(b => {
-        b.classList.toggle("active", b.dataset.view === viewId);
-      });
-      if (viewId === "points") renderPointsView();
-      if (viewId === "tables") renderTablesView();
-    }
-
-    document.querySelectorAll(".nav-btn").forEach(btn => {
-      btn.addEventListener("click", () => showView(btn.dataset.view));
-    });
-
-    function renderSubjectsGrid() {
-      const grid = document.getElementById("subjectsGrid");
-      grid.innerHTML = "";
-      SUBJECTS.forEach(s => {
-        const btn = document.createElement("button");
-        btn.className = `subject-card ${s.bgClass}`;
-        btn.innerHTML = `
-          <div class="subj-top">
-            <div class="subj-icon">${s.icon}</div>
-            <span class="subj-pts-tag">⭐ ${state.bySubject[s.id] || 0} pts</span>
-          </div>
-          <div>
-            <h3 class="subj-name">${s.name}</h3>
-            <p class="subj-desc">${s.desc}</p>
-          </div>
-        `;
-        btn.addEventListener("click", () => startGame({ type: "subject", subjectId: s.id }));
-        grid.appendChild(btn);
-      });
-    }
-
-    let selectedTableNum = 2;
-    let hideTableResults = false;
-
-    function renderTablesView() {
-      const numGrid = document.getElementById("tablesNumGrid");
-      numGrid.innerHTML = "";
-      for (let n = 1; n <= 10; n++) {
-        const b = document.createElement("button");
-        b.className = `table-num-btn ${n === selectedTableNum ? "active" : ""}`;
-        b.textContent = n;
-        b.addEventListener("click", () => { selectedTableNum = n; renderTablesView(); });
-        numGrid.appendChild(b);
-      }
-
-      const hideBtn = document.getElementById("btnToggleHideTable");
-      hideBtn.textContent = hideTableResults ? "Ocultar: SÍ" : "Ocultar: NO";
-
-      const rowsGrid = document.getElementById("tableRowsGrid");
-      rowsGrid.innerHTML = "";
-      for (let i = 1; i <= 10; i++) {
-        const res = selectedTableNum * i;
-        const row = document.createElement("button");
-        row.className = "table-row-btn";
-        const badge = document.createElement("span");
-        badge.className = "table-result-badge";
-        badge.textContent = hideTableResults ? "?" : res;
-        row.innerHTML = `<span>${selectedTableNum} × ${i}</span>`;
-        row.appendChild(badge);
-        row.addEventListener("click", () => {
-          badge.textContent = badge.textContent === "?" ? res : "?";
-        });
-        rowsGrid.appendChild(row);
-      }
-    }
-
-    document.getElementById("btnToggleHideTable").addEventListener("click", () => {
-      hideTableResults = !hideTableResults;
-      renderTablesView();
-    });
-
-    document.getElementById("btnQuizSelectedTable").addEventListener("click", () => {
-      startGame({ type: "subject", subjectId: "mates", matesMode: "tables", tableNum: selectedTableNum });
-    });
-
-    function renderPointsView() {
-      document.getElementById("totalStatsBadge").textContent = `${state.totalCorrect} aciertos · ${state.points} pts`;
-      const grid = document.getElementById("pointsBreakdownGrid");
-      grid.innerHTML = "";
-      SUBJECTS.forEach(s => {
-        const div = document.createElement("div");
-        div.className = "pts-subj-card";
-        div.innerHTML = `<span>${s.icon} ${s.name}</span><span>⭐ ${state.bySubject[s.id] || 0}</span>`;
-        grid.appendChild(div);
-      });
-
-      const mGrid = document.getElementById("medalsGrid");
-      mGrid.innerHTML = "";
-      MEDALS.forEach(m => {
-        const ok = m.check(state);
-        const card = document.createElement("div");
-        card.className = `medal-card ${ok ? "unlocked" : ""}`;
-        card.innerHTML = `
-          <div style="font-size:1.5rem">${m.icon}</div>
-          <div style="font-weight:900;font-size:0.9rem">${m.name}</div>
-          <div style="font-size:0.74rem;font-weight:700;color:var(--muted)">${m.desc}</div>
-        `;
-        mGrid.appendChild(card);
-      });
-    }
-
-    // RELOJ ANALÓGICO SVG
-    function buildClockSvg(hour12, minute) {
-      const cx = 90, cy = 90, r = 78;
-      const minAngle = (minute * 6) * Math.PI / 180;
-      const hrAngle = (((hour12 % 12) + minute / 60) * 30) * Math.PI / 180;
-
-      const mx = cx + 56 * Math.sin(minAngle);
-      const my = cy - 56 * Math.cos(minAngle);
-      const hx = cx + 38 * Math.sin(hrAngle);
-      const hy = cy - 38 * Math.cos(hrAngle);
-
-      let ticks = "";
-      for (let i = 0; i < 60; i++) {
-        const ang = (i * 6) * Math.PI / 180;
-        const isHour = i % 5 === 0;
-        const inner = isHour ? r - 11 : r - 6;
-        const x1 = cx + inner * Math.sin(ang);
-        const y1 = cy - inner * Math.cos(ang);
-        const x2 = cx + (r - 2) * Math.sin(ang);
-        const y2 = cy - (r - 2) * Math.cos(ang);
-        ticks += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="#475569" stroke-width="${isHour ? 2.4 : 1.1}" />`;
-      }
-
-      let nums = "";
-      for (let h = 1; h <= 12; h++) {
-        const ang = (h * 30) * Math.PI / 180;
-        const nx = cx + 57 * Math.sin(ang);
-        const ny = cy - 57 * Math.cos(ang) + 4;
-        nums += `<text x="${nx.toFixed(1)}" y="${ny.toFixed(1)}" text-anchor="middle" font-size="13" font-weight="900" fill="#0f172a">${h}</text>`;
-      }
-
-      return `
-        <svg width="180" height="180" viewBox="0 0 180 180" aria-label="Reloj analógico">
-          <circle cx="${cx}" cy="${cy}" r="${r}" fill="#ffffff" stroke="#1e293b" stroke-width="4" />
-          ${ticks}
-          ${nums}
-          <line x1="${cx}" y1="${cy}" x2="${hx.toFixed(1)}" y2="${hy.toFixed(1)}" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" />
-          <line x1="${cx}" y1="${cy}" x2="${mx.toFixed(1)}" y2="${my.toFixed(1)}" stroke="#2563eb" stroke-width="3.8" stroke-linecap="round" />
-          <circle cx="${cx}" cy="${cy}" r="5.5" fill="#0f172a" />
-        </svg>
-      `;
-    }
-
-    function formatSpanishTimePhrase(hour12, minute) {
-      const nextHour = (hour12 % 12) + 1;
-      if (minute === 0) return `Las ${hour12} en punto`;
-      if (minute === 15) return `Las ${hour12} y cuarto`;
-      if (minute === 30) return `Las ${hour12} y media`;
-      if (minute === 45) return `Las ${nextHour} menos cuarto`;
-      if (minute < 30) return `Las ${hour12} y ${minute} min`;
-      return `Las ${nextHour} menos ${60 - minute} min`;
-    }
-
-    function generateHourQuestion() {
-      const kind = randInt(1, 5);
-      if (kind === 1) {
-        const h = randInt(1, 12);
-        const m = pickRandom([0, 15, 30, 45, 5, 10, 20, 25, 35, 40, 50, 55]);
-        const digital = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
-        const distractors = new Set([digital]);
-        while (distractors.size < 4) {
-          const dh = randInt(1, 12);
-          const dm = pickRandom([0, 15, 30, 45, 5, 10, 20, 25, 40, 50]);
-          distractors.add(`${String(dh).padStart(2, "0")}:${String(dm).padStart(2, "0")}`);
-        }
-        return {
-          topic: "Reloj analógico · Digital",
-          question: "¿Qué hora digital marca este reloj?",
-          clock: { h, m },
-          options: shuffle([...distractors]),
-          answer: digital,
-          explain: `La aguja corta marca las ${h} y la larga los ${m} minutos (${digital}).`
-        };
-      }
-      if (kind === 2) {
-        const h = randInt(1, 12);
-        const m = pickRandom([0, 15, 30, 45, 10, 20, 40, 50]);
-        const phrase = formatSpanishTimePhrase(h, m);
-        const distractors = new Set([phrase]);
-        while (distractors.size < 4) {
-          distractors.add(formatSpanishTimePhrase(randInt(1, 12), pickRandom([0, 15, 30, 45, 10, 20, 40, 50])));
-        }
-        return {
-          topic: "Reloj analógico · Lectura",
-          question: "¿Cómo se lee la hora que marca el reloj?",
-          clock: { h, m },
-          options: shuffle([...distractors]),
-          answer: phrase,
-          explain: `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")} se lee: ${phrase}.`
-        };
-      }
-      if (kind === 3) {
-        const pmHour = randInt(13, 23);
-        const amHour = pmHour - 12;
-        const ans = `${amHour}:00 de la tarde`;
-        const opts = shuffle([
-          ans,
-          `${amHour}:00 de la madrugada`,
-          `${pmHour}:00 de la mañana`,
-          `${((amHour % 12) + 1)}:00 de la tarde`
-        ]);
-        return {
-          topic: "Formato 24 horas",
-          question: `En un reloj digital de 24 horas marcan las ${pmHour}:00. ¿Qué hora es en la vida diaria?`,
-          options: opts,
-          answer: ans,
-          explain: `A partir de las 12:00 se restan 12 horas: ${pmHour} - 12 = ${amHour} de la tarde.`
-        };
-      }
-      if (kind === 4) {
-        const cases = [
-          { q: "¿Cuántos minutos tiene 1 hora entera?", a: "60 minutos", opts: ["60 minutos", "30 minutos", "100 minutos", "24 minutos"], ex: "1 hora equivale siempre a 60 minutos." },
-          { q: "¿Cuántos minutos tiene media hora?", a: "30 minutos", opts: ["30 minutos", "15 minutos", "45 minutos", "20 minutos"], ex: "La mitad de 60 minutos son 30 minutos." },
-          { q: "¿Cuántos minutos tiene un cuarto de hora?", a: "15 minutos", opts: ["15 minutos", "25 minutos", "10 minutos", "45 minutos"], ex: "Un cuarto de 60 minutos son 15 minutos." },
-          { q: "¿Cuántos cuartos de hora hay en 1 hora?", a: "4 cuartos", opts: ["4 cuartos", "2 cuartos", "3 cuartos", "6 cuartos"], ex: "4 × 15 minutos = 60 minutos (1 hora)." }
-        ];
-        const c = pickRandom(cases);
-        return { topic: "Equivalencias de tiempo", question: c.q, options: shuffle(c.opts), answer: c.a, explain: c.ex };
-      }
-      const startH = randInt(16, 19);
-      const startM = pickRandom([0, 15, 30]);
-      const addM = pickRandom([15, 30, 45]);
-      const totalMin = startM + addM;
-      const endH = startH + Math.floor(totalMin / 60);
-      const endM = totalMin % 60;
-      const ans = `${String(endH).padStart(2, "0")}:${String(endM).padStart(2, "0")}`;
-      const set = new Set([ans]);
-      while (set.size < 4) {
-        set.add(`${String(endH).padStart(2, "0")}:${String(pickRandom([0, 15, 30, 45])).padStart(2, "0")}`);
-      }
-      return {
-        topic: "Paso del tiempo",
-        question: `Empieza a las ${String(startH).padStart(2, "0")}:${String(startM).padStart(2, "0')} y dura ${addM} minutos. ¿A qué hora termina?`,
-        options: shuffle([...set]),
-        answer: ans,
-        explain: `${startM} min + ${addM} min = ${totalMin} min → termina a las ${ans}.`
-      };
-    }
-
-    function generateMatesQuestion(mode, tableNum) {
-      let chosen = mode;
-      if (chosen === "mixed") {
-        chosen = pickRandom(["add", "sub", "mul", "tables", "problems", "hours"]);
-      }
-      if (chosen === "hours") {
-        return { ...generateHourQuestion(), pointSubject: "horas" };
-      }
-      if (chosen === "add") {
-        const a = randInt(120, 780);
-        const b = randInt(45, 210);
-        return {
-          topic: "Sumas de 3.º",
-          numeric: true,
-          prompt: `${a} + ${b}`,
-          answer: String(a + b),
-          explain: `${a} + ${b} = ${a + b}.`
-        };
-      }
-      if (chosen === "sub") {
-        const a = randInt(350, 950);
-        const b = randInt(60, a - 45);
-        return {
-          topic: "Restas de 3.º",
-          numeric: true,
-          prompt: `${a} − ${b}`,
-          answer: String(a - b),
-          explain: `${a} − ${b} = ${a - b}.`
-        };
-      }
-      if (chosen === "mul") {
-        const a = randInt(2, 9);
-        const b = randInt(2, 10);
-        return {
-          topic: "Multiplicación",
-          numeric: true,
-          prompt: `${a} × ${b}`,
-          answer: String(a * b),
-          explain: `${a} × ${b} = ${a * b}.`
-        };
-      }
-      if (chosen === "tables") {
-        const t = tableNum || randInt(1, 10);
-        const m = randInt(1, 10);
-        return {
-          topic: `Tabla del ${t}`,
-          numeric: true,
-          prompt: `${t} × ${m}`,
-          answer: String(t * m),
-          explain: `Tabla del ${t}: ${t} × ${m} = ${t * m}.`
-        };
-      }
-      const probs = [
-        (() => {
-          const packs = randInt(3, 8);
-          const perPack = randInt(4, 9);
-          const ans = packs * perPack;
-          return { topic: "Problema de Mates", question: `En clase hay ${packs} cajas con ${perPack} rotuladores cada una. ¿Cuántos rotuladores hay en total?`, options: shuffle([String(ans), String(ans + perPack), String(packs + perPack), String(Math.max(1, ans - 3))]), answer: String(ans), explain: `${packs} × ${perPack} = ${ans} rotuladores.` };
-        })(),
-        (() => {
-          const total = randInt(120, 300);
-          const spent = randInt(35, 95);
-          const ans = total - spent;
-          return { topic: "Problema de Mates", question: `En una excursión había ${total} cromos y se repartieron ${spent}. ¿Cuántos quedan?`, options: shuffle([String(ans), String(total + spent), String(ans + 10), String(Math.max(1, ans - 10))]), answer: String(ans), explain: `${total} − ${spent} = ${ans} cromos.` };
-        })()
+      const SUBJECTS = [
+        { id: "mates", name: "Matemáticas", icon: "🔢", bgClass: "bg-mates", desc: "Sumas, restas, tablas y problemas" },
+        { id: "horas", name: "Las Horas", icon: "🕒", bgClass: "bg-plastica", desc: "Reloj de agujas, 24h y minutos" },
+        { id: "lengua", name: "Lengua", icon: "✏️", bgClass: "bg-lengua", desc: "Sílabas, ortografía y gramática" },
+        { id: "valencia", name: "Valencià", icon: "🍊", bgClass: "bg-valencia", desc: "Vocabulari, dies, mesos i verbs" },
+        { id: "ingles", name: "Inglés", icon: "🇬🇧", bgClass: "bg-ingles", desc: "Days, months, numbers & words" },
+        { id: "cmedio", name: "C. del Medio", icon: "🌍", bgClass: "bg-cmedio", desc: "Cuerpo, salud, naturaleza y entorno" },
+        { id: "musica", name: "Música", icon: "🎵", bgClass: "bg-musica", desc: "Notas, ritmo, compás e instrumentos" },
+        { id: "plastica", name: "Plástica", icon: "🎨", bgClass: "bg-plastica", desc: "Colores, formas, simetría y arte" },
+        { id: "efisica", name: "Educación Física", icon: "🏃", bgClass: "bg-efisica", desc: "Deportes, hábitos y movimiento" },
+        { id: "religion", name: "Religión", icon: "🕊️", bgClass: "bg-religion", desc: "Valores, relatos y convivencia" },
+        { id: "lectura", name: "Lectura", icon: "📖", bgClass: "bg-lectura", desc: "Textos cortos y comprensión" }
       ];
-      return pickRandom(probs);
-    }
 
-    // MOTOR DE PARTIDA ANTI-REPETICIÓN
-    let gameSession = null;
-    let currentQuestion = null;
-    let answeredCurrent = false;
-    let numericBuffer = "";
-    let recentKeys = new Set();
+      const MEDALS = [
+        { id: "first_win", icon: "🌟", name: "Primer Paso", desc: "Consigue tus primeros 50 puntos", check: (s) => s.points >= 50 },
+        { id: "streak_5", icon: "🔥", name: "En Racha", desc: "Encadena 5 aciertos seguidos", check: (s) => s.bestStreak >= 5 },
+        { id: "streak_10", icon: "⚡", name: "Imparable", desc: "Encadena 10 aciertos seguidos", check: (s) => s.bestStreak >= 10 },
+        { id: "clock_master", icon: "🕒", name: "Amo del Reloj", desc: "Suma 100 puntos en Las Horas", check: (s) => (s.bySubject.horas || 0) >= 100 },
+        { id: "polyglot", icon: "🌍", name: "Bilingüe y Valencià", desc: "Suma 120 pts entre Inglés y Valencià", check: (s) => ((s.bySubject.ingles || 0) + (s.bySubject.valencia || 0)) >= 120 },
+        { id: "level_5", icon: "👑", name: "Nivel 5", desc: "Alcanza el Nivel 5 (400 puntos)", check: (s) => s.points >= 400 }
+      ];
 
-    function startGame(config) {
-      const isDaily = config.type === "daily";
-      const isAdventure = config.type === "adventure";
-      const totalQuestions = isAdventure ? 999 : 10;
-
-      gameSession = {
-        ...config,
-        isDaily,
-        isAdventure,
-        totalQuestions,
-        index: 0,
-        correct: 0,
-        bestStreak: 0,
-        roundPoints: 0,
-        matesMode: config.matesMode || "mixed",
-        tableNum: config.tableNum || selectedTableNum
-      };
-      recentKeys.clear();
-
-      document.getElementById("summaryCard").style.display = "none";
-      document.getElementById("gameCard").style.display = "flex";
-
-      const isMates = config.type === "subject" && config.subjectId === "mates";
-      document.getElementById("matesToolbar").style.display = isMates ? "flex" : "none";
-      if (isMates) {
-        syncMatesToolbar();
+      function defaultState() {
+        const bySubject = {};
+        SUBJECTS.forEach((s) => {
+          bySubject[s.id] = 0;
+        });
+        return {
+          hasConfiguredProfile: false,
+          profile: { name: "Campeón/a", avatar: "🦁" },
+          points: 0,
+          totalCorrect: 0,
+          totalAnswered: 0,
+          bestStreak: 0,
+          lastDailyDate: "",
+          bySubject
+        };
       }
 
-      const badge = document.getElementById("gameModeBadge");
-      if (isDaily) badge.textContent = "📅 Reto del Día";
-      else if (isAdventure) badge.textContent = "🚀 Modo Partida";
-      else if (config.subjectId === "horas") badge.textContent = "🕒 Las Horas";
-      else {
-        const sub = SUBJECTS.find(s => s.id === config.subjectId);
-        badge.textContent = `${sub ? sub.icon : "📚"} ${sub ? sub.name : "Asignatura"}`;
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return defaultState();
+          const parsed = JSON.parse(raw);
+          const base = defaultState();
+          return {
+            ...base,
+            ...parsed,
+            profile: { ...base.profile, ...(parsed.profile || {}) },
+            bySubject: { ...base.bySubject, ...(parsed.bySubject || {}) }
+          };
+        } catch (e) {
+          return defaultState();
+        }
       }
 
-      showView("game");
-      loadNextQuestion();
-    }
+      let state = loadState();
+      let currentStreak = 0;
 
-    function syncMatesToolbar() {
-      document.querySelectorAll("#matesToolbar .mode-btn").forEach(b => {
-        b.classList.toggle("active", b.dataset.mmode === gameSession.matesMode);
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {
+          // Ignorar errores de almacenamiento
+        }
+      }
+
+      function todayKey() {
+        const d = new Date();
+        return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      }
+
+      function randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function pickRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function shuffle(arr) {
+        const copy = arr.slice();
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+      }
+
+      function getLevelInfo(pts) {
+        const safePts = Math.max(0, Number(pts) || 0);
+        const level = Math.floor(safePts / 100) + 1;
+        const intoLevel = safePts % 100;
+        return { level, intoLevel, needed: 100 - intoLevel };
+      }
+
+      function renderTopbar() {
+        const lv = getLevelInfo(state.points);
+        document.getElementById("topAvatar").textContent = state.profile.avatar || "🦁";
+        document.getElementById("topGreeting").textContent = `¡Hola, ${state.profile.name || "Campeón/a"}!`;
+        document.getElementById("topLevelTag").textContent = `Nivel ${lv.level} · ${lv.intoLevel} / 100 pts para Nivel ${lv.level + 1}`;
+        document.getElementById("topPoints").textContent = String(state.points);
+        const doneToday = state.lastDailyDate === todayKey();
+        document.getElementById("dailyStatusPill").textContent = doneToday ? "✅ Completado hoy" : "🔥 +50 pts extra";
+      }
+
+      function showView(viewId) {
+        document.querySelectorAll(".view").forEach((v) => v.classList.remove("active"));
+        const target = document.getElementById(`view-${viewId}`);
+        if (target) target.classList.add("active");
+        document.querySelectorAll(".nav-btn").forEach((b) => {
+          b.classList.toggle("active", b.dataset.view === viewId);
+        });
+        if (viewId === "points") renderPointsView();
+        if (viewId === "tables") renderTablesView();
+        if (viewId === "subjects") renderSubjectsGrid();
+      }
+
+      document.querySelectorAll(".nav-btn").forEach((btn) => {
+        btn.addEventListener("click", () => showView(btn.dataset.view));
       });
-      const row = document.getElementById("tableSelectorRow");
-      row.classList.toggle("visible", gameSession.matesMode === "tables");
 
-      const pills = document.getElementById("matesTablePills");
-      pills.innerHTML = "";
-      for (let t = 1; t <= 10; t++) {
-        const pb = document.createElement("button");
-        pb.className = `pill-btn ${t === gameSession.tableNum ? "active" : ""}`;
-        pb.textContent = t;
-        pb.addEventListener("click", () => {
-          gameSession.tableNum = t;
+      function renderSubjectsGrid() {
+        const grid = document.getElementById("subjectsGrid");
+        grid.innerHTML = "";
+        SUBJECTS.forEach((s) => {
+          const btn = document.createElement("button");
+          btn.className = `subject-card ${s.bgClass}`;
+          btn.innerHTML = `
+            <div class="subj-top">
+              <div class="subj-icon">${s.icon}</div>
+              <span class="subj-pts-tag">⭐ ${state.bySubject[s.id] || 0} pts</span>
+            </div>
+            <div>
+              <h3 class="subj-name">${s.name}</h3>
+              <p class="subj-desc">${s.desc}</p>
+            </div>
+          `;
+          btn.addEventListener("click", () => startGame({ type: "subject", subjectId: s.id }));
+          grid.appendChild(btn);
+        });
+      }
+
+      let selectedTableNum = 2;
+      let hideTableResults = false;
+
+      function renderTablesView() {
+        const numGrid = document.getElementById("tablesNumGrid");
+        numGrid.innerHTML = "";
+        for (let n = 1; n <= 10; n++) {
+          const b = document.createElement("button");
+          b.className = `table-num-btn ${n === selectedTableNum ? "active" : ""}`;
+          b.textContent = String(n);
+          b.addEventListener("click", () => {
+            selectedTableNum = n;
+            renderTablesView();
+          });
+          numGrid.appendChild(b);
+        }
+
+        const hideBtn = document.getElementById("btnToggleHideTable");
+        hideBtn.textContent = hideTableResults ? "Ocultar: SÍ" : "Ocultar: NO";
+
+        const rowsGrid = document.getElementById("tableRowsGrid");
+        rowsGrid.innerHTML = "";
+        for (let i = 1; i <= 10; i++) {
+          const res = selectedTableNum * i;
+          const row = document.createElement("button");
+          row.className = "table-row-btn";
+          const badge = document.createElement("span");
+          badge.className = "table-result-badge";
+          badge.textContent = hideTableResults ? "?" : String(res);
+          row.innerHTML = `<span>${selectedTableNum} × ${i}</span>`;
+          row.appendChild(badge);
+          row.addEventListener("click", () => {
+            badge.textContent = badge.textContent === "?" ? String(res) : "?";
+          });
+          rowsGrid.appendChild(row);
+        }
+      }
+
+      document.getElementById("btnToggleHideTable").addEventListener("click", () => {
+        hideTableResults = !hideTableResults;
+        renderTablesView();
+      });
+
+      document.getElementById("btnQuizSelectedTable").addEventListener("click", () => {
+        startGame({ type: "subject", subjectId: "mates", matesMode: "tables", tableNum: selectedTableNum });
+      });
+
+      function renderPointsView() {
+        document.getElementById("totalStatsBadge").textContent = `${state.totalCorrect} aciertos · ${state.points} pts`;
+        const grid = document.getElementById("pointsBreakdownGrid");
+        grid.innerHTML = "";
+        SUBJECTS.forEach((s) => {
+          const div = document.createElement("div");
+          div.className = "pts-subj-card";
+          div.innerHTML = `<span>${s.icon} ${s.name}</span><span>⭐ ${state.bySubject[s.id] || 0}</span>`;
+          grid.appendChild(div);
+        });
+
+        const mGrid = document.getElementById("medalsGrid");
+        mGrid.innerHTML = "";
+        MEDALS.forEach((m) => {
+          const ok = m.check(state);
+          const card = document.createElement("div");
+          card.className = `medal-card ${ok ? "unlocked" : ""}`;
+          card.innerHTML = `
+            <div style="font-size:1.5rem">${m.icon}</div>
+            <div style="font-weight:900;font-size:0.9rem">${m.name}</div>
+            <div style="font-size:0.74rem;font-weight:700;color:var(--muted)">${m.desc}</div>
+          `;
+          mGrid.appendChild(card);
+        });
+      }
+
+      // RELOJ ANALÓGICO SVG
+      function buildClockSvg(hour12, minute) {
+        const cx = 90;
+        const cy = 90;
+        const r = 78;
+        const minAngle = (minute * 6 * Math.PI) / 180;
+        const hrAngle = ((((hour12 % 12) + minute / 60) * 30) * Math.PI) / 180;
+
+        const mx = cx + 56 * Math.sin(minAngle);
+        const my = cy - 56 * Math.cos(minAngle);
+        const hx = cx + 38 * Math.sin(hrAngle);
+        const hy = cy - 38 * Math.cos(hrAngle);
+
+        let ticks = "";
+        for (let i = 0; i < 60; i++) {
+          const ang = (i * 6 * Math.PI) / 180;
+          const isHour = i % 5 === 0;
+          const inner = isHour ? r - 11 : r - 6;
+          const x1 = cx + inner * Math.sin(ang);
+          const y1 = cy - inner * Math.cos(ang);
+          const x2 = cx + (r - 2) * Math.sin(ang);
+          const y2 = cy - (r - 2) * Math.cos(ang);
+          ticks += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="#475569" stroke-width="${isHour ? 2.4 : 1.1}" />`;
+        }
+
+        let nums = "";
+        for (let h = 1; h <= 12; h++) {
+          const ang = (h * 30 * Math.PI) / 180;
+          const nx = cx + 57 * Math.sin(ang);
+          const ny = cy - 57 * Math.cos(ang) + 4;
+          nums += `<text x="${nx.toFixed(1)}" y="${ny.toFixed(1)}" text-anchor="middle" font-size="13" font-weight="900" fill="#0f172a">${h}</text>`;
+        }
+
+        return `
+          <svg width="180" height="180" viewBox="0 0 180 180" aria-label="Reloj analógico">
+            <circle cx="${cx}" cy="${cy}" r="${r}" fill="#ffffff" stroke="#1e293b" stroke-width="4" />
+            ${ticks}
+            ${nums}
+            <line x1="${cx}" y1="${cy}" x2="${hx.toFixed(1)}" y2="${hy.toFixed(1)}" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" />
+            <line x1="${cx}" y1="${cy}" x2="${mx.toFixed(1)}" y2="${my.toFixed(1)}" stroke="#2563eb" stroke-width="3.8" stroke-linecap="round" />
+            <circle cx="${cx}" cy="${cy}" r="5.5" fill="#0f172a" />
+          </svg>
+        `;
+      }
+
+      function formatSpanishTimePhrase(hour12, minute) {
+        const nextHour = (hour12 % 12) + 1;
+        if (minute === 0) return `Las ${hour12} en punto`;
+        if (minute === 15) return `Las ${hour12} y cuarto`;
+        if (minute === 30) return `Las ${hour12} y media`;
+        if (minute === 45) return `Las ${nextHour} menos cuarto`;
+        if (minute < 30) return `Las ${hour12} y ${minute} min`;
+        return `Las ${nextHour} menos ${60 - minute} min`;
+      }
+
+      function generateHourQuestion() {
+        const kind = randInt(1, 5);
+        if (kind === 1) {
+          const h = randInt(1, 12);
+          const m = pickRandom([0, 15, 30, 45, 5, 10, 20, 25, 35, 40, 50, 55]);
+          const digital = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+          const distractors = new Set([digital]);
+          while (distractors.size < 4) {
+            const dh = randInt(1, 12);
+            const dm = pickRandom([0, 15, 30, 45, 5, 10, 20, 25, 40, 50]);
+            distractors.add(`${String(dh).padStart(2, "0")}:${String(dm).padStart(2, "0")}`);
+          }
+          return {
+            topic: "Reloj analógico · Digital",
+            question: "¿Qué hora digital marca este reloj?",
+            clock: { h, m },
+            options: shuffle(Array.from(distractors)),
+            answer: digital,
+            explain: `La aguja corta marca las ${h} y la larga los ${m} minutos (${digital}).`
+          };
+        }
+        if (kind === 2) {
+          const h = randInt(1, 12);
+          const m = pickRandom([0, 15, 30, 45, 10, 20, 40, 50]);
+          const phrase = formatSpanishTimePhrase(h, m);
+          const distractors = new Set([phrase]);
+          while (distractors.size < 4) {
+            distractors.add(formatSpanishTimePhrase(randInt(1, 12), pickRandom([0, 15, 30, 45, 10, 20, 40, 50])));
+          }
+          return {
+            topic: "Reloj analógico · Lectura",
+            question: "¿Cómo se lee la hora que marca el reloj?",
+            clock: { h, m },
+            options: shuffle(Array.from(distractors)),
+            answer: phrase,
+            explain: `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")} se lee: ${phrase}.`
+          };
+        }
+        if (kind === 3) {
+          const pmHour = randInt(13, 23);
+          const amHour = pmHour - 12;
+          const ans = `${amHour}:00 de la tarde`;
+          const opts = shuffle([
+            ans,
+            `${amHour}:00 de la madrugada`,
+            `${pmHour}:00 de la mañana`,
+            `${((amHour % 12) + 1)}:00 de la tarde`
+          ]);
+          return {
+            topic: "Formato 24 horas",
+            question: `En un reloj digital de 24 horas marcan las ${pmHour}:00. ¿Qué hora es en la vida diaria?`,
+            options: opts,
+            answer: ans,
+            explain: `A partir de las 12:00 se restan 12 horas: ${pmHour} - 12 = ${amHour} de la tarde.`
+          };
+        }
+        if (kind === 4) {
+          const cases = [
+            { q: "¿Cuántos minutos tiene 1 hora entera?", a: "60 minutos", opts: ["60 minutos", "30 minutos", "100 minutos", "24 minutos"], ex: "1 hora equivale siempre a 60 minutos." },
+            { q: "¿Cuántos minutos tiene media hora?", a: "30 minutos", opts: ["30 minutos", "15 minutos", "45 minutos", "20 minutos"], ex: "La mitad de 60 minutos son 30 minutos." },
+            { q: "¿Cuántos minutos tiene un cuarto de hora?", a: "15 minutos", opts: ["15 minutos", "25 minutos", "10 minutos", "45 minutos"], ex: "Un cuarto de 60 minutos son 15 minutos." },
+            { q: "¿Cuántos cuartos de hora hay en 1 hora?", a: "4 cuartos", opts: ["4 cuartos", "2 cuartos", "3 cuartos", "6 cuartos"], ex: "4 × 15 minutos = 60 minutos (1 hora)." }
+          ];
+          const c = pickRandom(cases);
+          return { topic: "Equivalencias de tiempo", question: c.q, options: shuffle(c.opts), answer: c.a, explain: c.ex };
+        }
+        const startH = randInt(16, 19);
+        const startM = pickRandom([0, 15, 30]);
+        const addM = pickRandom([15, 30, 45]);
+        const totalMin = startM + addM;
+        const endH = startH + Math.floor(totalMin / 60);
+        const endM = totalMin % 60;
+        const ans = `${String(endH).padStart(2, "0")}:${String(endM).padStart(2, "0")}`;
+        const set = new Set([ans]);
+        while (set.size < 4) {
+          set.add(`${String(endH).padStart(2, "0")}:${String(pickRandom([0, 15, 30, 45])).padStart(2, "0")}`);
+        }
+        return {
+          topic: "Paso del tiempo",
+          question: `Empieza a las ${String(startH).padStart(2, "0")}:${String(startM).padStart(2, "0")} y dura ${addM} minutos. ¿A qué hora termina?`,
+          options: shuffle(Array.from(set)),
+          answer: ans,
+          explain: `${startM} min + ${addM} min = ${totalMin} min → termina a las ${ans}.`
+        };
+      }
+
+      function generateMatesQuestion(mode, tableNum) {
+        let chosen = mode;
+        if (chosen === "mixed") {
+          chosen = pickRandom(["add", "sub", "mul", "tables", "problems", "hours"]);
+        }
+        if (chosen === "hours") {
+          return { ...generateHourQuestion(), pointSubject: "horas" };
+        }
+        if (chosen === "add") {
+          const a = randInt(120, 780);
+          const b = randInt(45, 210);
+          return {
+            topic: "Sumas de 3.º",
+            numeric: true,
+            prompt: `${a} + ${b}`,
+            answer: String(a + b),
+            explain: `${a} + ${b} = ${a + b}.`
+          };
+        }
+        if (chosen === "sub") {
+          const a = randInt(350, 950);
+          const b = randInt(60, a - 45);
+          return {
+            topic: "Restas de 3.º",
+            numeric: true,
+            prompt: `${a} − ${b}`,
+            answer: String(a - b),
+            explain: `${a} − ${b} = ${a - b}.`
+          };
+        }
+        if (chosen === "mul") {
+          const a = randInt(2, 9);
+          const b = randInt(2, 10);
+          return {
+            topic: "Multiplicación",
+            numeric: true,
+            prompt: `${a} × ${b}`,
+            answer: String(a * b),
+            explain: `${a} × ${b} = ${a * b}.`
+          };
+        }
+        if (chosen === "tables") {
+          const t = tableNum || randInt(1, 10);
+          const m = randInt(1, 10);
+          return {
+            topic: `Tabla del ${t}`,
+            numeric: true,
+            prompt: `${t} × ${m}`,
+            answer: String(t * m),
+            explain: `Tabla del ${t}: ${t} × ${m} = ${t * m}.`
+          };
+        }
+        const probs = [
+          () => {
+            const packs = randInt(3, 8);
+            const perPack = randInt(4, 9);
+            const ans = packs * perPack;
+            return {
+              topic: "Problema de Mates",
+              question: `En clase hay ${packs} cajas con ${perPack} rotuladores cada una. ¿Cuántos rotuladores hay en total?`,
+              options: shuffle([String(ans), String(ans + perPack), String(packs + perPack), String(Math.max(1, ans - 3))]),
+              answer: String(ans),
+              explain: `${packs} × ${perPack} = ${ans} rotuladores.`
+            };
+          },
+          () => {
+            const total = randInt(120, 300);
+            const spent = randInt(35, 95);
+            const ans = total - spent;
+            return {
+              topic: "Problema de Mates",
+              question: `En una excursión había ${total} cromos y se repartieron ${spent}. ¿Cuántos quedan?`,
+              options: shuffle([String(ans), String(total + spent), String(ans + 10), String(Math.max(1, ans - 10))]),
+              answer: String(ans),
+              explain: `${total} − ${spent} = ${ans} cromos.`
+            };
+          }
+        ];
+        return pickRandom(probs)();
+      }
+
+      // MOTOR DE PARTIDA ANTI-REPETICIÓN
+      let gameSession = null;
+      let currentQuestion = null;
+      let answeredCurrent = false;
+      let numericBuffer = "";
+      const recentKeys = new Set();
+
+      function startGame(config) {
+        const isDaily = config.type === "daily";
+        const isAdventure = config.type === "adventure";
+        const totalQuestions = isAdventure ? 999 : 10;
+
+        gameSession = {
+          ...config,
+          isDaily,
+          isAdventure,
+          totalQuestions,
+          index: 0,
+          correct: 0,
+          bestStreak: 0,
+          roundPoints: 0,
+          matesMode: config.matesMode || "mixed",
+          tableNum: config.tableNum || selectedTableNum
+        };
+        recentKeys.clear();
+
+        document.getElementById("summaryCard").style.display = "none";
+        document.getElementById("gameCard").style.display = "flex";
+
+        const isMates = config.type === "subject" && config.subjectId === "mates";
+        document.getElementById("matesToolbar").style.display = isMates ? "flex" : "none";
+        if (isMates) {
+          syncMatesToolbar();
+        }
+
+        const badge = document.getElementById("gameModeBadge");
+        if (isDaily) badge.textContent = "📅 Reto del Día";
+        else if (isAdventure) badge.textContent = "🚀 Modo Partida";
+        else if (config.subjectId === "horas") badge.textContent = "🕒 Las Horas";
+        else {
+          const sub = SUBJECTS.find((s) => s.id === config.subjectId);
+          badge.textContent = `${sub ? sub.icon : "📚"} ${sub ? sub.name : "Asignatura"}`;
+        }
+
+        showView("game");
+        loadNextQuestion();
+      }
+
+      function syncMatesToolbar() {
+        document.querySelectorAll("#matesToolbar .mode-btn").forEach((b) => {
+          b.classList.toggle("active", b.dataset.mmode === gameSession.matesMode);
+        });
+        const row = document.getElementById("tableSelectorRow");
+        row.classList.toggle("visible", gameSession.matesMode === "tables");
+
+        const pills = document.getElementById("matesTablePills");
+        pills.innerHTML = "";
+        for (let t = 1; t <= 10; t++) {
+          const pb = document.createElement("button");
+          pb.className = `pill-btn ${t === gameSession.tableNum ? "active" : ""}`;
+          pb.textContent = String(t);
+          pb.addEventListener("click", () => {
+            gameSession.tableNum = t;
+            syncMatesToolbar();
+            if (!answeredCurrent) loadNextQuestion(true);
+          });
+          pills.appendChild(pb);
+        }
+      }
+
+      document.querySelectorAll("#matesToolbar .mode-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (!gameSession) return;
+          gameSession.matesMode = btn.dataset.mmode;
           syncMatesToolbar();
           if (!answeredCurrent) loadNextQuestion(true);
         });
-        pills.appendChild(pb);
-      }
-    }
-
-    document.querySelectorAll("#matesToolbar .mode-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        if (!gameSession) return;
-        gameSession.matesMode = btn.dataset.mmode;
-        syncMatesToolbar();
-        if (!answeredCurrent) loadNextQuestion(true);
       });
-    });
 
-    function buildSingleQuestion() {
-      if (gameSession.type === "daily") {
-        const subj = pickRandom(["mates", "horas", "lengua", "valencia", "ingles", "cmedio", "efisica", "lectura"]);
-        return buildForSubject(subj);
+      function buildSingleQuestion() {
+        if (gameSession.type === "daily") {
+          const subj = pickRandom(["mates", "horas", "lengua", "valencia", "ingles", "cmedio", "efisica", "lectura"]);
+          return buildForSubject(subj);
+        }
+        if (gameSession.type === "adventure") {
+          const subj = pickRandom(SUBJECTS).id;
+          return buildForSubject(subj);
+        }
+        return buildForSubject(gameSession.subjectId);
       }
-      if (gameSession.type === "adventure") {
-        const subj = pickRandom(SUBJECTS).id;
-        return buildForSubject(subj);
-      }
-      return buildForSubject(gameSession.subjectId);
-    }
 
-    function buildForSubject(subjId) {
-      if (subjId === "horas") {
-        return { ...generateHourQuestion(), pointSubject: "horas" };
-      }
-      if (subjId === "mates") {
-        const q = generateMatesQuestion(gameSession.matesMode, gameSession.tableNum);
-        return { ...q, pointSubject: q.pointSubject || "mates" };
-      }
-      const bank = (window.QUESTION_BANK && window.QUESTION_BANK[subjId]) || [];
-      if (!bank.length) {
-        return { ...generateHourQuestion(), pointSubject: subjId };
-      }
-      const item = pickRandom(bank);
-      if (item.story) {
+      function buildForSubject(subjId) {
+        if (subjId === "horas") {
+          return { ...generateHourQuestion(), pointSubject: "horas" };
+        }
+        if (subjId === "mates") {
+          const q = generateMatesQuestion(gameSession.matesMode, gameSession.tableNum);
+          return { ...q, pointSubject: q.pointSubject || "mates" };
+        }
+        const bank = (window.QUESTION_BANK && window.QUESTION_BANK[subjId]) || [];
+        if (!bank.length) {
+          return { ...generateHourQuestion(), pointSubject: subjId };
+        }
+        const item = pickRandom(bank);
+        if (item.story) {
+          return {
+            topic: item.topic || "Comprensión lectora",
+            storyTitle: item.storyTitle || "📖 Lectura",
+            story: item.story,
+            question: item.question,
+            options: shuffle(item.options),
+            answer: item.answer,
+            explain: item.explain || "",
+            pointSubject: subjId
+          };
+        }
         return {
-          topic: item.topic || "Comprensión lectora",
-          storyTitle: item.storyTitle || "📖 Lectura",
-          story: item.story,
+          topic: item.topic || "Repaso",
           question: item.question,
           options: shuffle(item.options),
           answer: item.answer,
@@ -1365,544 +1974,594 @@
           pointSubject: subjId
         };
       }
-      return {
-        topic: item.topic || "Repaso",
-        question: item.question,
-        options: shuffle(item.options),
-        answer: item.answer,
-        explain: item.explain || "",
-        pointSubject: subjId
-      };
-    }
 
-    function loadNextQuestion(replaceInPlace = false) {
-      answeredCurrent = false;
-      numericBuffer = "";
+      function loadNextQuestion(replaceInPlace = false) {
+        answeredCurrent = false;
+        numericBuffer = "";
 
-      let q = null;
-      for (let tries = 0; tries < 25; tries++) {
-        const candidate = buildSingleQuestion();
-        const key = `${candidate.question}|${candidate.answer}`;
-        if (!recentKeys.has(key)) {
-          q = candidate;
-          recentKeys.add(key);
-          if (recentKeys.size > 45) {
-            const firstKey = recentKeys.values().next().value;
-            recentKeys.delete(firstKey);
+        let q = null;
+        for (let tries = 0; tries < 30; tries++) {
+          const candidate = buildSingleQuestion();
+          const key = `${candidate.question}|${candidate.answer}`;
+          if (!recentKeys.has(key)) {
+            q = candidate;
+            recentKeys.add(key);
+            if (recentKeys.size > 50) {
+              const firstKey = recentKeys.values().next().value;
+              recentKeys.delete(firstKey);
+            }
+            break;
           }
-          break;
+        }
+        if (!q) {
+          recentKeys.clear();
+          q = buildSingleQuestion();
+        }
+        currentQuestion = q;
+
+        if (!replaceInPlace) {
+          gameSession.index += 1;
+        }
+
+        if (gameSession.isAdventure) {
+          document.getElementById("progressText").textContent = `Pregunta ${gameSession.index} · Partida libre`;
+          document.getElementById("progressFill").style.width = `${Math.min(100, (gameSession.index % 10) * 10 || 10)}%`;
+        } else {
+          document.getElementById("progressText").textContent = `Pregunta ${gameSession.index} de ${gameSession.totalQuestions}`;
+          document.getElementById("progressFill").style.width = `${(gameSession.index / gameSession.totalQuestions) * 100}%`;
+        }
+
+        document.getElementById("roundScoreText").textContent = `+${gameSession.roundPoints} pts en esta ronda`;
+        document.getElementById("streakBadge").textContent = `🔥 Racha: ${currentStreak}`;
+
+        const storyBox = document.getElementById("storyBox");
+        if (q.story) {
+          storyBox.classList.add("visible");
+          document.getElementById("storyTitle").textContent = q.storyTitle || "📖 Lectura";
+          document.getElementById("storyBody").textContent = q.story;
+        } else {
+          storyBox.classList.remove("visible");
+        }
+
+        const clockWrap = document.getElementById("clockVisualWrap");
+        if (q.clock) {
+          clockWrap.classList.add("visible");
+          document.getElementById("clockSvgHolder").innerHTML = buildClockSvg(q.clock.h, q.clock.m);
+        } else {
+          clockWrap.classList.remove("visible");
+          document.getElementById("clockSvgHolder").innerHTML = "";
+        }
+
+        document.getElementById("questionTopic").textContent = q.topic || "REPASO";
+        document.getElementById("questionText").textContent = q.question;
+
+        const fb = document.getElementById("feedbackBox");
+        fb.className = "feedback-box";
+        document.getElementById("btnNextQuestion").classList.remove("visible");
+
+        const optsGrid = document.getElementById("optionsGrid");
+        const numArea = document.getElementById("numericArea");
+
+        if (q.numeric) {
+          optsGrid.style.display = "none";
+          numArea.classList.add("visible");
+          document.getElementById("mathPrompt").textContent = q.prompt;
+          updateNumericBox();
+          renderKeypad();
+        } else {
+          numArea.classList.remove("visible");
+          optsGrid.style.display = "grid";
+          optsGrid.innerHTML = "";
+          const letters = ["A", "B", "C", "D"];
+          q.options.forEach((opt, idx) => {
+            const btn = document.createElement("button");
+            btn.className = "option-btn";
+            btn.innerHTML = `<span class="option-letter">${letters[idx] || idx + 1}</span><span>${opt}</span>`;
+            btn.addEventListener("click", () => handleOptionAnswer(opt, btn));
+            optsGrid.appendChild(btn);
+          });
         }
       }
-      if (!q) {
-        recentKeys.clear();
-        q = buildSingleQuestion();
-      }
-      currentQuestion = q;
 
-      if (!replaceInPlace) {
-        gameSession.index += 1;
-      }
-
-      if (gameSession.isAdventure) {
-        document.getElementById("progressText").textContent = `Pregunta ${gameSession.index} · Partida libre`;
-        document.getElementById("progressFill").style.width = `${Math.min(100, (gameSession.index % 10) * 10 || 10)}%`;
-      } else {
-        document.getElementById("progressText").textContent = `Pregunta ${gameSession.index} de ${gameSession.totalQuestions}`;
-        document.getElementById("progressFill").style.width = `${(gameSession.index / gameSession.totalQuestions) * 100}%`;
+      function updateNumericBox() {
+        const box = document.getElementById("mathAnswerBox");
+        box.classList.remove("correct", "wrong");
+        if (!numericBuffer) {
+          box.textContent = "?";
+          box.classList.add("empty");
+        } else {
+          box.textContent = numericBuffer;
+          box.classList.remove("empty");
+        }
       }
 
-      document.getElementById("roundScoreText").textContent = `+${gameSession.roundPoints} pts en esta ronda`;
-      document.getElementById("streakBadge").textContent = `🔥 Racha: ${currentStreak}`;
-
-      const storyBox = document.getElementById("storyBox");
-      if (q.story) {
-        storyBox.classList.add("visible");
-        document.getElementById("storyTitle").textContent = q.storyTitle || "📖 Lectura";
-        document.getElementById("storyBody").textContent = q.story;
-      } else {
-        storyBox.classList.remove("visible");
-      }
-
-      const clockWrap = document.getElementById("clockVisualWrap");
-      if (q.clock) {
-        clockWrap.classList.add("visible");
-        document.getElementById("clockSvgHolder").innerHTML = buildClockSvg(q.clock.h, q.clock.m);
-      } else {
-        clockWrap.classList.remove("visible");
-        document.getElementById("clockSvgHolder").innerHTML = "";
-      }
-
-      document.getElementById("questionTopic").textContent = q.topic || "REPASO";
-      document.getElementById("questionText").textContent = q.question;
-
-      const fb = document.getElementById("feedbackBox");
-      fb.className = "feedback-box";
-      document.getElementById("btnNextQuestion").classList.remove("visible");
-
-      const optsGrid = document.getElementById("optionsGrid");
-      const numArea = document.getElementById("numericArea");
-
-      if (q.numeric) {
-        optsGrid.style.display = "none";
-        numArea.classList.add("visible");
-        document.getElementById("mathPrompt").textContent = q.prompt;
-        updateNumericBox();
-        renderKeypad();
-      } else {
-        numArea.classList.remove("visible");
-        optsGrid.style.display = "grid";
-        optsGrid.innerHTML = "";
-        const letters = ["A", "B", "C", "D"];
-        q.options.forEach((opt, idx) => {
-          const btn = document.createElement("button");
-          btn.className = "option-btn";
-          btn.innerHTML = `<span class="option-letter">${letters[idx] || idx + 1}</span><span>${opt}</span>`;
-          btn.addEventListener("click", () => handleOptionAnswer(opt, btn));
-          optsGrid.appendChild(btn);
+      function renderKeypad() {
+        const grid = document.getElementById("keypadGrid");
+        grid.innerHTML = "";
+        const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "del", "0", "ok"];
+        keys.forEach((k) => {
+          const b = document.createElement("button");
+          b.className = "key-btn";
+          if (k === "del") {
+            b.classList.add("key-del");
+            b.textContent = "⌫";
+            b.addEventListener("click", () => {
+              if (answeredCurrent) return;
+              numericBuffer = numericBuffer.slice(0, -1);
+              updateNumericBox();
+            });
+          } else if (k === "ok") {
+            b.classList.add("key-ok");
+            b.textContent = "OK ✓";
+            b.addEventListener("click", () => {
+              if (answeredCurrent || !numericBuffer) return;
+              finishEvaluation(numericBuffer === currentQuestion.answer);
+            });
+          } else {
+            b.textContent = k;
+            b.addEventListener("click", () => {
+              if (answeredCurrent || numericBuffer.length >= 5) return;
+              numericBuffer += k;
+              updateNumericBox();
+            });
+          }
+          grid.appendChild(b);
         });
       }
-    }
 
-    let currentStreak = 0;
-
-    function updateNumericBox() {
-      const box = document.getElementById("mathAnswerBox");
-      box.classList.remove("correct", "wrong");
-      if (!numericBuffer) {
-        box.textContent = "?";
-        box.classList.add("empty");
-      } else {
-        box.textContent = numericBuffer;
-        box.classList.remove("empty");
+      function handleOptionAnswer(chosenOpt, btnEl) {
+        if (answeredCurrent) return;
+        const isRight = chosenOpt === currentQuestion.answer;
+        document.querySelectorAll("#optionsGrid .option-btn").forEach((b) => {
+          b.disabled = true;
+          const spans = b.querySelectorAll("span");
+          const txt = spans[1] ? spans[1].textContent : "";
+          if (txt === currentQuestion.answer) b.classList.add("correct");
+        });
+        if (!isRight && btnEl) btnEl.classList.add("wrong");
+        finishEvaluation(isRight);
       }
-    }
 
-    function renderKeypad() {
-      const grid = document.getElementById("keypadGrid");
-      grid.innerHTML = "";
-      const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "del", "0", "ok"];
-      keys.forEach(k => {
-        const b = document.createElement("button");
-        b.className = "key-btn";
-        if (k === "del") {
-          b.classList.add("key-del");
-          b.textContent = "⌫";
-          b.addEventListener("click", () => {
-            if (answeredCurrent) return;
-            numericBuffer = numericBuffer.slice(0, -1);
-            updateNumericBox();
-          });
-        } else if (k === "ok") {
-          b.classList.add("key-ok");
-          b.textContent = "OK ✓";
-          b.addEventListener("click", () => {
-            if (answeredCurrent || !numericBuffer) return;
-            finishEvaluation(numericBuffer === currentQuestion.answer, numericBuffer);
-          });
+      function finishEvaluation(isRight) {
+        answeredCurrent = true;
+        state.totalAnswered += 1;
+
+        const fb = document.getElementById("feedbackBox");
+        const fbHead = document.getElementById("feedbackHeader");
+        const fbDet = document.getElementById("feedbackDetail");
+        const card = document.getElementById("gameCard");
+
+        if (isRight) {
+          currentStreak += 1;
+          if (currentStreak > state.bestStreak) state.bestStreak = currentStreak;
+          if (currentStreak > gameSession.bestStreak) gameSession.bestStreak = currentStreak;
+          state.totalCorrect += 1;
+          gameSession.correct += 1;
+
+          const mult = currentStreak >= 6 ? 3 : currentStreak >= 3 ? 2 : 1;
+          const earned = 10 * mult;
+          state.points += earned;
+          gameSession.roundPoints += earned;
+          const pSubj = currentQuestion.pointSubject || gameSession.subjectId || "mates";
+          state.bySubject[pSubj] = (state.bySubject[pSubj] || 0) + earned;
+
+          if (currentQuestion.numeric) {
+            document.getElementById("mathAnswerBox").classList.add("correct");
+          }
+          card.classList.remove("shake-anim");
+          card.classList.add("pop-anim");
+          setTimeout(() => card.classList.remove("pop-anim"), 260);
+
+          fb.className = "feedback-box visible is-correct";
+          fbHead.textContent = mult > 1 ? `¡Muy bien! +${earned} pts (Racha ×${mult})` : `¡Correcto! +${earned} pts`;
+          fbDet.textContent = currentQuestion.explain || "¡Sigue así!";
         } else {
-          b.textContent = k;
+          currentStreak = 0;
+          if (currentQuestion.numeric) {
+            document.getElementById("mathAnswerBox").classList.add("wrong");
+          }
+          card.classList.remove("pop-anim");
+          card.classList.add("shake-anim");
+          setTimeout(() => card.classList.remove("shake-anim"), 320);
+
+          fb.className = "feedback-box visible is-wrong";
+          fbHead.textContent = `Casi... La respuesta correcta era: ${currentQuestion.answer}`;
+          fbDet.textContent = currentQuestion.explain || "Fíjate bien y prueba la siguiente.";
+        }
+
+        document.getElementById("streakBadge").textContent = `🔥 Racha: ${currentStreak}`;
+        document.getElementById("roundScoreText").textContent = `+${gameSession.roundPoints} pts en esta ronda`;
+        saveState();
+        renderTopbar();
+
+        const nextBtn = document.getElementById("btnNextQuestion");
+        const isLastFixed = !gameSession.isAdventure && gameSession.index >= gameSession.totalQuestions;
+        nextBtn.textContent = isLastFixed ? "Ver resumen de la ronda →" : "Siguiente pregunta →";
+        nextBtn.classList.add("visible");
+      }
+
+      document.getElementById("btnNextQuestion").addEventListener("click", () => {
+        if (!gameSession.isAdventure && gameSession.index >= gameSession.totalQuestions) {
+          finishRound();
+        } else {
+          loadNextQuestion();
+        }
+      });
+
+      function finishRound() {
+        let bonus = 0;
+        if (gameSession.isDaily && state.lastDailyDate !== todayKey()) {
+          bonus = 50;
+          state.points += bonus;
+          state.lastDailyDate = todayKey();
+          gameSession.roundPoints += bonus;
+          saveState();
+          renderTopbar();
+        }
+
+        document.getElementById("gameCard").style.display = "none";
+        document.getElementById("summaryCard").style.display = "flex";
+
+        const ratio = gameSession.correct / gameSession.totalQuestions;
+        document.getElementById("summaryStars").textContent = ratio >= 0.8 ? "⭐⭐⭐" : ratio >= 0.5 ? "⭐⭐" : "⭐";
+        document.getElementById("summaryTitle").textContent = `¡Buen trabajo, ${state.profile.name}!`;
+        document.getElementById("summarySubtitle").textContent =
+          bonus > 0
+            ? `Has ganado +${bonus} puntos extra del Reto del Día.`
+            : "Tu progreso ya está guardado en la memoria del navegador.";
+
+        document.getElementById("sumCorrect").textContent = `${gameSession.correct}/${gameSession.totalQuestions}`;
+        document.getElementById("sumPoints").textContent = `+${gameSession.roundPoints}`;
+        document.getElementById("sumBestStreak").textContent = String(gameSession.bestStreak);
+      }
+
+      document.getElementById("btnPlayAgain").addEventListener("click", () => {
+        startGame({
+          type: gameSession.type,
+          subjectId: gameSession.subjectId,
+          matesMode: gameSession.matesMode,
+          tableNum: gameSession.tableNum
+        });
+      });
+
+      document.getElementById("btnBackHomeSummary").addEventListener("click", () => showView("home"));
+      document.getElementById("btnExitGame").addEventListener("click", () => showView("home"));
+
+      document.getElementById("btnStartDaily").addEventListener("click", () => startGame({ type: "daily" }));
+      document.getElementById("btnStartAdventure").addEventListener("click", () => startGame({ type: "adventure" }));
+      document.getElementById("btnStartHours").addEventListener("click", () => startGame({ type: "subject", subjectId: "horas" }));
+      document.getElementById("btnQuickSubjects").addEventListener("click", () => {
+        renderSubjectsGrid();
+        showView("subjects");
+      });
+      document.getElementById("btnQuickTables").addEventListener("click", () => showView("tables"));
+
+      // MODAL PERFIL Y COPIA DE SEGURIDAD
+      let tempAvatar = state.profile.avatar || "🦁";
+      const modal = document.getElementById("profileModal");
+
+      function setBanner(msg) {
+        const el = document.getElementById("modalBanner");
+        el.textContent = msg;
+        el.classList.add("visible");
+      }
+
+      function clearBanner() {
+        const el = document.getElementById("modalBanner");
+        el.textContent = "";
+        el.classList.remove("visible");
+      }
+
+      function openProfileModal(isFirstVisit) {
+        clearBanner();
+        tempAvatar = state.profile.avatar || "🦁";
+        document.getElementById("inputChildName").value = isFirstVisit && !state.hasConfiguredProfile ? "" : (state.profile.name || "");
+        document.getElementById("backupTextarea").style.display = "none";
+        document.getElementById("btnConfirmImport").style.display = "none";
+        document.getElementById("btnConfirmReset").style.display = "none";
+        if (isFirstVisit) {
+          setBanner("¡Bienvenido/a! Escribe el nombre del niño/a y elige su animal o mascota.");
+        }
+        renderAvatarChoices();
+        modal.classList.add("open");
+      }
+
+      document.getElementById("btnOpenProfile").addEventListener("click", () => openProfileModal(false));
+      document.getElementById("btnCloseModal").addEventListener("click", () => {
+        if (!state.hasConfiguredProfile) {
+          state.hasConfiguredProfile = true;
+          saveState();
+        }
+        modal.classList.remove("open");
+      });
+
+      function renderAvatarChoices() {
+        const box = document.getElementById("avatarChoices");
+        box.innerHTML = "";
+        AVATARS.forEach((av) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = `avatar-opt ${av === tempAvatar ? "active" : ""}`;
+          b.textContent = av;
           b.addEventListener("click", () => {
-            if (answeredCurrent || numericBuffer.length >= 5) return;
-            numericBuffer += k;
-            updateNumericBox();
+            tempAvatar = av;
+            renderAvatarChoices();
           });
-        }
-        grid.appendChild(b);
-      });
-    }
-
-    function handleOptionAnswer(chosenOpt, btnEl) {
-      if (answeredCurrent) return;
-      const isRight = chosenOpt === currentQuestion.answer;
-      document.querySelectorAll("#optionsGrid .option-btn").forEach(b => {
-        b.disabled = true;
-        const txt = b.querySelectorAll("span")[1]?.textContent;
-        if (txt === currentQuestion.answer) b.classList.add("correct");
-      });
-      if (!isRight && btnEl) btnEl.classList.add("wrong");
-      finishEvaluation(isRight, chosenOpt);
-    }
-
-    function finishEvaluation(isRight) {
-      answeredCurrent = true;
-      state.totalAnswered += 1;
-
-      const fb = document.getElementById("feedbackBox");
-      const fbHead = document.getElementById("feedbackHeader");
-      const fbDet = document.getElementById("feedbackDetail");
-      const card = document.getElementById("gameCard");
-
-      if (isRight) {
-        currentStreak += 1;
-        if (currentStreak > state.bestStreak) state.bestStreak = currentStreak;
-        if (currentStreak > gameSession.bestStreak) gameSession.bestStreak = currentStreak;
-        state.totalCorrect += 1;
-        gameSession.correct += 1;
-
-        const mult = currentStreak >= 6 ? 3 : (currentStreak >= 3 ? 2 : 1);
-        const earned = 10 * mult;
-        state.points += earned;
-        gameSession.roundPoints += earned;
-        const pSubj = currentQuestion.pointSubject || gameSession.subjectId || "mates";
-        state.bySubject[pSubj] = (state.bySubject[pSubj] || 0) + earned;
-
-        if (currentQuestion.numeric) {
-          document.getElementById("mathAnswerBox").classList.add("correct");
-        }
-        card.classList.remove("shake-anim");
-        card.classList.add("pop-anim");
-        setTimeout(() => card.classList.remove("pop-anim"), 260);
-
-        fb.className = "feedback-box visible is-correct";
-        fbHead.textContent = mult > 1 ? `¡Muy bien! +${earned} pts (Racha ×${mult})` : `¡Correcto! +${earned} pts`;
-        fbDet.textContent = currentQuestion.explain || "¡Sigue así!";
-      } else {
-        currentStreak = 0;
-        if (currentQuestion.numeric) {
-          document.getElementById("mathAnswerBox").classList.add("wrong");
-        }
-        card.classList.remove("pop-anim");
-        card.classList.add("shake-anim");
-        setTimeout(() => card.classList.remove("shake-anim"), 320);
-
-        fb.className = "feedback-box visible is-wrong";
-        fbHead.textContent = `Casi... La respuesta correcta era: ${currentQuestion.answer}`;
-        fbDet.textContent = currentQuestion.explain || "Fíjate bien y prueba la siguiente.";
+          box.appendChild(b);
+        });
       }
 
-      document.getElementById("streakBadge").textContent = `🔥 Racha: ${currentStreak}`;
-      document.getElementById("roundScoreText").textContent = `+${gameSession.roundPoints} pts en esta ronda`;
-      saveState();
-      renderTopbar();
-
-      const nextBtn = document.getElementById("btnNextQuestion");
-      const isLastFixed = !gameSession.isAdventure && gameSession.index >= gameSession.totalQuestions;
-      nextBtn.textContent = isLastFixed ? "Ver resumen de la ronda →" : "Siguiente pregunta →";
-      nextBtn.classList.add("visible");
-    }
-
-    document.getElementById("btnNextQuestion").addEventListener("click", () => {
-      if (!gameSession.isAdventure && gameSession.index >= gameSession.totalQuestions) {
-        finishRound();
-      } else {
-        loadNextQuestion();
-      }
-    });
-
-    function finishRound() {
-      let bonus = 0;
-      if (gameSession.isDaily && state.lastDailyDate !== todayKey()) {
-        bonus = 50;
-        state.points += bonus;
-        state.lastDailyDate = todayKey();
-        gameSession.roundPoints += bonus;
+      document.getElementById("btnSaveProfile").addEventListener("click", () => {
+        const clean = document.getElementById("inputChildName").value.trim() || "Campeón/a";
+        state.profile.name = clean;
+        state.profile.avatar = tempAvatar;
+        state.hasConfiguredProfile = true;
         saveState();
         renderTopbar();
-      }
-
-      document.getElementById("gameCard").style.display = "none";
-      document.getElementById("summaryCard").style.display = "flex";
-
-      const ratio = gameSession.correct / gameSession.totalQuestions;
-      document.getElementById("summaryStars").textContent = ratio >= 0.8 ? "⭐⭐⭐" : (ratio >= 0.5 ? "⭐⭐" : "⭐");
-      document.getElementById("summaryTitle").textContent = `¡Buen trabajo, ${state.profile.name}!`;
-      document.getElementById("summarySubtitle").textContent = bonus > 0
-        ? `Has ganado +${bonus} puntos extra del Reto del Día.`
-        : "Tu progreso ya está guardado en la memoria del navegador.";
-
-      document.getElementById("sumCorrect").textContent = `${gameSession.correct}/${gameSession.totalQuestions}`;
-      document.getElementById("sumPoints").textContent = `+${gameSession.roundPoints}`;
-      document.getElementById("sumBestStreak").textContent = gameSession.bestStreak;
-    }
-
-    document.getElementById("btnPlayAgain").addEventListener("click", () => {
-      startGame({
-        type: gameSession.type,
-        subjectId: gameSession.subjectId,
-        matesMode: gameSession.matesMode,
-        tableNum: gameSession.tableNum
-      });
-    });
-
-    document.getElementById("btnBackHomeSummary").addEventListener("click", () => showView("home"));
-    document.getElementById("btnExitGame").addEventListener("click", () => showView("home"));
-
-    document.getElementById("btnStartDaily").addEventListener("click", () => startGame({ type: "daily" }));
-    document.getElementById("btnStartAdventure").addEventListener("click", () => startGame({ type: "adventure" }));
-    document.getElementById("btnStartHours").addEventListener("click", () => startGame({ type: "subject", subjectId: "horas" }));
-    document.getElementById("btnQuickSubjects").addEventListener("click", () => { renderSubjectsGrid(); showView("subjects"); });
-    document.getElementById("btnQuickTables").addEventListener("click", () => showView("tables"));
-
-    // MODAL PERFIL Y COPIA DE SEGURIDAD
-    let tempAvatar = state.profile.avatar;
-    const modal = document.getElementById("profileModal");
-
-    document.getElementById("btnOpenProfile").addEventListener("click", () => {
-      tempAvatar = state.profile.avatar || "🦁";
-      document.getElementById("inputChildName").value = state.profile.name || "";
-      document.getElementById("backupTextarea").style.display = "none";
-      document.getElementById("btnConfirmImport").style.display = "none";
-      renderAvatarChoices();
-      modal.classList.add("open");
-    });
-
-    document.getElementById("btnCloseModal").addEventListener("click", () => modal.classList.remove("open"));
-
-    function renderAvatarChoices() {
-      const box = document.getElementById("avatarChoices");
-      box.innerHTML = "";
-      AVATARS.forEach(av => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = `avatar-opt ${av === tempAvatar ? "active" : ""}`;
-        b.textContent = av;
-        b.addEventListener("click", () => { tempAvatar = av; renderAvatarChoices(); });
-        box.appendChild(b);
-      });
-    }
-
-    document.getElementById("btnSaveProfile").addEventListener("click", () => {
-      const clean = document.getElementById("inputChildName").value.trim() || "Campeón/a";
-      state.profile.name = clean;
-      state.profile.avatar = tempAvatar;
-      saveState();
-      renderTopbar();
-      modal.classList.remove("open");
-    });
-
-    document.getElementById("btnExportSave").addEventListener("click", () => {
-      const ta = document.getElementById("backupTextarea");
-      ta.style.display = "block";
-      ta.value = btoa(unescape(encodeURIComponent(JSON.stringify(state))));
-      ta.select();
-      try { navigator.clipboard.writeText(ta.value); } catch (e) {}
-    });
-
-    document.getElementById("btnImportSave").addEventListener("click", () => {
-      const ta = document.getElementById("backupTextarea");
-      ta.style.display = "block";
-      ta.value = "";
-      ta.focus();
-      document.getElementById("btnConfirmImport").style.display = "block";
-    });
-
-    document.getElementById("btnConfirmImport").addEventListener("click", () => {
-      try {
-        const raw = document.getElementById("backupTextarea").value.trim();
-        const jsonStr = decodeURIComponent(escape(atob(raw)));
-        const data = JSON.parse(jsonStr);
-        state = { ...defaultState(), ...data, profile: { ...defaultState().profile, ...(data.profile || {}) } };
-        saveState();
-        renderTopbar();
-        renderSubjectsGrid();
         modal.classList.remove("open");
-      } catch (e) {
-        alert("Código de progreso no válido.");
-      }
-    });
+      });
 
-    document.getElementById("btnResetProgress").addEventListener("click", () => {
-      if (confirm("¿Seguro que quieres borrar todos los puntos y medallas y empezar de cero?")) {
+      document.getElementById("btnExportSave").addEventListener("click", () => {
+        const ta = document.getElementById("backupTextarea");
+        ta.style.display = "block";
+        ta.value = btoa(unescape(encodeURIComponent(JSON.stringify(state))));
+        ta.focus();
+        ta.select();
+        let copied = false;
+        try {
+          copied = document.execCommand("copy");
+        } catch (e) {
+          copied = false;
+        }
+        setBanner(copied ? "Código copiado al portapapeles." : "Código generado: cópialo desde el cuadro de texto.");
+      });
+
+      document.getElementById("btnImportSave").addEventListener("click", () => {
+        const ta = document.getElementById("backupTextarea");
+        ta.style.display = "block";
+        ta.value = "";
+        ta.focus();
+        document.getElementById("btnConfirmImport").style.display = "block";
+        setBanner("Pega el código guardado y pulsa Aplicar progreso pegado.");
+      });
+
+      document.getElementById("btnConfirmImport").addEventListener("click", () => {
+        try {
+          const raw = document.getElementById("backupTextarea").value.trim();
+          const jsonStr = decodeURIComponent(escape(atob(raw)));
+          const data = JSON.parse(jsonStr);
+          const base = defaultState();
+          state = {
+            ...base,
+            ...data,
+            hasConfiguredProfile: true,
+            profile: { ...base.profile, ...(data.profile || {}) },
+            bySubject: { ...base.bySubject, ...(data.bySubject || {}) }
+          };
+          saveState();
+          renderTopbar();
+          renderSubjectsGrid();
+          renderPointsView();
+          setBanner("¡Progreso restaurado correctamente!");
+        } catch (e) {
+          setBanner("Ese código de progreso no es válido. Revísalo e inténtalo de nuevo.");
+        }
+      });
+
+      document.getElementById("btnResetProgress").addEventListener("click", () => {
+        document.getElementById("btnConfirmReset").style.display = "block";
+        setBanner("Pulsa el botón rojo de confirmación si quieres borrar todos los puntos y medallas.");
+      });
+
+      document.getElementById("btnConfirmReset").addEventListener("click", () => {
         state = defaultState();
+        state.hasConfiguredProfile = true;
         currentStreak = 0;
         saveState();
         renderTopbar();
         renderSubjectsGrid();
+        renderPointsView();
         modal.classList.remove("open");
+      });
+
+      // BANCO DE PREGUNTAS POR ASIGNATURA
+      window.QUESTION_BANK = {
+        lengua: [
+          { topic: "Sílabas", question: "¿Cuántas sílabas tiene la palabra «mariposa»?", options: ["4 sílabas", "3 sílabas", "5 sílabas", "2 sílabas"], answer: "4 sílabas", explain: "Ma-ri-po-sa tiene 4 sílabas." },
+          { topic: "Sílabas", question: "¿Cómo se separa correctamente en sílabas «cuaderno»?", options: ["cua-der-no", "cu-a-der-no", "cuad-er-no", "cua-dern-o"], answer: "cua-der-no", explain: "«cua» forma un diptongo y no se separa: cua-der-no." },
+          { topic: "Sílaba tónica", question: "¿Cuál es la sílaba tónica de «lápiz»?", options: ["lá", "piz", "ambas", "ninguna"], answer: "lá", explain: "Se pronuncia con más fuerza en LÁ-piz." },
+          { topic: "Sílaba tónica", question: "¿Dónde carga la voz en «camión»?", options: ["mión", "ca", "ninguna", "las dos"], answer: "mión", explain: "En ca-MIÓN la sílaba fuerte es la última: mión." },
+          { topic: "Mayúsculas", question: "¿Qué palabras se escriben siempre con mayúscula inicial?", options: ["Nombres propios y inicio de frase", "Todos los sustantivos", "Todos los verbos", "Solo los meses"], answer: "Nombres propios y inicio de frase", explain: "Se escriben con mayúscula al empezar una oración y en nombres propios (personas, ciudades, ríos)." },
+          { topic: "Puntuación", question: "¿Qué signo se pone al final de una pregunta?", options: ["¿ ? (interrogación)", "¡ ! (exclamación)", "Dos puntos (:)", "Punto y coma (;)"], answer: "¿ ? (interrogación)", explain: "Las preguntas van entre signos de interrogación: ¿...?" },
+          { topic: "Puntuación", question: "¿Qué signo expresa sorpresa, alegría o un grito?", options: ["¡ ! (exclamación)", "¿ ? (interrogación)", "La coma (,)", "El guion (-)"], answer: "¡ ! (exclamación)", explain: "Los signos de exclamación muestran emoción o sorpresa: ¡Qué alegría!" },
+          { topic: "Sinónimos", question: "¿Cuál es un sinónimo de «bonito»?", options: ["Hermoso", "Feo", "Roto", "Oscuro"], answer: "Hermoso", explain: "«Hermoso» significa lo mismo o parecido a «bonito»." },
+          { topic: "Sinónimos", question: "¿Qué palabra significa casi lo mismo que «rápido»?", options: ["Veloz", "Lento", "Pesado", "Tranquilo"], answer: "Veloz", explain: "«Veloz» es un sinónimo de «rápido»." },
+          { topic: "Antónimos", question: "¿Cuál es el antónimo de «subir»?", options: ["Bajar", "Escalar", "Trepar", "Elevar"], answer: "Bajar", explain: "«Bajar» es lo contrario de «subir»." },
+          { topic: "Antónimos", question: "¿Cuál es el antónimo de «valiente»?", options: ["Cobarde", "Atrevido", "Fuerte", "Valeroso"], answer: "Cobarde", explain: "«Cobarde» es lo opuesto a «valiente»." },
+          { topic: "Sustantivos", question: "¿Cuál de estas palabras es un sustantivo común?", options: ["Perro", "Alicante", "Correr", "Azul"], answer: "Perro", explain: "«Perro» nombra a un animal común; «Alicante» es nombre propio." },
+          { topic: "Adjetivos", question: "¿Qué palabra es un adjetivo en «El coche rojo»?", options: ["rojo", "coche", "el", "ninguna"], answer: "rojo", explain: "«Rojo» dice cómo es el sustantivo «coche»." },
+          { topic: "Verbos", question: "¿Qué palabra indica una acción en «Laura escribe un cuento»?", options: ["escribe", "Laura", "cuento", "un"], answer: "escribe", explain: "«Escribe» es el verbo porque indica la acción." },
+          { topic: "Ortografía", question: "¿Cómo se escribe correctamente?", options: ["Huevo", "Uebo", "Hüebo", "Uvevo"], answer: "Huevo", explain: "Las palabras que empiezan por «hue-» se escriben con H." },
+          { topic: "Ortografía", question: "¿Cuál está bien escrita?", options: ["Campo", "Canpo", "Cambo", "Canbo"], answer: "Campo", explain: "Antes de P y B se escribe M: campo." }
+        ],
+
+        valencia: [
+          { topic: "Dies de la setmana", question: "Com es diu «lunes» en valencià?", options: ["Dilluns", "Dimarts", "Dijous", "Diumenge"], answer: "Dilluns", explain: "Lunes en valencià és dilluns." },
+          { topic: "Dies de la setmana", question: "Quin dia ve després de «dimecres»?", options: ["Dijous", "Dimarts", "Divendres", "Dissabte"], answer: "Dijous", explain: "L'ordre és: dilluns, dimarts, dimecres, dijous, divendres..." },
+          { topic: "Dies de la setmana", question: "Com es diu «viernes» en valencià?", options: ["Divendres", "Dissabte", "Dijous", "Dimarts"], answer: "Divendres", explain: "Viernes en valencià és divendres." },
+          { topic: "Dies de la setmana", question: "Quins dies formen el cap de setmana?", options: ["Dissabte i diumenge", "Dilluns i dimarts", "Dimecres i dijous", "Divendres i dilluns"], answer: "Dissabte i diumenge", explain: "El cap de setmana és dissabte i diumenge." },
+          { topic: "Els mesos", question: "Com es diu «enero» en valencià?", options: ["Gener", "Febrer", "Març", "Abril"], answer: "Gener", explain: "Enero en valencià és gener." },
+          { topic: "Els mesos", question: "Quin mes és «agost» en castellà?", options: ["Agosto", "Abril", "Octubre", "Junio"], answer: "Agosto", explain: "Agost correspon a agosto." },
+          { topic: "Les estacions", question: "Com es diu «primavera» en valencià?", options: ["Primavera", "Estiu", "Tardor", "Hivern"], answer: "Primavera", explain: "Primavera s'escriu igual en valencià i castellà." },
+          { topic: "Les estacions", question: "Com es diu «otoño» en valencià?", options: ["La tardor", "L'hivern", "L'estiu", "La primavera"], answer: "La tardor", explain: "Otoño en valencià és la tardor." },
+          { topic: "Vocabulari escolar", question: "Què vol dir «llibre»?", options: ["Libro", "Lápiz", "Goma", "Mochila"], answer: "Libro", explain: "Un llibre és un libro." },
+          { topic: "Vocabulari escolar", question: "Com es diu «estuche» en valencià?", options: ["Estoig", "Cadira", "Pissarra", "Taula"], answer: "Estoig", explain: "Estuche en valencià és estoig." },
+          { topic: "Salutacions", question: "Com es diu «buenos días» en valencià?", options: ["Bon dia", "Bona nit", "Adéu", "Fins demà"], answer: "Bon dia", explain: "Buenos días es diu bon dia." },
+          { topic: "Salutacions", question: "Com es diu «gracias» en valencià?", options: ["Gràcies", "Per favor", "Hola", "Bon vespre"], answer: "Gràcies", explain: "Gracias en valencià és gràcies." },
+          { topic: "Colors", question: "Com es diu «amarillo» en valencià?", options: ["Groc", "Roig / Vermell", "Blau", "Verd"], answer: "Groc", explain: "Amarillo en valencià és groc." },
+          { topic: "Colors", question: "Quin color és «verd»?", options: ["Verde", "Azul", "Blanco", "Negro"], answer: "Verde", explain: "Verd significa verde." },
+          { topic: "Animals", question: "Com es diu «perro» en valencià?", options: ["Gos", "Gat", "Ocell", "Peix"], answer: "Gos", explain: "Perro en valencià és gos." },
+          { topic: "Animals", question: "Com es diu «pájaro» en valencià?", options: ["Ocell", "Cavall", "Vaca", "Conill"], answer: "Ocell", explain: "Pájaro en valencià és ocell." }
+        ],
+
+        ingles: [
+          { topic: "Days of the week", question: "What day is «lunes» in English?", options: ["Monday", "Tuesday", "Friday", "Sunday"], answer: "Monday", explain: "Lunes en inglés es Monday." },
+          { topic: "Days of the week", question: "What day comes after Wednesday?", options: ["Thursday", "Tuesday", "Saturday", "Monday"], answer: "Thursday", explain: "Monday, Tuesday, Wednesday, Thursday..." },
+          { topic: "Days of the week", question: "How do you say «sábado» in English?", options: ["Saturday", "Sunday", "Friday", "Wednesday"], answer: "Saturday", explain: "Sábado en inglés es Saturday." },
+          { topic: "Days of the week", question: "How do you say «domingo» in English?", options: ["Sunday", "Monday", "Tuesday", "Thursday"], answer: "Sunday", explain: "Domingo en inglés es Sunday." },
+          { topic: "Months", question: "What month is «mayo» in English?", options: ["May", "March", "June", "July"], answer: "May", explain: "Mayo en inglés es May." },
+          { topic: "Months", question: "What does «September» mean?", options: ["Septiembre", "Julio", "Noviembre", "Diciembre"], answer: "Septiembre", explain: "September es septiembre." },
+          { topic: "Numbers", question: "What number is «twenty»?", options: ["20", "12", "30", "2"], answer: "20", explain: "Twenty es el número 20." },
+          { topic: "Numbers", question: "What number is «fifteen»?", options: ["15", "50", "5", "14"], answer: "15", explain: "Fifteen es 15." },
+          { topic: "Numbers", question: "What is 10 + 10 in English?", options: ["Twenty", "Twelve", "Ten", "Thirty"], answer: "Twenty", explain: "10 + 10 = 20 (twenty)." },
+          { topic: "Colors", question: "What color is «yellow»?", options: ["Amarillo", "Azul", "Verde", "Morado"], answer: "Amarillo", explain: "Yellow significa amarillo." },
+          { topic: "Colors", question: "How do you say «morado / violeta» in English?", options: ["Purple", "Orange", "Brown", "Pink"], answer: "Purple", explain: "Morado en inglés es purple." },
+          { topic: "School", question: "What is a «pencil case»?", options: ["Un estuche", "Una regla", "Una silla", "Una goma"], answer: "Un estuche", explain: "Pencil case es estuche." },
+          { topic: "School", question: "How do you say «libro» in English?", options: ["Book", "Pen", "Bag", "Desk"], answer: "Book", explain: "Libro en inglés es book." },
+          { topic: "Greetings", question: "What does «Good morning» mean?", options: ["Buenos días", "Buenas noches", "Hasta luego", "Por favor"], answer: "Buenos días", explain: "Good morning significa buenos días." },
+          { topic: "Greetings", question: "How do you say «gracias» in English?", options: ["Thank you", "Hello", "Sorry", "Please"], answer: "Thank you", explain: "Gracias en inglés es thank you." },
+          { topic: "Animals", question: "What animal is a «dog»?", options: ["Un perro", "Un gato", "Un pato", "Un pez"], answer: "Un perro", explain: "Dog significa perro." }
+        ],
+
+        cmedio: [
+          { topic: "Cuerpo humano", question: "¿Qué órgano bombea la sangre por todo el cuerpo?", options: ["El corazón", "Los pulmones", "El estómago", "El hígado"], answer: "El corazón", explain: "El corazón impulsa la sangre por el cuerpo." },
+          { topic: "Cuerpo humano", question: "¿Qué órganos usamos principalmente para respirar?", options: ["Los pulmones", "Los riñones", "Los oídos", "Los huesos"], answer: "Los pulmones", explain: "Los pulmones toman oxígeno del aire y expulsan dióxido de carbono." },
+          { topic: "Los sentidos", question: "¿Con qué sentido percibimos los sonidos?", options: ["El oído", "El olfato", "El tacto", "El gusto"], answer: "El oído", explain: "El sentido del oído capta los sonidos." },
+          { topic: "Salud", question: "¿Cuál es un hábito saludable diario?", options: ["Dormir suficientes horas y beber agua", "Comer chuches todo el día", "No lavarse nunca las manos", "Quedarse sin dormir"], answer: "Dormir suficientes horas y beber agua", explain: "Descansar, hidratarse y moverse cuidan la salud." },
+          { topic: "Naturaleza", question: "¿Qué necesitan las plantas para fabricar su alimento?", options: ["Luz solar, agua y aire", "Solo piedras y sombra", "Refresco y azúcar", "Hielo y oscuridad"], answer: "Luz solar, agua y aire", explain: "Las plantas usan luz del sol, agua y aire para crecer." },
+          { topic: "Agua", question: "¿En qué estado está el agua si la congelamos en el congelador?", options: ["Sólido (hielo)", "Gaseoso (vapor)", "Líquido caliente", "No cambia"], answer: "Sólido (hielo)", explain: "Al enfriarse por debajo de 0 °C, el agua pasa a estado sólido." },
+          { topic: "El tiempo y clima", question: "¿Qué instrumento mide la temperatura?", options: ["El termómetro", "La brújula", "La balanza", "La regla"], answer: "El termómetro", explain: "El termómetro mide la temperatura en grados." },
+          { topic: "Orientación", question: "¿Por dónde suele salir el sol aproximadamente?", options: ["Por el este", "Por el oeste", "Por el sur", "Por debajo de la tierra"], answer: "Por el este", explain: "El sol aparece por el este y se pone por el oeste." },
+          { topic: "Reciclaje", question: "¿En qué contenedor van el papel y el cartón?", options: ["Contenedor azul", "Contenedor amarillo", "Contenedor verde", "Contenedor rojo"], answer: "Contenedor azul", explain: "Papel y cartón van al contenedor azul." },
+          { topic: "Reciclaje", question: "¿Dónde se depositan los envases de plástico y latas?", options: ["Contenedor amarillo", "Contenedor azul", "Contenedor marrón", "Ninguno"], answer: "Contenedor amarillo", explain: "Envases de plástico, briks y latas van al amarillo." },
+          { topic: "Animales", question: "¿Cómo se llaman los animales que tienen columna vertebral?", options: ["Vertebrados", "Invertebrados", "Vegetales", "Minerales"], answer: "Vertebrados", explain: "Los vertebrados tienen esqueleto interno y columna vertebral." },
+          { topic: "Entorno", question: "¿Qué es un barrio o localidad?", options: ["Un lugar donde viven personas y hay servicios", "Un planeta lejano", "Un tipo de nube", "Una herramienta"], answer: "Un lugar donde viven personas y hay servicios", explain: "En la localidad compartimos calles, colegios, parques y servicios." }
+        ],
+
+        efisica: [
+          { topic: "Calentamiento", question: "¿Para qué sirve calentar antes de hacer deporte?", options: ["Preparar músculos y articulaciones y evitar lesiones", "Cansarse antes de empezar", "No tener que moverse después", "Saltarse el juego"], answer: "Preparar músculos y articulaciones y evitar lesiones", explain: "Calentar activa el cuerpo poco a poco y previene lesiones." },
+          { topic: "Higiene deportiva", question: "¿Qué conviene hacer al terminar una sesión de Educación Física?", options: ["Estirar, asearse e hidratarse", "Correr más rápido sin parar", "Beber refrescos con gas de golpe", "Quedarse helado sin abrigo"], answer: "Estirar, asearse e hidratarse", explain: "Al acabar conviene estirar suavemente, beber agua y cuidar la higiene." },
+          { topic: "Juegos en equipo", question: "¿Qué es fundamental para jugar bien en equipo?", options: ["Respetar las reglas y colaborar con los compañeros", "Quitarle el balón a todos sin pasar", "Enfadarse si no ganas", "No escuchar al árbitro o profe"], answer: "Respetar las reglas y colaborar con los compañeros", explain: "El juego limpio, el respeto y la ayuda mutua son clave en equipo." },
+          { topic: "Habilidades motrices", question: "¿Cuál de estas acciones es un desplazamiento?", options: ["Correr o trotar", "Girar una pelota en el dedo", "Sentarse en el suelo", "Mirar el reloj"], answer: "Correr o trotar", explain: "Desplazarse es moverse de un lugar a otro (andar, correr, saltar)." },
+          { topic: "Equilibrio", question: "¿Qué trabajamos al caminar sobre una línea sin caernos?", options: ["El equilibrio", "La vista en la oscuridad", "La memoria de números", "El gusto"], answer: "El equilibrio", explain: "Mantenerse estable sin caer trabaja el equilibrio." },
+          { topic: "Coordinación", question: "¿Qué cualidad usamos al botar un balón mientras caminamos?", options: ["Coordinación óculo-manual", "Fuerza máxima de pesas", "Respiración bajo el agua", "Olfato"], answer: "Coordinación óculo-manual", explain: "Coordinar la vista con el movimiento de las manos es coordinación óculo-manual." },
+          { topic: "Deportes", question: "¿En qué deporte se marca gol usando principalmente los pies y la cabeza?", options: ["Fútbol", "Baloncesto", "Tenis", "Natación"], answer: "Fútbol", explain: "En fútbol se juega con los pies y otras partes del cuerpo, sin usar manos salvo el portero." },
+          { topic: "Deportes", question: "¿En qué deporte se intenta encestar un balón en un aro?", options: ["Baloncesto", "Fútbol sala", "Atletismo", "Ciclismo"], answer: "Baloncesto", explain: "En baloncesto se bota, pasa y lanza a canasta." },
+          { topic: "Seguridad", question: "¿Qué calzado es más adecuado para Educación Física?", options: ["Zapatillas deportivas sujetas", "Chanclas de playa", "Zapatos de vestir resbaladizos", "Ir descalzo por el patio"], answer: "Zapatillas deportivas sujetas", explain: "Las deportivas sujetas dan agarre y protegen los pies." },
+          { topic: "Resistencia", question: "¿Qué hacemos si notamos mucho cansancio al correr?", options: ["Bajar el ritmo, respirar hondo y avisar si nos mareamos", "Aguantar sin respirar", "Seguir corriendo sin parar", "Esconderse"], answer: "Bajar el ritmo, respirar hondo y avisar si nos mareamos", explain: "Escuchar al cuerpo y regular el esfuerzo es parte de la educación física." },
+          { topic: "Fair play", question: "¿Qué significa tener deportividad («fair play»)?", options: ["Aceptar el resultado y tratar bien a todos", "Hacer trampas para ganar", "Burlarse del rival", "Romper el material"], answer: "Aceptar el resultado y tratar bien a todos", explain: "La deportividad es jugar limpio, respetar y animar." },
+          { topic: "Lateralidad", question: "Si pateas el balón con la pierna derecha y escribes con la mano derecha, ¿qué predomina?", options: ["El lado derecho", "El lado izquierdo", "Ningún lado", "Solo la cabeza"], answer: "El lado derecho", explain: "Es la preferencia por el lado derecho del cuerpo." }
+        ],
+
+        musica: [
+          { topic: "Notas musicales", question: "¿Cuál es la nota que va después de «mi» en la escala?", options: ["Fa", "Do", "La", "Si"], answer: "Fa", explain: "La escala es: do, re, mi, fa, sol, la, si." },
+          { topic: "Notas musicales", question: "¿Cuál es la primera nota de la escala musical?", options: ["Do", "Sol", "Re", "Mi"], answer: "Do", explain: "La escala empieza en Do." },
+          { topic: "Ritmo", question: "¿Qué figura musical suele durar 1 pulso o tiempo?", options: ["La negra", "La redonda", "La fusa", "El silencio eterno"], answer: "La negra", explain: "En compases habituales como 4/4, la negra equivale a 1 tiempo." },
+          { topic: "Sonido", question: "¿Qué cualidad del sonido distingue si es grave o agudo?", options: ["La altura (tono)", "El color", "El peso", "La temperatura"], answer: "La altura (tono)", explain: "La altura diferencia sonidos graves (bajos) y agudos (altos)." },
+          { topic: "Sonido", question: "¿Qué cualidad indica si un sonido es fuerte o suave?", options: ["La intensidad", "La duración", "El timbre", "El compás"], answer: "La intensidad", explain: "La intensidad es el volumen: fuerte o suave." },
+          { topic: "Instrumentos", question: "¿A qué familia pertenece la guitarra?", options: ["Cuerda", "Viento", "Percusión", "Electrónica"], answer: "Cuerda", explain: "La guitarra produce sonido al vibrar sus cuerdas." },
+          { topic: "Instrumentos", question: "¿A qué familia pertenece el tambor o pandero?", options: ["Percusión", "Cuerda", "Viento madera", "Teclado"], answer: "Percusión", explain: "El tambor y el pandero son instrumentos de percusión." },
+          { topic: "Silencio", question: "¿Qué indica un silencio en música?", options: ["Un momento sin sonido pero con duración", "Que se acaba la canción", "Tocar muy fuerte", "Cambiar de instrumento"], answer: "Un momento sin sonido pero con duración", explain: "Los silencios forman parte del ritmo y tienen su duración." }
+        ],
+
+        plastica: [
+          { topic: "Colores primarios", question: "¿Cuáles son los tres colores primarios pigmento tradicionales?", options: ["Rojo, amarillo y azul", "Verde, naranja y morado", "Blanco, negro y gris", "Rosa, marrón y beige"], answer: "Rojo, amarillo y azul", explain: "Con rojo, amarillo y azul se obtienen muchas mezclas." },
+          { topic: "Colores secundarios", question: "¿Qué color sale al mezclar azul y amarillo?", options: ["Verde", "Naranja", "Violeta", "Marrón"], answer: "Verde", explain: "Azul + amarillo = verde." },
+          { topic: "Colores secundarios", question: "¿Qué color obtenemos mezclando rojo y amarillo?", options: ["Naranja", "Verde", "Azul marino", "Gris"], answer: "Naranja", explain: "Rojo + amarillo = naranja." },
+          { topic: "Colores secundarios", question: "¿Qué color resulta de mezclar rojo y azul?", options: ["Morado / Violeta", "Verde", "Amarillo", "Blanco"], answer: "Morado / Violeta", explain: "Rojo + azul = morado o violeta." },
+          { topic: "Formas y geometría", question: "¿Cuántos lados tiene un hexágono?", options: ["6 lados", "5 lados", "4 lados", "8 lados"], answer: "6 lados", explain: "Un hexágono tiene 6 lados." },
+          { topic: "Simetría", question: "¿Qué ocurre en una figura simétrica respecto a un eje?", options: ["Ambas partes se reflejan igual", "Un lado es gigante y otro diminuto", "No tiene lados", "Siempre es un círculo"], answer: "Ambas partes se reflejan igual", explain: "El eje de simetría divide una figura en dos mitades iguales." },
+          { topic: "Texturas", question: "¿Qué es la textura táctil?", options: ["Cómo se siente al tocar (lisa, rugosa, suave)", "El tamaño de un folio", "El nombre del pintor", "El color del cielo"], answer: "Cómo se siente al tocar (lisa, rugosa, suave)", explain: "La textura táctil se percibe al tocar o imaginar el tacto." },
+          { topic: "Técnicas", question: "¿Qué es hacer un «collage»?", options: ["Componer pegando recortes, papeles o materiales", "Pintar solo con ceras", "Hacer una foto", "Escribir un poema"], answer: "Componer pegando recortes, papeles o materiales", explain: "En el collage se combinan distintos recortes y materiales sobre una base." }
+        ],
+
+        religion: [
+          { topic: "Valores", question: "¿Qué significa actuar con empatía?", options: ["Ponerse en el lugar del otro y comprenderle", "Quitarle lo que tiene", "No ayudar nunca", "Ignorar a los demás"], answer: "Ponerse en el lugar del otro y comprenderle", explain: "La empatía ayuda a entender cómo se sienten los demás." },
+          { topic: "Convivencia", question: "¿Qué ayuda a resolver un conflicto de forma pacífica?", options: ["Hablar, escuchar y buscar acuerdos", "Gritar o empujar", "Hacer trampas", "Culpar siempre a otro"], answer: "Hablar, escuchar y buscar acuerdos", explain: "El diálogo y el respeto ayudan a convivir mejor." },
+          { topic: "Solidaridad", question: "¿Qué es ser solidario?", options: ["Ayudar y compartir con quien lo necesita", "Guardarlo todo para uno mismo", "Reírse de los problemas ajenos", "No participar"], answer: "Ayudar y compartir con quien lo necesita", explain: "La solidaridad consiste en apoyar y compartir." },
+          { topic: "Gratitud", question: "¿Qué expresamos cuando damos las gracias?", options: ["Agradecimiento por lo recibido", "Enfado", "Prisa", "Indiferencia"], answer: "Agradecimiento por lo recibido", explain: "Dar las gracias reconoce la ayuda o el detalle de alguien." },
+          { topic: "Cuidado del mundo", question: "¿Cómo cuidamos la creación o naturaleza en el día a día?", options: ["Cuidando plantas, animales y no tirando basura", "Dejando el grifo abierto", "Rompiendo ramas por diversión", "Tirando residuos al suelo"], answer: "Cuidando plantas, animales y no tirando basura", explain: "Cuidar el entorno es una responsabilidad compartida." },
+          { topic: "Perdón", question: "¿Qué pedimos cuando nos equivocamos y queremos arreglarlo?", options: ["Disculpas o perdón", "Un premio", "Silencio absoluto", "Más deberes"], answer: "Disculpas o perdón", explain: "Reconocer el error y pedir perdón ayuda a reparar la relación." }
+        ],
+
+        lectura: [
+          {
+            storyTitle: "📖 El huerto del patio",
+            story: "En el patio del colegio han preparado un pequeño huerto. Los lunes y miércoles riegan las lechugas y tomates, y los viernes anotan cuánto han crecido.",
+            question: "¿Qué días riegan las plantas del huerto?",
+            options: ["Lunes y miércoles", "Martes y jueves", "Solo los viernes", "Todos los fines de semana"],
+            answer: "Lunes y miércoles",
+            explain: "El texto dice que riegan los lunes y miércoles."
+          },
+          {
+            storyTitle: "📖 El huerto del patio",
+            story: "En el patio del colegio han preparado un pequeño huerto. Los lunes y miércoles riegan las lechugas y tomates, y los viernes anotan cuánto han crecido.",
+            question: "¿Qué hacen los viernes en el huerto?",
+            options: ["Anotan cuánto han crecido", "Siembra patatas", "Cierran con llave", "Cortan todos los árboles"],
+            answer: "Anotan cuánto han crecido",
+            explain: "Los viernes apuntan el crecimiento de las plantas."
+          },
+          {
+            storyTitle: "📖 La mochila de Sofía",
+            story: "Sofía preparó su mochila la noche anterior: metió el estuche, la botella de agua, el cuaderno de Mates y la merienda. Así salió tranquila por la mañana.",
+            question: "¿Cuándo preparó Sofía la mochila?",
+            options: ["La noche anterior", "En el recreo", "Después de cenar del viernes", "No la preparó"],
+            answer: "La noche anterior",
+            explain: "La preparó la noche anterior para ir tranquila."
+          },
+          {
+            storyTitle: "📖 La mochila de Sofía",
+            story: "Sofía preparó su mochila la noche anterior: metió el estuche, la botella de agua, el cuaderno de Mates y la merienda. Así salió tranquila por la mañana.",
+            question: "¿Por qué salió tranquila por la mañana?",
+            options: ["Porque ya lo tenía todo listo", "Porque faltaba a clase", "Porque no llevaba agua", "Porque corrió mucho"],
+            answer: "Porque ya lo tenía todo listo",
+            explain: "Al tenerlo preparado de la noche anterior, salió sin prisas."
+          },
+          {
+            storyTitle: "📖 Excursión al parque",
+            story: "La clase salió a las 9:00 hacia el parque y regresó a las 12:30. Durante el paseo observaron pájaros, hojas caídas y árboles grandes.",
+            question: "¿A qué hora regresaron al colegio?",
+            options: ["A las 12:30", "A las 9:00", "A las 15:00", "A las 8:00"],
+            answer: "A las 12:30",
+            explain: "El texto indica que regresaron a las 12:30."
+          },
+          {
+            storyTitle: "📖 Excursión al parque",
+            story: "La clase salió a las 9:00 hacia el parque y regresó a las 12:30. Durante el paseo observaron pájaros, hojas caídas y árboles grandes.",
+            question: "¿Qué observaron durante el paseo?",
+            options: ["Pájaros, hojas caídas y árboles", "Barcos y faros", "Trenes y estaciones", "Nieve y pingüinos"],
+            answer: "Pájaros, hojas caídas y árboles",
+            explain: "Observaron pájaros, hojas caídas y árboles grandes."
+          },
+          {
+            storyTitle: "📖 El concurso de puzles",
+            story: "Dani y su hermana armaron un puzle de 150 piezas en una tarde lluviosa. Empezaron por las esquinas y los bordes antes de completar el centro.",
+            question: "¿Por dónde empezaron a armar el puzle?",
+            options: ["Por las esquinas y los bordes", "Por el centro", "Por la última pieza", "No empezaron"],
+            answer: "Por las esquinas y los bordes",
+            explain: "Comenzaron por las esquinas y los bordes."
+          },
+          {
+            storyTitle: "📖 El concurso de puzles",
+            story: "Dani y su hermana armaron un puzle de 150 piezas en una tarde lluviosa. Empezaron por las esquinas y los bordes antes de completar el centro.",
+            question: "¿Cómo era la tarde en que hicieron el puzle?",
+            options: ["Lluviosa", "Muy calurosa de playa", "De nieve", "De noche cerrada"],
+            answer: "Lluviosa",
+            explain: "Fue una tarde lluviosa."
+          }
+        ]
+      };
+
+      // Arranque inicial
+      renderTopbar();
+      renderSubjectsGrid();
+      renderTablesView();
+      renderPointsView();
+
+      if (!state.hasConfiguredProfile) {
+        openProfileModal(true);
       }
-    });
-window.QUESTION_BANK = {
-      lengua: [
-        { topic: "Sílabas", question: "¿Cuántas sílabas tiene la palabra «mariposa»?", options: ["4 sílabas", "3 sílabas", "5 sílabas", "2 sílabas"], answer: "4 sílabas", explain: "Ma-ri-po-sa tiene 4 sílabas." },
-        { topic: "Sílabas", question: "¿Cómo se separa correctamente en sílabas «cuaderno»?", options: ["cua-der-no", "cu-a-der-no", "cuad-er-no", "cua-dern-o"], answer: "cua-der-no", explain: "«cua» forma un diptongo y no se separa: cua-der-no." },
-        { topic: "Sílaba tónica", question: "¿Cuál es la sílaba tónica de «lápiz»?", options: ["lá", "piz", "ambas", "ninguna"], answer: "lá", explain: "Se pronuncia con más fuerza en LÁ-piz." },
-        { topic: "Sílaba tónica", question: "¿Dónde carga la voz en «camión»?", options: ["mión", "ca", "ninguna", "las dos"], answer: "mión", explain: "En ca-MIÓN la sílaba fuerte es la última: mión." },
-        { topic: "Mayúsculas", question: "¿Qué palabras se escriben siempre con mayúscula inicial?", options: ["Nombres propios y inicio de frase", "Todos los sustantivos", "Todos los verbos", "Solo los meses"], answer: "Nombres propios y inicio de frase", explain: "Se escriben con mayúscula al empezar una oración y en nombres propios (personas, ciudades, ríos)." },
-        { topic: "Puntuación", question: "¿Qué signo se pone al final de una pregunta?", options: ["¿ ? (interrogación)", "¡ ! (exclamación)", "Dos puntos (:)", "Punto y coma (;)"], answer: "¿ ? (interrogación)", explain: "Las preguntas van entre signos de interrogación: ¿...?" },
-        { topic: "Puntuación", question: "¿Qué signo expresa sorpresa, alegría o un grito?", options: ["¡ ! (exclamación)", "¿ ? (interrogación)", "La coma (,)", "El guion (-)"], answer: "¡ ! (exclamación)", explain: "Los signos de exclamación muestran emoción o sorpresa: ¡Qué alegría!" },
-        { topic: "Sinónimos", question: "¿Cuál es un sinónimo de «bonito»?", options: ["Hermoso", "Feo", "Roto", "Oscuro"], answer: "Hermoso", explain: "«Hermoso» significa lo mismo o parecido a «bonito»." },
-        { topic: "Sinónimos", question: "¿Qué palabra significa casi lo mismo que «rápido»?", options: ["Veloz", "Lento", "Pesado", "Tranquilo"], answer: "Veloz", explain: "«Veloz» es un sinónimo de «rápido»." },
-        { topic: "Antónimos", question: "¿Cuál es el antónimo de «subir»?", options: ["Bajar", "Escalar", "Trepar", "Elevar"], answer: "Bajar", explain: "«Bajar» es lo contrario de «subir»." },
-        { topic: "Antónimos", question: "¿Cuál es el antónimo de «valiente»?", options: ["Cobarde", "Atrevido", "Fuerte", "Valeroso"], answer: "Cobarde", explain: "«Cobarde» es lo opuesto a «valiente»." },
-        { topic: "Sustantivos", question: "¿Cuál de estas palabras es un sustantivo común?", options: ["Perro", "Alicante", "Correr", "Azul"], answer: "Perro", explain: "«Perro» nombra a un animal común; «Alicante» es nombre propio." },
-        { topic: "Adjetivos", question: "¿Qué palabra es un adjetivo en «El coche rojo»?", options: ["rojo", "coche", "el", "ninguna"], answer: "rojo", explain: "«Rojo» dice cómo es el sustantivo «coche»." },
-        { topic: "Verbos", question: "¿Qué palabra indica una acción en «Laura escribe un cuento»?", options: ["escribe", "Laura", "cuento", "un"], answer: "escribe", explain: "«Escribe» es el verbo porque indica la acción." },
-        { topic: "Ortografía", question: "¿Cómo se escribe correctamente?", options: ["Huevo", "Uebo", "Hüebo", "Uvevo"], answer: "Huevo", explain: "Las palabras que empiezan por «hue-» se escriben con H." },
-        { topic: "Ortografía", question: "¿Cuál está bien escrita?", options: ["Campo", "Canpo", "Cambo", "Canbo"], answer: "Campo", explain: "Antes de P y B se escribe M: campo." }
-      ],
-
-      valencia: [
-        { topic: "Dies de la setmana", question: "Com es diu «lunes» en valencià?", options: ["Dilluns", "Dimarts", "Dijous", "Diumenge"], answer: "Dilluns", explain: "Lunes en valencià és dilluns." },
-        { topic: "Dies de la setmana", question: "Quin dia ve després de «dimecres»?", options: ["Dijous", "Dimarts", "Divendres", "Dissabte"], answer: "Dijous", explain: "L'ordre és: dilluns, dimarts, dimecres, dijous, divendres..." },
-        { topic: "Dies de la setmana", question: "Com es diu «viernes» en valencià?", options: ["Divendres", "Dissabte", "Dijous", "Dimarts"], answer: "Divendres", explain: "Viernes en valencià és divendres." },
-        { topic: "Dies de la setmana", question: "Quins dies formen el cap de setmana?", options: ["Dissabte i diumenge", "Dilluns i dimarts", "Dimecres i dijous", "Divendres i dilluns"], answer: "Dissabte i diumenge", explain: "El cap de setmana és dissabte i diumenge." },
-        { topic: "Els mesos", question: "Com es diu «enero» en valencià?", options: ["Gener", "Febrer", "Març", "Abril"], answer: "Gener", explain: "Enero en valencià és gener." },
-        { topic: "Els mesos", question: "Quin mes és «agost» en castellà?", options: ["Agosto", "Abril", "Octubre", "Junio"], answer: "Agosto", explain: "Agost correspon a agosto." },
-        { topic: "Les estacions", question: "Com es diu «primavera» en valencià?", options: ["Primavera", "Estiu", "Tardor", "Hivern"], answer: "Primavera", explain: "Primavera s'escriu igual en valencià i castellà." },
-        { topic: "Les estacions", question: "Com es diu «otoño» en valencià?", options: ["La tardor", "L'hivern", "L'estiu", "La primavera"], answer: "La tardor", explain: "Otoño en valencià és la tardor." },
-        { topic: "Vocabulari escolar", question: "Què vol dir «llibre»?", options: ["Libro", "Lápiz", "Goma", "Mochila"], answer: "Libro", explain: "Un llibre és un libro." },
-        { topic: "Vocabulari escolar", question: "Com es diu «estuche» en valencià?", options: ["Estoig", "Cadira", "Pissarra", "Taula"], answer: "Estoig", explain: "Estuche en valencià és estoig." },
-        { topic: "Salutacions", question: "Com es diu «buenos días» en valencià?", options: ["Bon dia", "Bona nit", "Adéu", "Fins demà"], answer: "Bon dia", explain: "Buenos días es diu bon dia." },
-        { topic: "Salutacions", question: "Com es diu «gracias» en valencià?", options: ["Gràcies", "Per favor", "Hola", "Bon vespre"], answer: "Gràcies", explain: "Gracias en valencià és gràcies." },
-        { topic: "Colors", question: "Com es diu «amarillo» en valencià?", options: ["Groc", "Roig / Vermell", "Blau", "Verd"], answer: "Groc", explain: "Amarillo en valencià és groc." },
-        { topic: "Colors", question: "Quin color és «verd»?", options: ["Verde", "Azul", "Blanco", "Negro"], answer: "Verde", explain: "Verd significa verde." },
-        { topic: "Animals", question: "Com es diu «perro» en valencià?", options: ["Gos", "Gat", "Ocell", "Peix"], answer: "Gos", explain: "Perro en valencià és gos." },
-        { topic: "Animals", question: "Com es diu «pájaro» en valencià?", options: ["Ocell", "Cavall", "Vaca", "Conill"], answer: "Ocell", explain: "Pájaro en valencià és ocell." }
-      ],
-
-      ingles: [
-        { topic: "Days of the week", question: "What day is «lunes» in English?", options: ["Monday", "Tuesday", "Friday", "Sunday"], answer: "Monday", explain: "Lunes en inglés es Monday." },
-        { topic: "Days of the week", question: "What day comes after Wednesday?", options: ["Thursday", "Tuesday", "Saturday", "Monday"], answer: "Thursday", explain: "Monday, Tuesday, Wednesday, Thursday..." },
-        { topic: "Days of the week", question: "How do you say «sábado» in English?", options: ["Saturday", "Sunday", "Friday", "Wednesday"], answer: "Saturday", explain: "Sábado en inglés es Saturday." },
-        { topic: "Days of the week", question: "How do you say «domingo» in English?", options: ["Sunday", "Monday", "Tuesday", "Thursday"], answer: "Sunday", explain: "Domingo en inglés es Sunday." },
-        { topic: "Months", question: "What month is «mayo» in English?", options: ["May", "March", "June", "July"], answer: "May", explain: "Mayo en inglés es May." },
-        { topic: "Months", question: "What does «September» mean?", options: ["Septiembre", "Julio", "Noviembre", "Diciembre"], answer: "Septiembre", explain: "September es septiembre." },
-        { topic: "Numbers", question: "What number is «twenty»?", options: ["20", "12", "30", "2"], answer: "20", explain: "Twenty es el número 20." },
-        { topic: "Numbers", question: "What number is «fifteen»?", options: ["15", "50", "5", "14"], answer: "15", explain: "Fifteen es 15." },
-        { topic: "Numbers", question: "What is 10 + 10 in English?", options: ["Twenty", "Twelve", "Ten", "Thirty"], answer: "Twenty", explain: "10 + 10 = 20 (twenty)." },
-        { topic: "Colors", question: "What color is «yellow»?", options: ["Amarillo", "Azul", "Verde", "Morado"], answer: "Amarillo", explain: "Yellow significa amarillo." },
-        { topic: "Colors", question: "How do you say «morado / violeta» in English?", options: ["Purple", "Orange", "Brown", "Pink"], answer: "Purple", explain: "Morado en inglés es purple." },
-        { topic: "School", question: "What is a «pencil case»?", options: ["Un estuche", "Una regla", "Una silla", "Una goma"], answer: "Un estuche", explain: "Pencil case es estuche." },
-        { topic: "School", question: "How do you say «libro» in English?", options: ["Book", "Pen", "Bag", "Desk"], answer: "Book", explain: "Libro en inglés es book." },
-        { topic: "Greetings", question: "What does «Good morning» mean?", options: ["Buenos días", "Buenas noches", "Hasta luego", "Por favor"], answer: "Buenos días", explain: "Good morning significa buenos días." },
-        { topic: "Greetings", question: "How do you say «gracias» in English?", options: ["Thank you", "Hello", "Sorry", "Please"], answer: "Thank you", explain: "Gracias en inglés es thank you." },
-        { topic: "Animals", question: "What animal is a «dog»?", options: ["Un perro", "Un gato", "Un pato", "Un pez"], answer: "Un perro", explain: "Dog significa perro." }
-      ],
-
-      cmedio: [
-        { topic: "Cuerpo humano", question: "¿Qué órgano bombea la sangre por todo el cuerpo?", options: ["El corazón", "Los pulmones", "El estómago", "El hígado"], answer: "El corazón", explain: "El corazón impulsa la sangre por el cuerpo." },
-        { topic: "Cuerpo humano", question: "¿Qué órganos usamos principalmente para respirar?", options: ["Los pulmones", "Los riñones", "Los oídos", "Los huesos"], answer: "Los pulmones", explain: "Los pulmones toman oxígeno del aire y expulsan dióxido de carbono." },
-        { topic: "Los sentidos", question: "¿Con qué sentido percibimos los sonidos?", options: ["El oído", "El olfato", "El tacto", "El gusto"], answer: "El oído", explain: "El sentido del oído capta los sonidos." },
-        { topic: "Salud", question: "¿Cuál es un hábito saludable diario?", options: ["Dormir suficientes horas y beber agua", "Comer chuches todo el día", "No lavarse nunca las manos", "Quedarse sin dormir"], answer: "Dormir suficientes horas y beber agua", explain: "Descansar, hidratarse y moverse cuidan la salud." },
-        { topic: "Naturaleza", question: "¿Qué necesitan las plantas para fabricar su alimento?", options: ["Luz solar, agua y aire", "Solo piedras y sombra", "Refresco y azúcar", "Hielo y oscuridad"], answer: "Luz solar, agua y aire", explain: "Las plantas usan luz del sol, agua y aire para crecer." },
-        { topic: "Agua", question: "¿En qué estado está el agua si la congelamos en el congelador?", options: ["Sólido (hielo)", "Gaseoso (vapor)", "Líquido caliente", "No cambia"], answer: "Sólido (hielo)", explain: "Al enfriarse por debajo de 0 °C, el agua pasa a estado sólido." },
-        { topic: "El tiempo y clima", question: "¿Qué instrumento mide la temperatura?", options: ["El termómetro", "La brújula", "La balanza", "La regla"], answer: "El termómetro", explain: "El termómetro mide la temperatura en grados." },
-        { topic: "Orientación", question: "¿Por dónde suele salir el sol aproximadamente?", options: ["Por el este", "Por el oeste", "Por el sur", "Por debajo de la tierra"], answer: "Por el este", explain: "El sol aparece por el este y se pone por el oeste." },
-        { topic: "Reciclaje", question: "¿En qué contenedor van el papel y el cartón?", options: ["Contenedor azul", "Contenedor amarillo", "Contenedor verde", "Contenedor rojo"], answer: "Contenedor azul", explain: "Papel y cartón van al contenedor azul." },
-        { topic: "Reciclaje", question: "¿Dónde se depositan los envases de plástico y latas?", options: ["Contenedor amarillo", "Contenedor azul", "Contenedor marrón", "Ninguno"], answer: "Contenedor amarillo", explain: "Envases de plástico, briks y latas van al amarillo." },
-        { topic: "Animales", question: "¿Cómo se llaman los animales que tienen columna vertebral?", options: ["Vertebrados", "Invertebrados", "Vegetales", "Minerales"], answer: "Vertebrados", explain: "Los vertebrados tienen esqueleto interno y columna vertebral." },
-        { topic: "Entorno", question: "¿Qué es un barrio o localidad?", options: ["Un lugar donde viven personas y hay servicios", "Un planeta lejano", "Un tipo de nube", "Una herramienta"], answer: "Un lugar donde viven personas y hay servicios", explain: "En la localidad compartimos calles, colegios, parques y servicios." }
-      ],
-
-      efisica: [
-        { topic: "Calentamiento", question: "¿Para qué sirve calentar antes de hacer deporte?", options: ["Preparar músculos y articulaciones y evitar lesiones", "Cansarse antes de empezar", "No tener que moverse después", "Saltarse el juego"], answer: "Preparar músculos y articulaciones y evitar lesiones", explain: "Calentar activa el cuerpo poco a poco y previene lesiones." },
-        { topic: "Higiene deportiva", question: "¿Qué conviene hacer al terminar una sesión de Educación Física?", options: ["Estirar, asearse e hidratarse", "Correr más rápido sin parar", "Beber refrescos con gas de golpe", "Quedarse helado sin abrigo"], answer: "Estirar, asearse e hidratarse", explain: "Al acabar conviene estirar suavemente, beber agua y cuidar la higiene." },
-        { topic: "Juegos en equipo", question: "¿Qué es fundamental para jugar bien en equipo?", options: ["Respetar las reglas y colaborar con los compañeros", "Quitarle el balón a todos sin pasar", "Enfadarse si no ganas", "No escuchar al árbitro o profe"], answer: "Respetar las reglas y colaborar con los compañeros", explain: "El juego limpio, el respeto y la ayuda mutua son clave en equipo." },
-        { topic: "Habilidades motrices", question: "¿Cuál de estas acciones es un desplazamiento?", options: ["Correr o trotar", "Girar una pelota en el dedo", "Sentarse en el suelo", "Mirar el reloj"], answer: "Correr o trotar", explain: "Desplazarse es moverse de un lugar a otro (andar, correr, saltar)." },
-        { topic: "Equilibrio", question: "¿Qué trabajamos al caminar sobre una línea sin caernos?", options: ["El equilibrio", "La vista en la oscuridad", "La memoria de números", "El gusto"], answer: "El equilibrio", explain: "Mantenerse estable sin caer trabaja el equilibrio." },
-        { topic: "Coordinación", question: "¿Qué cualidad usamos al botar un balón mientras caminamos?", options: ["Coordinación óculo-manual", "Fuerza máxima de pesas", "Respiración bajo el agua", "Olfato"], answer: "Coordinación óculo-manual", explain: "Coordinar la vista con el movimiento de las manos es coordinación óculo-manual." },
-        { topic: "Deportes", question: "¿En qué deporte se marca gol usando principalmente los pies y la cabeza?", options: ["Fútbol", "Baloncesto", "Tenis", "Natación"], answer: "Fútbol", explain: "En fútbol se juega con los pies y otras partes del cuerpo, sin usar manos salvo el portero." },
-        { topic: "Deportes", question: "¿En qué deporte se intenta encestar un balón en un aro?", options: ["Baloncesto", "Fútbol sala", "Atletismo", "Ciclismo"], answer: "Baloncesto", explain: "En baloncesto se bota, pasa y lanza a canasta." },
-        { topic: "Seguridad", question: "¿Qué calzado es más adecuado para Educación Física?", options: ["Zapatillas deportivas sujetas", "Chanclas de playa", "Zapatos de vestir resbaladizos", "Ir descalzo por el patio"], answer: "Zapatillas deportivas sujetas", explain: "Las deportivas sujetas dan agarre y protegen los pies." },
-        { topic: "Resistencia", question: "¿Qué hacemos si notamos mucho cansancio al correr?", options: ["Bajar el ritmo, respirar hondo y avisar si nos mareamos", "Aguantar sin respirar", "Seguir corriendo sin parar", "Esconderse"], answer: "Bajar el ritmo, respirar hondo y avisar si nos mareamos", explain: "Escuchar al cuerpo y regular el esfuerzo es parte de la educación física." },
-        { topic: "Fair play", question: "¿Qué significa tener deportividad («fair play»)?", options: ["Aceptar el resultado y tratar bien a todos", "Hacer trampas para ganar", "Burlarse del rival", "Romper el material"], answer: "Aceptar el resultado y tratar bien a todos", explain: "La deportividad es jugar limpio, respetar y animar." },
-        { topic: "Lateralidad", question: "Si pateas el balón con la pierna derecha y escribes con la mano derecha, ¿qué predomina?", options: ["El lado derecho", "El lado izquierdo", "Ningún lado", "Solo la cabeza"], answer: "El lado derecho", explain: "Es la preferencia por el lado derecho del cuerpo." }
-      ],
-
-      musica: [
-        { topic: "Notas musicales", question: "¿Cuál es la nota que va después de «mi» en la escala?", options: ["Fa", "Do", "La", "Si"], answer: "Fa", explain: "La escala es: do, re, mi, fa, sol, la, si." },
-        { topic: "Notas musicales", question: "¿Cuál es la primera nota de la escala musical?", options: ["Do", "Sol", "Re", "Mi"], answer: "Do", explain: "La escala empieza en Do." },
-        { topic: "Ritmo", question: "¿Qué figura musical suele durar 1 pulso o tiempo?", options: ["La negra", "La redonda", "La fusa", "El silencio eterno"], answer: "La negra", explain: "En compases habituales como 4/4, la negra equivale a 1 tiempo." },
-        { topic: "Sonido", question: "¿Qué cualidad del sonido distingue si es grave o agudo?", options: ["La altura (tono)", "El color", "El peso", "La temperatura"], answer: "La altura (tono)", explain: "La altura diferencia sonidos graves (bajos) y agudos (altos)." },
-        { topic: "Sonido", question: "¿Qué cualidad indica si un sonido es fuerte o suave?", options: ["La intensidad", "La duración", "El timbre", "El compás"], answer: "La intensidad", explain: "La intensidad es el volumen: fuerte o suave." },
-        { topic: "Instrumentos", question: "¿A qué familia pertenece la guitarra?", options: ["Cuerda", "Viento", "Percusión", "Electrónica"], answer: "Cuerda", explain: "La guitarra produce sonido al vibrar sus cuerdas." },
-        { topic: "Instrumentos", question: "¿A qué familia pertenece el tambor o pandero?", options: ["Percusión", "Cuerda", "Viento madera", "Teclado"], answer: "Percusión", explain: "El tambor y el pandero son instrumentos de percusión." },
-        { topic: "Silencio", question: "¿Qué indica un silencio en música?", options: ["Un momento sin sonido pero con duración", "Que se acaba la canción", "Tocar muy fuerte", "Cambiar de instrumento"], answer: "Un momento sin sonido pero con duración", explain: "Los silencios forman parte del ritmo y tienen su duración." }
-      ],
-
-      plastica: [
-        { topic: "Colores primarios", question: "¿Cuáles son los tres colores primarios pigmento tradicionales?", options: ["Rojo, amarillo y azul", "Verde, naranja y morado", "Blanco, negro y gris", "Rosa, marrón y beige"], answer: "Rojo, amarillo y azul", explain: "Con rojo, amarillo y azul se obtienen muchas mezclas." },
-        { topic: "Colores secundarios", question: "¿Qué color sale al mezclar azul y amarillo?", options: ["Verde", "Naranja", "Violeta", "Marrón"], answer: "Verde", explain: "Azul + amarillo = verde." },
-        { topic: "Colores secundarios", question: "¿Qué color obtenemos mezclando rojo y amarillo?", options: ["Naranja", "Verde", "Azul marino", "Gris"], answer: "Naranja", explain: "Rojo + amarillo = naranja." },
-        { topic: "Colores secundarios", question: "¿Qué color resulta de mezclar rojo y azul?", options: ["Morado / Violeta", "Verde", "Amarillo", "Blanco"], answer: "Morado / Violeta", explain: "Rojo + azul = morado o violeta." },
-        { topic: "Formas y geometría", question: "¿Cuántos lados tiene un hexágono?", options: ["6 lados", "5 lados", "4 lados", "8 lados"], answer: "6 lados", explain: "Un hexágono tiene 6 lados." },
-        { topic: "Simetría", question: "¿Qué ocurre en una figura simétrica respecto a un eje?", options: ["Ambas partes se reflejan igual", "Un lado es gigante y otro diminuto", "No tiene lados", "Siempre es un círculo"], answer: "Ambas partes se reflejan igual", explain: "El eje de simetría divide una figura en dos mitades iguales." },
-        { topic: "Texturas", question: "¿Qué es la textura táctil?", options: ["Cómo se siente al tocar (lisa, rugosa, suave)", "El tamaño de un folio", "El nombre del pintor", "El color del cielo"], answer: "Cómo se siente al tocar (lisa, rugosa, suave)", explain: "La textura táctil se percibe al tocar o imaginar el tacto." },
-        { topic: "Técnicas", question: "¿Qué es hacer un «collage»?", options: ["Componer pegando recortes, papeles o materiales", "Pintar solo con ceras", "Hacer una foto", "Escribir un poema"], answer: "Componer pegando recortes, papeles o materiales", explain: "En el collage se combinan distintos recortes y materiales sobre una base." }
-      ],
-
-      religion: [
-        { topic: "Valores", question: "¿Qué significa actuar con empatía?", options: ["Ponerse en el lugar del otro y comprenderle", "Quitarle lo que tiene", "No ayudar nunca", "Ignorar a los demás"], answer: "Ponerse en el lugar del otro y comprenderle", explain: "La empatía ayuda a entender cómo se sienten los demás." },
-        { topic: "Convivencia", question: "¿Qué ayuda a resolver un conflicto de forma pacífica?", options: ["Hablar, escuchar y buscar acuerdos", "Gritar o empujar", "Hacer trampas", "Culpar siempre a otro"], answer: "Hablar, escuchar y buscar acuerdos", explain: "El diálogo y el respeto ayudan a convivir mejor." },
-        { topic: "Solidaridad", question: "¿Qué es ser solidario?", options: ["Ayudar y compartir con quien lo necesita", "Guardarlo todo para uno mismo", "Reírse de los problemas ajenos", "No participar"], answer: "Ayudar y compartir con quien lo necesita", explain: "La solidaridad consiste en apoyar y compartir." },
-        { topic: "Gratitud", question: "¿Qué expresamos cuando damos las gracias?", options: ["Agradecimiento por lo recibido", "Enfado", "Prisa", "Indiferencia"], answer: "Agradecimiento por lo recibido", explain: "Dar las gracias reconoce la ayuda o el detalle de alguien." },
-        { topic: "Cuidado del mundo", question: "¿Cómo cuidamos la creación o naturaleza en el día a día?", options: ["Cuidando plantas, animales y no tirando basura", "Dejando el grifo abierto", "Rompiendo ramas por diversión", "Tirando residuos al suelo"], answer: "Cuidando plantas, animales y no tirando basura", explain: "Cuidar el entorno es una responsabilidad compartida." },
-        { topic: "Perdón", question: "¿Qué pedimos cuando nos equivocamos y queremos arreglarlo?", options: ["Disculpas o perdón", "Un premio", "Silencio absoluto", "Más deberes"], answer: "Disculpas o perdón", explain: "Reconocer el error y pedir perdón ayuda a reparar la relación." }
-      ],
-
-      lectura: [
-        {
-          storyTitle: "📖 El huerto del patio",
-          story: "En el patio del colegio han preparado un pequeño huerto. Los lunes y miércoles riegan las lechugas y tomates, y los viernes anotan cuánto han crecido.",
-          question: "¿Qué días riegan las plantas del huerto?",
-          options: ["Lunes y miércoles", "Martes y jueves", "Solo los viernes", "Todos los fines de semana"],
-          answer: "Lunes y miércoles",
-          explain: "El texto dice que riegan los lunes y miércoles."
-        },
-        {
-          storyTitle: "📖 El huerto del patio",
-          story: "En el patio del colegio han preparado un pequeño huerto. Los lunes y miércoles riegan las lechugas y tomates, y los viernes anotan cuánto han crecido.",
-          question: "¿Qué hacen los viernes en el huerto?",
-          options: ["Anotan cuánto han crecido", "Siembra patatas", "Cierran con llave", "Cortan todos los árboles"],
-          answer: "Anotan cuánto han crecido",
-          explain: "Los viernes apuntan el crecimiento de las plantas."
-        },
-        {
-          storyTitle: "📖 La mochila de Sofía",
-          story: "Sofía preparó su mochila la noche anterior: metió el estuche, la botella de agua, el cuaderno de Mates y la merienda. Así salió tranquila por la mañana.",
-          question: "¿Cuándo preparó Sofía la mochila?",
-          options: ["La noche anterior", "En el recreo", "Después de cenar del viernes", "No la preparó"],
-          answer: "La noche anterior",
-          explain: "La preparó la noche anterior para ir tranquila."
-        },
-        {
-          storyTitle: "📖 La mochila de Sofía",
-          story: "Sofía preparó su mochila la noche anterior: metió el estuche, la botella de agua, el cuaderno de Mates y la merienda. Así salió tranquila por la mañana.",
-          question: "¿Por qué salió tranquila por la mañana?",
-          options: ["Porque ya lo tenía todo listo", "Porque faltaba a clase", "Porque no llevaba agua", "Porque corrió mucho"],
-          answer: "Porque ya lo tenía todo listo",
-          explain: "Al tenerlo preparado de la noche anterior, salió sin prisas."
-        },
-        {
-          storyTitle: "📖 Excursión al parque",
-          story: "La clase salió a las 9:00 hacia el parque y regresó a las 12:30. Durante el paseo observaron pájaros, hojas caídas y árboles grandes.",
-          question: "¿A qué hora regresaron al colegio?",
-          options: ["A las 12:30", "A las 9:00", "A las 15:00", "A las 8:00"],
-          answer: "A las 12:30",
-          explain: "El texto indica que regresaron a las 12:30."
-        },
-        {
-          storyTitle: "📖 Excursión al parque",
-          story: "La clase salió a las 9:00 hacia el parque y regresó a las 12:30. Durante el paseo observaron pájaros, hojas caídas y árboles grandes.",
-          question: "¿Qué observaron durante el paseo?",
-          options: ["Pájaros, hojas caídas y árboles", "Barcos y faros", "Trenes y estaciones", "Nieve y pingüinos"],
-          answer: "Pájaros, hojas caídas y árboles",
-          explain: "Observaron pájaros, hojas caídas y árboles grandes."
-        },
-        {
-          storyTitle: "📖 El concurso de puzles",
-          story: "Dani y su hermana armaron un puzle de 150 piezas en una tarde lluviosa. Empezaron por las esquinas y los bordes antes de completar el centro.",
-          question: "¿Por dónde empezaron a armar el puzle?",
-          options: ["Por las esquinas y los bordes", "Por el centro", "Por la última pieza", "No empezaron"],
-          answer: "Por las esquinas y los bordes",
-          explain: "Comenzaron por las esquinas y los bordes."
-        },
-        {
-          storyTitle: "📖 El concurso de puzles",
-          story: "Dani y su hermana armaron un puzle de 150 piezas en una tarde lluviosa. Empezaron por las esquinas y los bordes antes de completar el centro.",
-          question: "¿Cómo era la tarde en que hicieron el puzle?",
-          options: ["Lluviosa", "Muy calurosa de playa", "De nieve", "De noche cerrada"],
-          answer: "Lluviosa",
-          explain: "Fue una tarde lluviosa."
-        }
-      ]
-    };
-
-    renderTopbar();
-    renderSubjectsGrid();
-    renderTablesView();
-    renderPointsView();
+    })();
   </script>
 </body>
 </html>
-  
