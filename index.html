@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -889,4 +888,2033 @@
       border-radius: 10px;
       background: #ffffff;
       color: var(--primary-dark);
-      min-width:
+      min-width: 54px;
+      text-align: center;
+    }
+
+    .table-result-badge.hidden-val {
+      background: var(--indigo);
+      color: #ffffff;
+      font-size: 0.84rem;
+    }
+
+    /* MIS PUNTOS Y MEDALLAS */
+    .stats-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .overview-box {
+      background: #f8fafc;
+      border: 2px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 12px 8px;
+      text-align: center;
+    }
+
+    .overview-num {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .overview-lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .subj-progress-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .subj-prog-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: #f8fafc;
+      padding: 10px 12px;
+      border-radius: var(--r-md);
+      border: 1px solid var(--border);
+    }
+
+    .subj-prog-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .medals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (min-width: 540px) {
+      .medals-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .medal-card {
+      border-radius: var(--r-lg);
+      padding: 12px 10px;
+      text-align: center;
+      border: 2px solid var(--border);
+      background: #f8fafc;
+      opacity: 0.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .medal-card.unlocked {
+      opacity: 1;
+      background: linear-gradient(135deg, #fffbeb, #fef3c7);
+      border-color: #f59e0b;
+    }
+
+    .medal-icon { font-size: 2rem; }
+    .medal-name { font-size: 0.8rem; font-weight: 900; }
+    .medal-req { font-size: 0.68rem; font-weight: 700; color: var(--muted); }
+
+    /* MODALES (BIENVENIDA Y PERFIL/AJUSTES) */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: var(--r-xl);
+      width: 100%;
+      max-width: 460px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 22px 18px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      animation: popIn 0.22s ease;
+    }
+
+    .avatar-picker {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    .avatar-opt {
+      font-size: 1.65rem;
+      padding: 8px 0;
+      border-radius: 14px;
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      cursor: pointer;
+    }
+
+    .avatar-opt.selected {
+      border-color: var(--primary);
+      background: #dbeafe;
+      transform: scale(1.06);
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--r-md);
+      border: 2px solid #cbd5e1;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0f172a;
+      outline: none;
+    }
+
+    .text-input:focus {
+      border-color: var(--primary);
+    }
+
+    .backup-box {
+      width: 100%;
+      height: 68px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      font-family: monospace;
+      font-size: 0.72rem;
+      resize: none;
+      color: #334155;
+      user-select: all;
+    }
+
+    .btn-primary {
+      padding: 13px 16px;
+      border-radius: var(--r-lg);
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 0 var(--primary-dark);
+    }
+
+    .btn-danger {
+      padding: 11px 14px;
+      border-radius: var(--r-md);
+      border: 2px solid #fca5a5;
+      background: #fee2e2;
+      color: #b91c1c;
+      font-size: 0.86rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      padding: 11px 14px;
+      border-radius: var(--r-md);
+      border: 2px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      font-size: 0.88rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 300;
+      text-align: center;
+      max-width: 90vw;
+    }
+
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- CABECERA SUPERIOR -->
+    <header class="topbar">
+      <div class="user-badge">
+        <div class="user-avatar" id="header-avatar">🦁</div>
+        <div>
+          <h1 class="user-greeting" id="header-greeting">¡Hola, Campeón!</h1>
+          <p class="user-level-tag" id="header-level-tag">Nivel 1 · 3º de Primaria</p>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="points-pill" title="Puntos acumulados">
+          <span style="font-size: 1.25rem;">🏆</span>
+          <div>
+            <div class="pts-val" id="header-points">0</div>
+            <div class="pts-lbl">Puntos</div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-icon" id="btn-open-profile" title="Perfil y ajustes">
+          <span>⚙️</span>
+          <span>Perfil</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓN DE 4 PESTAÑAS -->
+    <nav class="main-nav" role="tablist">
+      <button type="button" class="nav-btn active" data-tab="home">
+        <span>🏠</span><span>Inicio / Modos</span>
+      </button>
+      <button type="button" class="nav-btn" data-tab="subjects">
+        <span>📚</span><span>Asignaturas</span>
+      </button>
+      <button type="button" class="nav-btn" data-tab="tables">
+        <span>✖️</span><span>Tablas (1-10)</span>
+      </button>
+      <button type="button" class="nav-btn" data-tab="points">
+        <span>🏅</span><span>Mis Puntos</span>
+      </button>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- VISTA 1: INICIO / MODOS DE JUEGO                                    -->
+    <!-- =================================================================== -->
+    <section id="view-home" class="view active">
+      <div class="modes-grid">
+        <!-- RETO DEL DÍA -->
+        <button type="button" class="hero-mode-card mode-daily" id="card-daily-challenge">
+          <div class="hero-top">
+            <div class="hero-emoji">☀️</div>
+            <span class="hero-pill" id="daily-status-pill">¡Disponible hoy!</span>
+          </div>
+          <div>
+            <h2 class="hero-title">Reto del Día</h2>
+            <p class="hero-desc">10 preguntas variadas de todas las asignaturas. ¡Puntos dobles (+20 pts) y +100 pts de bonus!</p>
+          </div>
+        </button>
+
+        <!-- MODO PARTIDA / AVENTURA -->
+        <button type="button" class="hero-mode-card mode-adventure" id="card-adventure-mode">
+          <div class="hero-top">
+            <div class="hero-emoji">🚀</div>
+            <span class="hero-pill" id="adventure-level-pill">Nivel 1</span>
+          </div>
+          <div>
+            <h2 class="hero-title">Modo Partida (Aventura)</h2>
+            <p class="hero-desc">Supera rondas mixtas, multiplica puntos por racha (×2, ×3) y sube de nivel.</p>
+          </div>
+        </button>
+
+        <!-- ACCESO RÁPIDO ASIGNATURAS -->
+        <button type="button" class="hero-mode-card mode-subjects-quick" id="card-quick-subjects">
+          <div class="hero-top">
+            <div class="hero-emoji">🎒</div>
+            <span class="hero-pill">10 Asignaturas</span>
+          </div>
+          <div>
+            <h2 class="hero-title">Elegir Asignatura</h2>
+            <p class="hero-desc">Mates, Lengua, Valencià, Inglés, Lectura, C. Medio, Música, Plástica, E. Física y Religión.</p>
+          </div>
+        </button>
+
+        <!-- ACCESO RÁPIDO TABLAS -->
+        <button type="button" class="hero-mode-card mode-tables-quick" id="card-quick-tables">
+          <div class="hero-top">
+            <div class="hero-emoji">📋</div>
+            <span class="hero-pill">Del 1 al 10</span>
+          </div>
+          <div>
+            <h2 class="hero-title">Tablas de Multiplicar</h2>
+            <p class="hero-desc">Repasa cada tabla con modo ocultar respuestas o ponte a prueba.</p>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- VISTA 2: ELEGIR ASIGNATURA (LAS 10 DE 3º PRIMARIA)                  -->
+    <!-- =================================================================== -->
+    <section id="view-subjects" class="view">
+      <div class="subjects-grid" id="subjects-grid"></div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- VISTA 3: ÁREA DE JUEGO / PRÁCTICA                                   -->
+    <!-- =================================================================== -->
+    <section id="view-play" class="view">
+      <!-- Barra de configuración solo en Mates libre -->
+      <div class="mates-toolbar" id="mates-toolbar" style="display: none;">
+        <div class="mates-modes" id="mates-modes-grid">
+          <button type="button" class="mode-btn active" data-mmode="suma">➕ Sumas</button>
+          <button type="button" class="mode-btn" data-mmode="resta">➖ Restas</button>
+          <button type="button" class="mode-btn" data-mmode="multiplicar">✖️ Multiplicar</button>
+          <button type="button" class="mode-btn" data-mmode="mixto">🎲 Mixto Mates</button>
+          <button type="button" class="mode-btn" data-mmode="problemas">🧩 Problemas</button>
+          <button type="button" class="mode-btn" id="btn-jump-tables" style="background:#eef2ff; border-color:#a5b4fc; color:#3730a3;">📋 Ver Tablas</button>
+        </div>
+
+        <div class="table-selector-row" id="mates-table-row">
+          <span style="font-size:0.76rem; font-weight:800; color:#475569;">Elige tabla de multiplicar:</span>
+          <div class="table-pills" id="mates-table-pills"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="round-top">
+          <span class="round-badge" id="play-mode-badge">🧮 Mates</span>
+          <span class="streak-badge" id="play-streak-badge">🔥 Racha: 0 (×1)</span>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-labels">
+            <span id="play-step-text">Pregunta 1 de 10</span>
+            <span id="play-pts-round">+0 pts en esta ronda</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="play-progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Cuento o texto de lectura -->
+        <div class="story-box" id="play-story-box">
+          <span class="story-title" id="play-story-title">📖 Lee con atención:</span>
+          <div id="play-story-text"></div>
+        </div>
+
+        <!-- Enunciado -->
+        <div class="question-box">
+          <span class="question-topic" id="play-topic">Tema</span>
+          <p class="question-text" id="play-question">Pregunta</p>
+        </div>
+
+        <!-- Teclado numérico para cálculo directo -->
+        <div class="numeric-area" id="play-numeric-area">
+          <div class="math-equation">
+            <span id="play-math-expr">12 + 15</span>
+            <span>=</span>
+            <div class="math-answer-box empty" id="play-math-ans">?</div>
+          </div>
+
+          <div class="keypad-grid" id="play-keypad">
+            <button type="button" class="key-btn" data-key="1">1</button>
+            <button type="button" class="key-btn" data-key="2">2</button>
+            <button type="button" class="key-btn" data-key="3">3</button>
+            <button type="button" class="key-btn" data-key="4">4</button>
+            <button type="button" class="key-btn" data-key="5">5</button>
+            <button type="button" class="key-btn" data-key="6">6</button>
+            <button type="button" class="key-btn" data-key="7">7</button>
+            <button type="button" class="key-btn" data-key="8">8</button>
+            <button type="button" class="key-btn" data-key="9">9</button>
+            <button type="button" class="key-btn key-del" data-key="DEL">⌫ Borrar</button>
+            <button type="button" class="key-btn" data-key="0">0</button>
+            <button type="button" class="key-btn key-ok" data-key="OK">✔ Comprobar</button>
+          </div>
+        </div>
+
+        <!-- 4 opciones múltiples -->
+        <div class="options-grid" id="play-options-grid"></div>
+
+        <!-- Feedback -->
+        <div class="feedback-box" id="play-feedback">
+          <div class="feedback-header" id="play-feedback-title">¡Correcto!</div>
+          <div id="play-feedback-expl">Explicación</div>
+        </div>
+
+        <button type="button" class="btn-next" id="btn-play-next">
+          <span>Siguiente pregunta</span>
+          <span>➔</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- VISTA 4: RESUMEN DE RONDA                                           -->
+    <!-- =================================================================== -->
+    <section id="view-summary" class="view">
+      <div class="card" style="text-align:center; align-items:center; padding:24px 18px;">
+        <div id="summary-emoji" style="font-size:4rem; line-height:1;">🏆</div>
+        <div>
+          <h2 id="summary-title" style="margin:0; font-size:1.38rem; font-weight:900;">¡Ronda completada!</h2>
+          <p id="summary-subtitle" style="margin:4px 0 0; font-size:0.88rem; color:var(--muted); font-weight:700;">Resumen</p>
+        </div>
+
+        <div class="stats-overview" style="width:100%; max-width:440px;">
+          <div class="overview-box">
+            <div class="overview-num" id="sum-correct" style="color:var(--success);">8/10</div>
+            <div class="overview-lbl">Aciertos</div>
+          </div>
+          <div class="overview-box">
+            <div class="overview-num" id="sum-points" style="color:var(--warn);">+100</div>
+            <div class="overview-lbl">Puntos ganados</div>
+          </div>
+          <div class="overview-box">
+            <div class="overview-num" id="sum-level" style="color:var(--indigo);">Nv. 1</div>
+            <div class="overview-lbl">Nivel Aventura</div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:400px;">
+          <button type="button" class="btn-primary" id="btn-sum-mistakes" style="display:none; background:#f59e0b; box-shadow:0 4px 0 #d97706;">
+            🔁 Repasar solo los fallos (<span id="sum-mistakes-count">0</span>)
+          </button>
+          <button type="button" class="btn-primary" id="btn-sum-again">
+            🚀 Jugar otra ronda
+          </button>
+          <button type="button" class="btn-secondary" id="btn-sum-home">
+            🏠 Volver al Inicio
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- VISTA 5: TABLAS DE MULTIPLICAR (1 AL 10)                            -->
+    <!-- =================================================================== -->
+    <section id="view-tables" class="view">
+      <div class="card">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+          <div>
+            <h2 style="margin:0; font-size:1.15rem; font-weight:900;">✖️ Tablas de Multiplicar (1 al 10)</h2>
+            <p style="margin:2px 0 0; font-size:0.78rem; color:var(--muted); font-weight:700;">Toca una tabla para estudiarla o practicarla</p>
+          </div>
+          <button type="button" class="btn-primary" id="btn-practice-selected-table" style="padding:10px 14px; font-size:0.86rem;">
+            🎮 Practicar esta tabla
+          </button>
+        </div>
+
+        <div class="tables-num-grid" id="tables-num-grid"></div>
+
+        <div class="hide-mode-bar">
+          <div>
+            <div style="font-size:0.86rem; font-weight:900; color:#1e1b4b;">🙈 Ocultar resultados</div>
+            <div style="font-size:0.73rem; font-weight:700; color:#4338ca;">Toca cada fila para comprobar si te la sabes</div>
+          </div>
+          <button type="button" class="mode-btn" id="btn-toggle-hide-tables" style="padding:8px 14px;">Activar</button>
+        </div>
+
+        <strong id="tables-current-title" style="font-size:1.05rem; color:var(--primary-dark);">Tabla del 2</strong>
+        <div class="table-rows-grid" id="tables-rows-grid"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- VISTA 6: MIS PUNTOS Y MEDALLAS                                      -->
+    <!-- =================================================================== -->
+    <section id="view-points" class="view">
+      <div class="card">
+        <h2 style="margin:0; font-size:1.15rem; font-weight:900;">🏅 Progreso de <span id="pts-student-name">Campeón</span></h2>
+
+        <div class="stats-overview">
+          <div class="overview-box">
+            <div class="overview-num" id="pts-total-big" style="color:var(--warn);">0</div>
+            <div class="overview-lbl">Puntos Totales</div>
+          </div>
+          <div class="overview-box">
+            <div class="overview-num" id="pts-level-big" style="color:var(--indigo);">1</div>
+            <div class="overview-lbl">Nivel Aventura</div>
+          </div>
+          <div class="overview-box">
+            <div class="overview-num" id="pts-daily-big" style="color:var(--success);">0</div>
+            <div class="overview-lbl">Retos del Día</div>
+          </div>
+        </div>
+
+        <h3 style="margin:4px 0 0; font-size:0.98rem; font-weight:900;">🎖️ Medallas desbloqueadas</h3>
+        <div class="medals-grid" id="medals-grid"></div>
+
+        <h3 style="margin:4px 0 0; font-size:0.98rem; font-weight:900;">📊 Puntos por asignatura</h3>
+        <div class="subj-progress-list" id="subj-progress-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 1: BIENVENIDA INICIAL (NOMBRE DEL NIÑO Y AVATAR)                -->
+  <!-- ===================================================================== -->
+  <div class="modal-backdrop" id="modal-welcome">
+    <div class="modal-card">
+      <div style="text-align:center;">
+        <div style="font-size:3rem;">🎒✨</div>
+        <h2 style="margin:6px 0 0; font-size:1.35rem; font-weight:900;">¡Bienvenido a 3º de Primaria!</h2>
+        <p style="margin:4px 0 0; font-size:0.86rem; color:var(--muted); font-weight:700;">Escribe tu nombre y elige tu mascota para guardar tus puntos.</p>
+      </div>
+
+      <div>
+        <label style="display:block; font-size:0.8rem; font-weight:800; margin-bottom:5px;">¿Cómo te llamas?</label>
+        <input type="text" id="welcome-name-input" class="text-input" placeholder="Ej. Hugo, Sofía, Leo..." maxlength="20" />
+      </div>
+
+      <div>
+        <label style="display:block; font-size:0.8rem; font-weight:800; margin-bottom:6px;">Elige tu avatar:</label>
+        <div class="avatar-picker" id="welcome-avatar-picker"></div>
+      </div>
+
+      <button type="button" class="btn-primary" id="btn-welcome-start">🚀 ¡Empezar a jugar!</button>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 2: PERFIL, COPIA DE SEGURIDAD Y RESTAURAR PROGRESO              -->
+  <!-- ===================================================================== -->
+  <div class="modal-backdrop" id="modal-profile">
+    <div class="modal-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <h2 style="margin:0; font-size:1.2rem; font-weight:900;">⚙️ Perfil y Memoria</h2>
+        <button type="button" class="btn-icon" id="btn-close-profile">✕</button>
+      </div>
+
+      <div>
+        <label style="display:block; font-size:0.8rem; font-weight:800; margin-bottom:5px;">Nombre del alumno/a:</label>
+        <input type="text" id="profile-name-input" class="text-input" maxlength="20" />
+      </div>
+
+      <div>
+        <label style="display:block; font-size:0.8rem; font-weight:800; margin-bottom:6px;">Avatar:</label>
+        <div class="avatar-picker" id="profile-avatar-picker"></div>
+      </div>
+
+      <button type="button" class="btn-primary" id="btn-save-profile">💾 Guardar cambios</button>
+
+      <div style="border-top:1px solid var(--border); padding-top:12px; display:flex; flex-direction:column; gap:8px;">
+        <div style="font-size:0.82rem; font-weight:900;">🛡️ Código de seguridad (para no perder nunca los puntos)</div>
+        <p style="margin:0; font-size:0.74rem; color:var(--muted); font-weight:600;">Copia este código o pégalo si cambias de móvil o navegador:</p>
+        <textarea id="backup-code-area" class="backup-box"></textarea>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <button type="button" class="btn-secondary" id="btn-copy-backup">📋 Copiar código</button>
+          <button type="button" class="btn-secondary" id="btn-import-backup">📥 Cargar código</button>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border); padding-top:12px; display:flex; flex-direction:column; gap:8px;">
+        <button type="button" class="btn-danger" id="btn-reset-progress">🗑️ Restaurar progreso a cero</button>
+        <div id="reset-confirm-box" style="display:none; background:#fef2f2; border:1px solid #fecaca; border-radius:12px; padding:10px; text-align:center;">
+          <div style="font-size:0.8rem; font-weight:800; color:#991b1b; margin-bottom:8px;">¿Seguro que quieres borrar todos los puntos y empezar desde 0?</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <button type="button" class="btn-secondary" id="btn-cancel-reset">Cancelar</button>
+            <button type="button" class="btn-danger" id="btn-confirm-reset" style="background:#dc2626; color:#fff;">Sí, borrar todo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Mensaje</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      /* =====================================================================
+         1. CONFIGURACIÓN GENERAL Y ASIGNATURAS
+         ===================================================================== */
+      const STORAGE_KEY = 'aprende_jugando_3primaria_v2';
+      const AVATARS = ['🦁', '🐼', '🦊', '🐯', '🐸', '🦄', '🐶', '🐱', '🐵', '🦖', '🚀', '⚽'];
+
+      const SUBJECTS = [
+        { id: 'mates', name: 'Mates', icon: '🧮', desc: 'Cálculo, tablas y problemas', bg: 'bg-mates' },
+        { id: 'lengua', name: 'Lengua', icon: '📝', desc: 'Ortografía, acentos y gramática', bg: 'bg-lengua' },
+        { id: 'valencia', name: 'Valencià', icon: '🍊', desc: 'Articles, vocabulari i ortografia', bg: 'bg-valencia' },
+        { id: 'ingles', name: 'Inglés', icon: '🇬🇧', desc: 'Vocabulary, grammar & numbers', bg: 'bg-ingles' },
+        { id: 'lectura', name: 'Lectura', icon: '📚', desc: 'Cuentos nuevos en cada partida', bg: 'bg-lectura' },
+        { id: 'cmedio', name: 'C. Medio', icon: '🌍', desc: 'Cuerpo, animales, plantas y Tierra', bg: 'bg-cmedio' },
+        { id: 'musica', name: 'Música', icon: '🎵', desc: 'Notas, figuras e instrumentos', bg: 'bg-musica' },
+        { id: 'plastica', name: 'Plástica', icon: '🎨', desc: 'Colores, mezclas y formas', bg: 'bg-plastica' },
+        { id: 'efisica', name: 'E. Física', icon: '⚽', desc: 'Salud, calentamiento y deporte', bg: 'bg-efisica' },
+        { id: 'religion', name: 'Religión', icon: '🕊️', desc: 'Valores, parábolas y fiestas', bg: 'bg-religion' }
+      ];
+
+      const MEDALS = [
+        { id: 'first_100', icon: '🌟', name: 'Primeros 100 pts', req: 'Consigue 100 puntos', check: function (p) { return p.points >= 100; } },
+        { id: 'daily_1', icon: '☀️', name: 'Constancia Diaria', req: 'Completa 1 Reto del Día', check: function (p) { return p.dailyCount >= 1; } },
+        { id: 'level_3', icon: '🚀', name: 'Explorador Nivel 3', req: 'Llega al Nivel 3 en Aventura', check: function (p) { return p.level >= 3; } },
+        { id: 'points_500', icon: '🏆', name: 'Campeón de 3º', req: 'Acumula 500 puntos', check: function (p) { return p.points >= 500; } },
+        { id: 'daily_5', icon: '🔥', name: 'Súper Racha', req: 'Completa 5 Retos del Día', check: function (p) { return p.dailyCount >= 5; } },
+        { id: 'all_subjects', icon: '🎓', name: 'Todoterreno', req: 'Suma puntos en 5 asignaturas', check: function (p) {
+          return Object.values(p.subjectPoints).filter(function (v) { return v > 0; }).length >= 5;
+        }},
+        { id: 'level_6', icon: '👑', name: 'Maestro Aventura', req: 'Llega al Nivel 6 en Aventura', check: function (p) { return p.level >= 6; } },
+        { id: 'points_1500', icon: '💎', name: 'Leyenda Primaria', req: 'Consigue 1.500 puntos', check: function (p) { return p.points >= 1500; } }
+      ];
+
+      /* =====================================================================
+         2. GENERADORES DINÁMICOS (MATES, LENGUA, VALENCIÀ, INGLÉS, LECTURA)
+         ===================================================================== */
+      function randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function pick(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function shuffle(arr) {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const t = a[i];
+          a[i] = a[j];
+          a[j] = t;
+        }
+        return a;
+      }
+
+      // --- GENERADOR MATES (Cálculo y Problemas dinámicos) ---
+      function genMatesQuestion(forcedMode) {
+        let mode = forcedMode || state.matesMode;
+        if (mode === 'mixto') {
+          mode = pick(['suma', 'resta', 'multiplicar', 'problemas']);
+        }
+
+        if (mode === 'problemas') {
+          const names = ['Hugo', 'Sofía', 'Leo', 'Martina', 'Lucas', 'Valeria', 'Mateo', 'Lucía', 'Daniel', 'Carla'];
+          const n1 = pick(names);
+          let n2 = pick(names);
+          while (n2 === n1) n2 = pick(names);
+
+          const type = randInt(1, 4);
+          if (type === 1) {
+            const cajas = randInt(3, 9);
+            const porCaja = randInt(4, 9);
+            const total = cajas * porCaja;
+            const opts = shuffle([total + ' cromos', (total + porCaja) + ' cromos', (cajas + porCaja) + ' cromos', Math.max(2, total - cajas) + ' cromos']);
+            return {
+              subject: 'mates',
+              type: 'choice',
+              topic: 'Problema · Multiplicación',
+              storyTitle: '🧩 Problema de Mates',
+              story: n1 + ' tiene ' + cajas + ' sobres y en cada sobre hay ' + porCaja + ' cromos.',
+              q: '¿Cuántos cromos tiene ' + n1 + ' en total?',
+              options: opts,
+              answer: opts.indexOf(total + ' cromos'),
+              explanation: 'Multiplicamos ' + cajas + ' sobres × ' + porCaja + ' cromos = ' + total + ' cromos.'
+            };
+          } else if (type === 2) {
+            const a = randInt(24, 58);
+            const b = randInt(18, 49);
+            const faltan = randInt(4, 15);
+            const ans = a + b - faltan;
+            const opts = shuffle([ans + ' alumnos', (a + b) + ' alumnos', (ans + 5) + ' alumnos', Math.max(10, ans - 4) + ' alumnos']);
+            return {
+              subject: 'mates',
+              type: 'choice',
+              topic: 'Problema · Dos operaciones',
+              storyTitle: '🧩 Problema de clase',
+              story: 'En 3º A hay ' + a + ' alumnos y en 3º B hay ' + b + ' alumnos. Hoy han ido al museo ' + faltan + ' alumnos.',
+              q: '¿Cuántos alumnos quedan hoy en las dos clases?',
+              options: opts,
+              answer: opts.indexOf(ans + ' alumnos'),
+              explanation: 'Sumamos ' + a + ' + ' + b + ' = ' + (a + b) + ' alumnos en total, y restamos ' + faltan + ': quedan ' + ans + ' alumnos.'
+            };
+          } else if (type === 3) {
+            const tenia = randInt(65, 140);
+            const gasto = randInt(23, 54);
+            const queda = tenia - gasto;
+            const opts = shuffle([queda + ' euros', (tenia + gasto) + ' euros', (queda + 10) + ' euros', Math.max(5, queda - 6) + ' euros']);
+            return {
+              subject: 'mates',
+              type: 'choice',
+              topic: 'Problema · Resta',
+              storyTitle: '🧩 Ahorros en la hucha',
+              story: n1 + ' tenía ' + tenia + ' euros en su hucha y compró un libro y un juego por ' + gasto + ' euros.',
+              q: '¿Cuánto dinero le queda ahora?',
+              options: opts,
+              answer: opts.indexOf(queda + ' euros'),
+              explanation: 'Restamos ' + tenia + ' − ' + gasto + ' = ' + queda + ' euros.'
+            };
+          } else {
+            const base = randInt(6, 15);
+            const mult = pick([2, 3]);
+            const label = mult === 2 ? 'el doble' : 'el triple';
+            const res = base * mult;
+            const opts = shuffle([res + ' canicas', (base + mult) + ' canicas', (res + base) + ' canicas', Math.max(4, res - 3) + ' canicas']);
+            return {
+              subject: 'mates',
+              type: 'choice',
+              topic: 'Problema · Doble y triple',
+              storyTitle: '🧩 Juego en el patio',
+              story: n1 + ' tiene ' + base + ' canicas y ' + n2 + ' tiene ' + label + ' de canicas que ' + n1 + '.',
+              q: '¿Cuántas canicas tiene ' + n2 + '?',
+              options: opts,
+              answer: opts.indexOf(res + ' canicas'),
+              explanation: (mult === 2 ? 'El doble' : 'El triple') + ' de ' + base + ' es ' + base + ' × ' + mult + ' = ' + res + ' canicas.'
+            };
+          }
+        }
+
+        if (mode === 'suma') {
+          const carry = Math.random() < 0.55;
+          let a, b;
+          if (!carry) {
+            const d1 = randInt(1, 7), d2 = randInt(1, 9 - d1);
+            const u1 = randInt(0, 8), u2 = randInt(1, 9 - u1);
+            a = d1 * 10 + u1;
+            b = d2 * 10 + u2;
+            return {
+              subject: 'mates', type: 'numeric', topic: 'Suma sin llevadas',
+              q: 'Resuelve la suma:', expr: a + ' + ' + b, answer: a + b,
+              explanation: 'Unidades: ' + u1 + ' + ' + u2 + ' = ' + (u1 + u2) + '. Decenas: ' + d1 + ' + ' + d2 + ' = ' + (d1 + d2) + '. Total: ' + (a + b) + '.'
+            };
+          } else {
+            const three = Math.random() < 0.4;
+            do {
+              a = three ? randInt(125, 489) : randInt(28, 89);
+              b = three ? randInt(48, 369) : randInt(16, 78);
+            } while ((a % 10) + (b % 10) < 10);
+            return {
+              subject: 'mates', type: 'numeric', topic: 'Suma con llevadas',
+              q: 'Resuelve la suma con llevadas:', expr: a + ' + ' + b, answer: a + b,
+              explanation: (a % 10) + ' + ' + (b % 10) + ' = ' + ((a % 10) + (b % 10)) + ', escribimos las unidades y nos llevamos 1. Resultado: ' + (a + b) + '.'
+            };
+          }
+        }
+
+        if (mode === 'resta') {
+          const carry = Math.random() < 0.55;
+          let a, b;
+          if (!carry) {
+            const d1 = randInt(3, 9), d2 = randInt(1, d1 - 1);
+            const u1 = randInt(2, 9), u2 = randInt(1, u1);
+            a = d1 * 10 + u1;
+            b = d2 * 10 + u2;
+            return {
+              subject: 'mates', type: 'numeric', topic: 'Resta sin llevadas',
+              q: 'Resuelve la resta:', expr: a + ' − ' + b, answer: a - b,
+              explanation: 'Unidades: ' + u1 + ' − ' + u2 + ' = ' + (u1 - u2) + '. Decenas: ' + d1 + ' − ' + d2 + ' = ' + (d1 - d2) + '. Total: ' + (a - b) + '.'
+            };
+          } else {
+            do {
+              a = randInt(42, 95);
+              b = randInt(16, 69);
+            } while (a <= b + 10 || (a % 10) >= (b % 10));
+            return {
+              subject: 'mates', type: 'numeric', topic: 'Resta con llevadas',
+              q: 'Resuelve la resta con llevadas:', expr: a + ' − ' + b, answer: a - b,
+              explanation: 'Pedimos 1 decena: en las unidades ' + (10 + (a % 10)) + ' − ' + (b % 10) + ' = ' + ((10 + (a % 10)) - (b % 10)) + '. Resultado: ' + (a - b) + '.'
+            };
+          }
+        }
+
+        // Multiplicación
+        const tChoice = state.selectedMatesTable;
+        const fa = tChoice === 'all' ? randInt(1, 10) : parseInt(tChoice, 10);
+        const fb = randInt(1, 10);
+        return {
+          subject: 'mates', type: 'numeric',
+          topic: tChoice === 'all' ? 'Tablas de multiplicar' : ('Tabla del ' + fa),
+          q: 'Calcula la multiplicación:', expr: fa + ' × ' + fb, answer: fa * fb,
+          explanation: fa + ' × ' + fb + ' = ' + (fa * fb) + '.'
+        };
+      }
+
+      // --- GENERADOR LENGUA (Combinaciones dinámicas de ortografía, acentos, sinónimos, gramática) ---
+      function genLenguaQuestion() {
+        const cat = randInt(1, 5);
+        if (cat === 1) {
+          // Ortografía b/v, g/j, h, qu/c, r/rr
+          const items = [
+            { ok: 'avión', bad: ['abión', 'habión', 'abion'], rule: '"Avión" se escribe con v y lleva tilde en la o.' },
+            { ok: 'brazo', bad: ['vrazo', 'hrazo', 'braso'], rule: 'Delante de r y l siempre se escribe b (brazo, blanco).' },
+            { ok: 'huevo', bad: ['uevo', 'guevo', 'buevo'], rule: 'Las palabras que empiezan por hue- llevan h inicial.' },
+            { ok: 'queso', bad: ['ceso', 'keso', 'qeso'], rule: 'Con e, i el sonido fuerte /k/ se escribe con qu.' },
+            { ok: 'girasol', bad: ['jirasol', 'guirasol', 'girasoll'], rule: '"Girasol" se escribe con g.' },
+            { ok: 'perro', bad: ['pero', 'perrro', 'pelo'], rule: 'Entre vocales el sonido fuerte de r se escribe rr.' },
+            { ok: 'invierno', bad: ['inbierno', 'imbierno', 'invirno'], rule: 'Después de n siempre se escribe v (invierno).' },
+            { ok: 'tambor', bad: ['tanbor', 'tamvor', 'tanvor'], rule: 'Delante de b siempre se escribe m (tambor).' },
+            { ok: 'hielo', bad: ['ielo', 'yelo', 'gielo'], rule: 'Las palabras que empiezan por hie- llevan h.' },
+            { ok: 'jirafa', bad: ['girafa', 'guirafa', 'jirrafa'], rule: '"Jirafa" se escribe con j.' },
+            { ok: 'blanco', bad: ['vlanco', 'blanqo', 'hlanco'], rule: 'Delante de l siempre se escribe b (blanco).' },
+            { ok: 'zapato', bad: ['sapato', 'capato', 'zapto'], rule: 'Con a, o, u se escribe z (zapato, zorro, zumo).' }
+          ];
+          const it = pick(items);
+          const opts = shuffle([it.ok, it.bad[0], it.bad[1], it.bad[2]]);
+          return {
+            subject: 'lengua', type: 'choice', topic: 'Ortografía · 3º Primaria',
+            q: '¿Cuál de estas palabras está escrita correctamente?',
+            options: opts, answer: opts.indexOf(it.ok), explanation: it.rule
+          };
+        } else if (cat === 2) {
+          // Acentuación (agudas, llanas, esdrújulas)
+          const words = [
+            { w: 'pájaro', tipo: 'Esdrújula', reason: 'Pá-ja-ro tiene su sílaba tónica en la antepenúltima sílaba (todas las esdrújulas llevan tilde).' },
+            { w: 'camión', tipo: 'Aguda', reason: 'Ca-mión tiene la fuerza en la última sílaba y lleva tilde por acabar en n.' },
+            { w: 'lápiz', tipo: 'Llana', reason: 'Lá-piz es llana y lleva tilde porque no acaba en vocal, n ni s.' },
+            { w: 'música', tipo: 'Esdrújula', reason: 'Mú-si-ca tiene la fuerza en la antepenúltima sílaba: es esdrújula.' },
+            { w: 'sofá', tipo: 'Aguda', reason: 'So-fá tiene la sílaba tónica al final y lleva tilde por terminar en vocal.' },
+            { w: 'árbol', tipo: 'Llana', reason: 'Ár-bol es llana y lleva tilde por acabar en l.' },
+            { w: 'plátano', tipo: 'Esdrújula', reason: 'Plá-ta-no es esdrújula (antepenúltima sílaba).' },
+            { w: 'reloj', tipo: 'Aguda', reason: 'Re-loj tiene la sílaba tónica en la última sílaba (loj): es aguda.' }
+          ];
+          const chosen = pick(words);
+          const opts = ['Aguda', 'Llana', 'Esdrújula', 'Monosílaba'];
+          return {
+            subject: 'lengua', type: 'choice', topic: 'Acentuación y sílabas',
+            q: 'Según su sílaba tónica, ¿qué tipo de palabra es "' + chosen.w + '"?',
+            options: opts, answer: opts.indexOf(chosen.tipo), explanation: chosen.reason
+          };
+        } else if (cat === 3) {
+          // Sinónimos y antónimos
+          const isSyn = Math.random() < 0.5;
+          const pairs = isSyn ? [
+            { w: 'veloz', ans: 'rápido', bad: ['lento', 'pesado', 'dormido'] },
+            { w: 'contento', ans: 'alegre', bad: ['triste', 'enfadado', 'aburrido'] },
+            { w: 'bonito', ans: 'hermoso', bad: ['feo', 'roto', 'sucio'] },
+            { w: 'empezar', ans: 'comenzar', bad: ['terminar', 'acabar', 'frenar'] },
+            { w: 'gigante', ans: 'enorme', bad: ['diminuto', 'corto', 'bajo'] },
+            { w: 'charlar', ans: 'hablar', bad: ['callar', 'dormir', 'correr'] }
+          ] : [
+            { w: 'subir', ans: 'bajar', bad: ['trepar', 'volar', 'saltar'] },
+            { w: 'oscuro', ans: 'claro', bad: ['negro', 'gris', 'nocturno'] },
+            { w: 'lleno', ans: 'vacío', bad: ['completo', 'grande', 'pesado'] },
+            { w: 'frío', ans: 'caliente', bad: ['helado', 'fresco', 'nevado'] },
+            { w: 'antiguo', ans: 'moderno', bad: ['viejo', 'roto', 'lejos'] },
+            { w: 'fácil', ans: 'difícil', bad: ['sencillo', 'rápido', 'corto'] }
+          ];
+          const p = pick(pairs);
+          const opts = shuffle([p.ans, p.bad[0], p.bad[1], p.bad[2]]);
+          return {
+            subject: 'lengua', type: 'choice', topic: isSyn ? 'Sinónimos' : 'Antónimos',
+            q: '¿Cuál es un ' + (isSyn ? 'SINÓNIMO (significado parecido)' : 'ANTÓNIMO (significado contrario)') + ' de "' + p.w + '"?',
+            options: opts, answer: opts.indexOf(p.ans),
+            explanation: (isSyn ? 'Sinónimo: ' : 'Antónimo: ') + '"' + p.w + '" y "' + p.ans + '".'
+          };
+        } else if (cat === 4) {
+          // Categorías gramaticales (Sustantivo, Adjetivo, Verbo)
+          const bank = [
+            { word: 'mochila', type: 'Sustantivo', expl: '"Mochila" nombra un objeto, por lo tanto es un sustantivo.' },
+            { word: 'saltar', type: 'Verbo', expl: '"Saltar" expresa una acción, por lo tanto es un verbo.' },
+            { word: 'simpático', type: 'Adjetivo', expl: '"Simpático" dice cómo es una persona o animal: es un adjetivo.' },
+            { word: 'escribir', type: 'Verbo', expl: '"Escribir" indica una acción: es un verbo.' },
+            { word: 'montaña', type: 'Sustantivo', expl: '"Montaña" nombra un lugar o elemento: es un sustantivo.' },
+            { word: 'brillante', type: 'Adjetivo', expl: '"Brillante" describe una cualidad: es un adjetivo.' }
+          ];
+          const it = pick(bank);
+          const opts = ['Sustantivo', 'Adjetivo', 'Verbo', 'Artículo'];
+          return {
+            subject: 'lengua', type: 'choice', topic: 'Gramática',
+            q: '¿Qué clase de palabra es "' + it.word + '"?',
+            options: opts, answer: opts.indexOf(it.type), explanation: it.expl
+          };
+        } else {
+          // Plurales y familias de palabras
+          const plurals = [
+            { s: 'pez', p: 'peces', bad: ['pezs', 'pezes', 'los pez'], r: 'Las palabras acabadas en z cambian z por c en plural: peces.' },
+            { s: 'lápiz', p: 'lápices', bad: ['lápizs', 'lápizes', 'lápis'], r: 'Acaba en z, así que en plural se escribe con c: lápices.' },
+            { s: 'luz', p: 'luces', bad: ['luzs', 'luzes', 'luses'], r: 'Luz → luces (z cambia a c).' },
+            { s: 'nuez', p: 'nueces', bad: ['nuezs', 'nuezes', 'nueses'], r: 'Nuez → nueces.' }
+          ];
+          const it = pick(plurals);
+          const opts = shuffle([it.p, it.bad[0], it.bad[1], it.bad[2]]);
+          return {
+            subject: 'lengua', type: 'choice', topic: 'Singular y plural',
+            q: '¿Cuál es el plural correcto de "' + it.s + '"?',
+            options: opts, answer: opts.indexOf(it.p), explanation: it.r
+          };
+        }
+      }
+
+      // --- GENERADOR VALENCIÀ ---
+      function genValenciaQuestion() {
+        const mode = randInt(1, 4);
+        if (mode === 1) {
+          // Articles i apòstrof
+          const nouns = [
+            { noun: 'escola', art: "l'", expl: 'Davant de vocal o h en singular s’apostrofa: l’escola.' },
+            { noun: 'arbre', art: "l'", expl: '"Arbre" comença per vocal i és singular: l’arbre.' },
+            { noun: 'taula', art: 'la', expl: '"Taula" és femení singular i comença per consonant: la taula.' },
+            { noun: 'gos', art: 'el', expl: '"Gos" és masculí singular i comença per consonant: el gos.' },
+            { noun: 'llibres', art: 'els', expl: '"Llibres" és masculí plural: els llibres.' },
+            { noun: 'finestres', art: 'les', expl: '"Finestres" és femení plural: les finestres.' },
+            { noun: 'home', art: "l'", expl: '"Home" comença per h muda en singular: l’home.' },
+            { noun: 'aigua', art: "l'", expl: '"Aigua" comença per vocal i s’apostrofa: l’aigua.' }
+          ];
+          const it = pick(nouns);
+          const opts = ['el', 'la', "l'", 'els'];
+          return {
+            subject: 'valencia', type: 'choice', topic: 'Articles i apòstrof',
+            q: 'Tria l’article correcte per a: "___ ' + it.noun + '"',
+            options: opts, answer: opts.indexOf(it.art), explanation: it.expl
+          };
+        } else if (mode === 2) {
+          // Vocabulari temàtic
+          const vocab = [
+            { q: 'Com es diu "perro" en valencià?', ok: 'gos', bad: ['gat', 'ocell', 'peix'], e: '"Gos" significa perro.' },
+            { q: 'Quin color és el "groc"?', ok: 'Amarillo', bad: ['Rojo', 'Verde', 'Azul'], e: '"Groc" és el color amarillo.' },
+            { q: 'Quin animal és un "conill"?', ok: 'Conejo', bad: ['Caballo', 'Tortuga', 'Rana'], e: '"Conill" és conejo.' },
+            { q: 'Quin dia ve després de "dimarts"?', ok: 'dimecres', bad: ['dilluns', 'dijous', 'divendres'], e: 'Després de dimarts ve dimecres.' },
+            { q: 'Què significa "llibreta" en castellà?', ok: 'Libreta / cuaderno', bad: ['Lápiz', 'Goma', 'Estuche'], e: 'La llibreta és el cuaderno.' },
+            { q: 'Com diem "Buenos días" en valencià?', ok: 'Bon dia', bad: ['Bona nit', 'Bona vesprada', 'Fins demà'], e: 'Pel matí diem "Bon dia".' },
+            { q: 'Qui és el "germà" de la teua mare?', ok: 'El teu oncle', bad: ['El teu avi', 'El teu cosí', 'El teu nebot'], e: 'El germà del pare o de la mare és l’oncle.' },
+            { q: 'Quin número és "trenta-quatre"?', ok: '34', bad: ['43', '24', '14'], e: 'Trenta (30) i quatre (4) = 34.' }
+          ];
+          const v = pick(vocab);
+          const opts = shuffle([v.ok, v.bad[0], v.bad[1], v.bad[2]]);
+          return {
+            subject: 'valencia', type: 'choice', topic: 'Vocabulari · 3r Primària',
+            q: v.q, options: opts, answer: opts.indexOf(v.ok), explanation: v.e
+          };
+        } else if (mode === 3) {
+          // Ortografia valenciana (l·l, ç, b/v, ny)
+          const ortho = [
+            { ok: 'col·legi', bad: ['colegi', 'col-legi', 'collegi'], e: '"Col·legi" s’escriu amb ela geminada (l·l).' },
+            { ok: 'plaça', bad: ['plasa', 'plaza', 'plassa'], e: 'Davant de a, o, u s’escriu ç: plaça.' },
+            { ok: 'muntanya', bad: ['montaña', 'muntana', 'muntanyia'], e: 'El so /ñ/ en valencià s’escriu ny: muntanya.' },
+            { ok: 'beure (aigua)', bad: ['veure (aigua)', 'beber', 'vebre'], e: 'Prendre líquid és "beure" amb b; mirar és "veure" amb v.' },
+            { ok: 'xicotet', bad: ['chicotet', 'xicotett', 'sicotet'], e: 'En valencià s’escriu amb x inicial: xicotet.' },
+            { ok: 'taronges', bad: ['taronjes', 'tarongues', 'taronxes'], e: 'Davant de e, i s’escriu g: taronja → taronges.' }
+          ];
+          const o = pick(ortho);
+          const opts = shuffle([o.ok, o.bad[0], o.bad[1], o.bad[2]]);
+          return {
+            subject: 'valencia', type: 'choice', topic: 'Ortografia valenciana',
+            q: 'Quina paraula està ben escrita en valencià?',
+            options: opts, answer: opts.indexOf(o.ok), explanation: o.e
+          };
+        } else {
+          // Contrarios / Sinònims en valencià
+          const pairs = [
+            { w: 'content', ans: 'feliç', bad: ['trist', 'enfadat', 'cansat'], type: 'sinònim' },
+            { w: 'gran', ans: 'xicotet', bad: ['enorme', 'alt', 'llarg'], type: 'contrari' },
+            { w: 'fred', ans: 'calent', bad: ['gelat', 'fresc', 'humit'], type: 'contrari' },
+            { w: 'bonic', ans: 'bell / preciós', bad: ['lleig', 'brut', 'trencat'], type: 'sinònim' }
+          ];
+          const p = pick(pairs);
+          const opts = shuffle([p.ans, p.bad[0], p.bad[1], p.bad[2]]);
+          return {
+            subject: 'valencia', type: 'choice', topic: 'Lèxic valencià',
+            q: 'Quin és un ' + p.type + ' de "' + p.w + '"?',
+            options: opts, answer: opts.indexOf(p.ans),
+            explanation: 'El ' + p.type + ' de "' + p.w + '" és "' + p.ans + '".'
+          };
+        }
+      }
+
+      // --- GENERADOR INGLÉS ---
+      function genInglesQuestion() {
+        const type = randInt(1, 3);
+        if (type === 1) {
+          // Vocabulario variado
+          const dict = [
+            { en: 'rabbit', es: 'Conejo', bad: ['Perro', 'Caballo', 'Tortuga'], cat: 'Animals' },
+            { en: 'butterfly', es: 'Mariposa', bad: ['Abeja', 'Araña', 'Hormiga'], cat: 'Animals' },
+            { en: 'purple', es: 'Morado', bad: ['Amarillo', 'Verde', 'Naranja'], cat: 'Colours' },
+            { en: 'trousers', es: 'Pantalones', bad: ['Camiseta', 'Zapatos', 'Sombrero'], cat: 'Clothes' },
+            { en: 'strawberry', es: 'Fresa', bad: ['Plátano', 'Manzana', 'Naranja'], cat: 'Food' },
+            { en: 'sharpener', es: 'Sacapuntas', bad: ['Regla', 'Goma', 'Estuche'], cat: 'School' },
+            { en: 'cloudy', es: 'Nublado', bad: ['Soleado', 'Nevado', 'Ventoso'], cat: 'Weather' },
+            { en: 'grandmother', es: 'Abuela', bad: ['Hermana', 'Tía', 'Prima'], cat: 'Family' },
+            { en: 'shoulders', es: 'Hombros', bad: ['Rodillas', 'Dedos', 'Orejas'], cat: 'Body' },
+            { en: 'Wednesday', es: 'Miércoles', bad: ['Martes', 'Jueves', 'Viernes'], cat: 'Days' }
+          ];
+          const item = pick(dict);
+          const opts = shuffle([item.es, item.bad[0], item.bad[1], item.bad[2]]);
+          return {
+            subject: 'ingles', type: 'choice', topic: 'English · ' + item.cat,
+            q: 'What does "' + item.en + '" mean in Spanish?',
+            options: opts, answer: opts.indexOf(item.es),
+            explanation: '"' + item.en + '" means "' + item.es + '".'
+          };
+        } else if (type === 2) {
+          // Números en inglés dinámicos
+          const tens = [
+            { n: 20, w: 'twenty' }, { n: 30, w: 'thirty' }, { n: 40, w: 'forty' },
+            { n: 50, w: 'fifty' }, { n: 60, w: 'sixty' }, { n: 70, w: 'seventy' }, { n: 80, w: 'eighty' }
+          ];
+          const units = [
+            { n: 1, w: 'one' }, { n: 2, w: 'two' }, { n: 3, w: 'three' },
+            { n: 4, w: 'four' }, { n: 5, w: 'five' }, { n: 7, w: 'seven' }, { n: 8, w: 'eight' }
+          ];
+          const t = pick(tens);
+          const u = pick(units);
+          const fullNum = t.n + u.n;
+          const word = t.w + '-' + u.w;
+          const opts = shuffle([String(fullNum), String(u.n * 10 + (t.n / 10)), String(fullNum + 10), String(fullNum - 2)]);
+          return {
+            subject: 'ingles', type: 'choice', topic: 'English · Numbers',
+            q: 'Which number is "' + word + '"?',
+            options: opts, answer: opts.indexOf(String(fullNum)),
+            explanation: t.w + ' (' + t.n + ') + ' + u.w + ' (' + u.n + ') = ' + fullNum + '.'
+          };
+        } else {
+          // Gramática de 3º primaria
+          const grammar = [
+            { q: 'Complete: "She ___ my sister."', ok: 'is', bad: ['am', 'are', 'have'], e: 'With "she / he / it" we use "is".' },
+            { q: 'Complete: "They ___ happy at school."', ok: 'are', bad: ['is', 'am', 'has'], e: 'With "they / we / you" we use "are".' },
+            { q: 'Complete: "I ___ got a green turtle."', ok: 'have', bad: ['has', 'is', 'am'], e: 'With "I" we use "have got".' },
+            { q: 'Complete: "He ___ got two brothers."', ok: 'has', bad: ['have', 'are', 'am'], e: 'With "he / she" we use "has got".' },
+            { q: 'Complete: "___ four pencils on the table."', ok: 'There are', bad: ['There is', 'There am', 'Is there'], e: 'For plural ("four pencils") we use "There are".' },
+            { q: 'Complete: "A bird ___ fly, but a dog ___ fly."', ok: "can / can't", bad: ["can't / can", 'is / are', 'has / have'], e: 'Birds can fly and dogs can’t fly.' }
+          ];
+          const g = pick(grammar);
+          const opts = shuffle([g.ok, g.bad[0], g.bad[1], g.bad[2]]);
+          return {
+            subject: 'ingles', type: 'choice', topic: 'English · Grammar',
+            q: g.q, options: opts, answer: opts.indexOf(g.ok), explanation: g.e
+          };
+        }
+      }
+
+      // --- GENERADOR LECTURA (Cuentos con personajes, lugares y datos dinámicos) ---
+      function genLecturaQuestion() {
+        const template = randInt(1, 4);
+        const chars = ['Nora', 'Lucas', 'Martina', 'Hugo', 'Valeria', 'Mateo', 'Clara', 'Leo'];
+        const name = pick(chars);
+
+        if (template === 1) {
+          const lugares = ['el bosque de pinos', 'la playa de arena dorada', 'el huerto del abuelo', 'la montaña nevada'];
+          const objetos = ['una brújula antigua', 'un mapa escondido', 'una caja de madera', 'una llave dorada'];
+          const colores = ['azul', 'roja', 'verde', 'amarilla'];
+          const lugar = pick(lugares);
+          const objeto = pick(objetos);
+          const color = pick(colores);
+
+          const text = 'El sábado por la mañana, ' + name + ' fue de excursión a ' + lugar + ' con su mochila ' + color + '. Mientras caminaba junto a un arroyo, encontró ' + objeto + ' debajo de una piedra lisa.';
+          const askObject = Math.random() < 0.5;
+          if (askObject) {
+            const opts = shuffle([objeto, 'un reloj de arena', 'una moneda de plata', 'un libro de cuentos']);
+            return {
+              subject: 'lectura', type: 'choice', topic: 'Comprensión lectora',
+              storyTitle: '📖 La excursión de ' + name, story: text,
+              q: '¿Qué encontró ' + name + ' debajo de una piedra?',
+              options: opts, answer: opts.indexOf(objeto),
+              explanation: 'En el texto se explica que encontró ' + objeto + '.'
+            };
+          } else {
+            const opts = shuffle(['De color ' + color, 'De color naranja', 'De color morado', 'De color negro']);
+            return {
+              subject: 'lectura', type: 'choice', topic: 'Comprensión lectora',
+              storyTitle: '📖 La excursión de ' + name, story: text,
+              q: '¿De qué color era la mochila de ' + name + '?',
+              options: opts, answer: opts.indexOf('De color ' + color),
+              explanation: 'La primera frase dice que llevaba su mochila ' + color + '.'
+            };
+          }
+        } else if (template === 2) {
+          const animales = ['un gatito blanco', 'un perrito marrón', 'una tortuga pequeña', 'un conejo gris'];
+          const comidas = ['zanahorias frescas', 'galletas crujientes', 'manzanas dulces', 'hojas de lechuga'];
+          const horas = ['las cinco de la tarde', 'las diez de la mañana', 'las seis de la tarde'];
+          const animal = pick(animales);
+          const comida = pick(comidas);
+          const hora = pick(horas);
+
+          const text = name + ' cuida con mucho cariño a ' + animal + '. Todos los días a ' + hora + ' le prepara ' + comida + ' y juega un rato en el jardín antes de hacer los deberes.';
+          const opts = shuffle([comida, 'helado de fresa', 'sopa caliente', 'pan con queso']);
+          return {
+            subject: 'lectura', type: 'choice', topic: 'Comprensión lectora',
+            storyTitle: '📖 La mascota de ' + name, story: text,
+            q: '¿Qué le prepara ' + name + ' a su mascota todos los días?',
+            options: opts, answer: opts.indexOf(comida),
+            explanation: 'El cuento indica que a ' + hora + ' le prepara ' + comida + '.'
+          };
+        } else if (template === 3) {
+          const inventos = ['un robot que ordena lápices', 'un barco de papel impermeable', 'un molino de viento con cartón', 'un telescopio con tubos'];
+          const dias = ['el viernes', 'el miércoles', 'el jueves'];
+          const invento = pick(inventos);
+          const dia = pick(dias);
+
+          const text = 'Para la feria de ciencias del colegio que se celebraba ' + dia + ', ' + name + ' construyó ' + invento + '. Todos los compañeros de 3º aplaudieron mucho cuando vieron lo bien que funcionaba.';
+          const opts = shuffle([dia, 'el lunes', 'el domingo', 'el sábado']);
+          return {
+            subject: 'lectura', type: 'choice', topic: 'Comprensión lectora',
+            storyTitle: '📖 El invento de 3º', story: text,
+            q: '¿Qué día se celebraba la feria de ciencias del colegio?',
+            options: opts, answer: opts.indexOf(dia),
+            explanation: 'La feria de ciencias se celebraba ' + dia + '.'
+          };
+        } else {
+          const vehiculos = ['en tren', 'en bicicleta', 'en autobús', 'en barco'];
+          const destinos = ['la casa de sus abuelos', 'el parque natural', 'el museo de dinosaurios', 'el observatorio'];
+          const tiempos = ['dos horas', 'cuarenta minutos', 'una hora'];
+          const vehiculo = pick(vehiculos);
+          const destino = pick(destinos);
+          const tiempo = pick(tiempos);
+
+          const text = 'Durante las vacaciones, ' + name + ' viajó ' + vehiculo + ' hasta ' + destino + '. El trayecto duró ' + tiempo + ' y durante el camino estuvo dibujando paisajes en su cuaderno.';
+          const opts = shuffle([tiempo, 'cinco horas', 'diez minutos', 'todo el día']);
+          return {
+            subject: 'lectura', type: 'choice', topic: 'Comprensión lectora',
+            storyTitle: '📖 Un viaje especial', story: text,
+            q: '¿Cuánto tiempo duró el trayecto?',
+            options: opts, answer: opts.indexOf(tiempo),
+            explanation: 'El texto dice que el trayecto duró ' + tiempo + '.'
+          };
+        }
+      }
+
+      /* =====================================================================
+         3. BANCOS AMPLIOS PARA C. MEDIO, MÚSICA, PLÁSTICA, E. FÍSICA, RELIGIÓN
+         ===================================================================== */
+      const STATIC_BANKS = {
+        cmedio: [
+          { t: 'El cuerpo humano', q: '¿Qué órgano bombea la sangre por todo nuestro cuerpo?', o: ['El corazón', 'Los pulmones', 'El estómago', 'El hígado'], a: 0, e: 'El corazón impulsa la sangre a través de los vasos sanguíneos.' },
+          { t: 'El cuerpo humano', q: '¿Qué órganos usamos para respirar y tomar oxígeno del aire?', o: ['Los pulmones', 'Los riñones', 'Los intestinos', 'Los músculos'], a: 0, e: 'Los pulmones absorben el oxígeno al inspirar.' },
+          { t: 'El cuerpo humano', q: '¿Qué parte del cuerpo protege el cerebro?', o: ['El cráneo', 'Las costillas', 'El fémur', 'La pelvis'], a: 0, e: 'Los huesos del cráneo protegen el cerebro.' },
+          { t: 'Los sentidos', q: '¿Cuál es el órgano del sentido del gusto?', o: ['La lengua', 'La nariz', 'El oído', 'La piel'], a: 0, e: 'En la lengua están las papilas gustativas.' },
+          { t: 'Los sentidos', q: '¿Qué sentido nos permite notar si algo está frío, caliente, suave o áspero?', o: ['El tacto (piel)', 'La vista', 'El olfato', 'El oído'], a: 0, e: 'La piel es el órgano del sentido del tacto.' },
+          { t: 'Alimentación', q: '¿Qué alimentos debemos tomar varias veces al día porque tienen muchas vitaminas?', o: ['Frutas y verduras', 'Golosinas y refrescos', 'Patatas fritas de bolsa', 'Bollería industrial'], a: 0, e: 'Las frutas y verduras aportan vitaminas, fibra y agua.' },
+          { t: 'Animales vertebrados', q: '¿Qué tienen todos los animales vertebrados?', o: ['Columna vertebral y esqueleto interno', 'Plumas de colores', 'Branquias para el agua', 'Ocho patas'], a: 0, e: 'Los vertebrados tienen esqueleto con columna vertebral.' },
+          { t: 'Mamíferos', q: '¿Cómo nacen y se alimentan al principio los mamíferos?', o: ['Nacen del vientre de su madre y maman leche', 'Nacen de huevos en el agua', 'Nacen de semillas', 'Tienen escamas duras'], a: 0, e: 'Los mamíferos son vivíparos y maman leche.' },
+          { t: 'Aves', q: '¿De qué está cubierto el cuerpo de las aves?', o: ['De plumas', 'De escamas', 'De pelo', 'De piel desnuda'], a: 0, e: 'Las aves tienen plumas, pico y dos alas.' },
+          { t: 'Anfibios', q: '¿A qué grupo pertenecen las ranas y las salamandras?', o: ['Anfibios', 'Reptiles', 'Peces', 'Insectos'], a: 0, e: 'Los anfibios viven cerca del agua y sufren metamorfosis.' },
+          { t: 'Reptiles', q: '¿Cómo se desplazan las serpientes y los lagartos?', o: ['Reptando o arrastrándose con patas muy cortas', 'Volando alto', 'Nadando con aletas', 'Saltando con alas'], a: 0, e: 'Los reptiles tienen escamas y reptan.' },
+          { t: 'Invertebrados', q: '¿Cuántas patas tienen los insectos como la hormiga o la abeja?', o: ['6 patas', '8 patas', '4 patas', '10 patas'], a: 0, e: 'Todos los insectos tienen 6 patas y suelen tener antenas.' },
+          { t: 'Las plantas', q: '¿Cómo se llama el proceso por el que las plantas fabrican su alimento con luz solar?', o: ['Fotosíntesis', 'Respiración', 'Evaporación', 'Germinación'], a: 0, e: 'Con luz del sol, agua, aire y sales minerales hacen la fotosíntesis.' },
+          { t: 'Partes de la planta', q: '¿Qué parte de la planta se transforma en el fruto que contiene las semillas?', o: ['La flor', 'La raíz', 'El tallo', 'La corteza'], a: 0, e: 'Tras la polinización, la flor da lugar al fruto.' },
+          { t: 'El agua', q: '¿En qué tres estados podemos encontrar el agua en la naturaleza?', o: ['Sólido, líquido y gaseoso', 'Duro, blando y dulce', 'Caliente, templado y salado', 'Río, nube y piedra'], a: 0, e: 'Hielo (sólido), agua líquida y vapor de agua (gaseoso).' },
+          { t: 'Ciclo del agua', q: '¿Qué ocurre cuando el vapor de agua sube, se enfría y forma las nubes?', o: ['Condensación', 'Fusión', 'Filtración', 'Erosión'], a: 0, e: 'Al enfriarse, el vapor se condensa en gotitas formando nubes.' },
+          { t: 'El aire y el tiempo', q: '¿Cómo se llama el aire en movimiento?', o: ['Viento', 'Granizo', 'Niebla', 'Rocío'], a: 0, e: 'El viento es aire que se desplaza.' },
+          { t: 'El Sistema Solar', q: '¿Qué planeta es conocido como el "planeta azul" por la gran cantidad de agua que tiene?', o: ['La Tierra', 'Marte', 'Mercurio', 'Saturno'], a: 0, e: 'La mayor parte de la superficie de la Tierra está cubierta de agua.' },
+          { t: 'La Tierra', q: '¿Cuánto tarda la Tierra en dar una vuelta completa sobre sí misma (rotación)?', o: ['24 horas (1 día)', '365 días (1 año)', '7 días', '12 horas'], a: 0, e: 'La rotación dura 24 horas y produce el día y la noche.' },
+          { t: 'La Tierra', q: '¿Qué origina el movimiento de traslación de la Tierra alrededor del Sol?', o: ['Las cuatro estaciones del año', 'El día y la noche', 'Las olas del mar', 'Los terremotos'], a: 0, e: 'La traslación dura 365 días y da lugar a primavera, verano, otoño e invierno.' },
+          { t: 'Paisajes', q: '¿Cómo se llama un conjunto de montañas alineadas?', o: ['Cordillera o sierra', 'Llanura', 'Archipiélago', 'Bahía'], a: 0, e: 'Varias montañas unidas forman una sierra o cordillera.' },
+          { t: 'Paisajes de costa', q: '¿Cómo se llama un conjunto de islas cercanas entre sí?', o: ['Archipiélago', 'Península', 'Cabo', 'Golfo'], a: 0, e: 'Por ejemplo, las Islas Baleares y las Islas Canarias son archipiélagos.' },
+          { t: 'Los ríos', q: '¿Cómo se llama el lugar donde un río termina y entrega sus aguas al mar?', o: ['Desembocadura', 'Nacimiento', 'Afluente', 'Meandro'], a: 0, e: 'Un río nace en la montaña y acaba en su desembocadura.' },
+          { t: 'La localidad', q: '¿Qué servicio municipal se encarga de apagar incendios y rescatar personas?', o: ['Los bomberos', 'Los jardineros', 'Los carteros', 'Los bibliotecarios'], a: 0, e: 'Los bomberos actúan en emergencias e incendios.' }
+        ],
+
+        musica: [
+          { t: 'Figuras musicales', q: '¿Cuántos tiempos (pulsos) dura una NEGRA?', o: ['1 tiempo', '2 tiempos', '4 tiempos', 'Medio tiempo'], a: 0, e: 'La negra vale 1 pulso.' },
+          { t: 'Figuras musicales', q: '¿Cuántos tiempos dura una BLANCA?', o: ['2 tiempos', '1 tiempo', '3 tiempos', '4 tiempos'], a: 0, e: 'La blanca vale 2 pulsos.' },
+          { t: 'Figuras musicales', q: '¿Cuántos tiempos dura una REDONDA?', o: ['4 tiempos', '2 tiempos', '1 tiempo', '6 tiempos'], a: 0, e: 'La redonda dura 4 pulsos.' },
+          { t: 'Figuras musicales', q: '¿Cuántas CORCHEAS caben en 1 tiempo (una negra)?', o: ['2 corcheas', '4 corcheas', '1 corchea', '8 corcheas'], a: 0, e: 'Cada corchea dura medio tiempo: 2 corcheas = 1 negra.' },
+          { t: 'El pentagrama', q: '¿Cuántas líneas tiene un pentagrama?', o: ['5 líneas', '4 líneas', '6 líneas', '3 líneas'], a: 0, e: 'El pentagrama tiene 5 líneas y 4 espacios.' },
+          { t: 'El pentagrama', q: '¿Cómo se cuentan las líneas y espacios del pentagrama?', o: ['De abajo hacia arriba', 'De arriba hacia abajo', 'De derecha a izquierda', 'Desde el centro'], a: 0, e: 'Siempre se numeran de abajo hacia arriba (1.ª línea abajo).' },
+          { t: 'Notas musicales', q: '¿Qué nota está justo después de FA en la escala ascendente?', o: ['SOL', 'MI', 'LA', 'RE'], a: 0, e: 'Do - Re - Mi - Fa - Sol - La - Si.' },
+          { t: 'Notas musicales', q: '¿Qué nota va antes de RE?', o: ['DO', 'MI', 'FA', 'SI'], a: 0, e: 'La escala empieza en Do y sigue con Re.' },
+          { t: 'Clave de Sol', q: '¿En qué línea del pentagrama se empieza a dibujar la Clave de Sol?', o: ['En la segunda línea', 'En la quinta línea', 'En la primera línea', 'Fuera del pentagrama'], a: 0, e: 'La Clave de Sol nace en la 2.ª línea y ahí coloca la nota Sol.' },
+          { t: 'Familia de cuerda', q: '¿Cuál de estos instrumentos es de CUERDA FROTADA?', o: ['Violonchelo', 'Trompeta', 'Flauta dulce', 'Pandereta'], a: 0, e: 'El violonchelo se toca frotando sus cuerdas con un arco.' },
+          { t: 'Familia de cuerda', q: '¿Cómo se toca el arpa o la guitarra?', o: ['Pulsando o rasgueando las cuerdas', 'Soplando por una boquilla', 'Golpeando con baquetas', 'Agitando cascabeles'], a: 0, e: 'Son instrumentos de cuerda pulsada.' },
+          { t: 'Familia de viento', q: '¿Cuál de estos instrumentos pertenece a la familia de VIENTO?', o: ['Clarinete', 'Violín', 'Xilófono', 'Triángulo'], a: 0, e: 'El clarinete suena al soplar aire por su tubo.' },
+          { t: 'Familia de viento', q: '¿A qué familia pertenece la trompeta?', o: ['Viento metal', 'Cuerda pulsada', 'Percusión', 'Teclado'], a: 0, e: 'La trompeta es un instrumento de viento metal.' },
+          { t: 'Familia de percusión', q: '¿Cuál de estos instrumentos es de PERCUSIÓN?', o: ['Bombo', 'Flauta travesera', 'Oboe', 'Contrabajo'], a: 0, e: 'El bombo suena al golpearlo con una maza.' },
+          { t: 'Cualidades del sonido', q: '¿Qué cualidad diferencia un sonido AGUDO de uno GRAVE?', o: ['La altura', 'La intensidad', 'La duración', 'El timbre'], a: 0, e: 'La altura indica si el sonido es agudo o grave.' },
+          { t: 'Cualidades del sonido', q: '¿Qué cualidad diferencia un sonido FUERTE de uno SUAVE?', o: ['La intensidad', 'La altura', 'La duración', 'El compás'], a: 0, e: 'La intensidad es el volumen (fuerte o suave).' },
+          { t: 'Cualidades del sonido', q: '¿Qué cualidad nos permite distinguir la voz de mamá de la voz de papá?', o: ['El timbre', 'La duración', 'La altura', 'El silencio'], a: 0, e: 'El timbre identifica qué instrumento o persona produce el sonido.' },
+          { t: 'Cualidades del sonido', q: '¿Qué cualidad indica si un sonido es LARGO o CORTO?', o: ['La duración', 'La intensidad', 'El timbre', 'La altura'], a: 0, e: 'La duración mide el tiempo que dura el sonido.' }
+        ],
+
+        plastica: [
+          { t: 'Colores primarios', q: '¿Cuáles son los tres colores PRIMARIOS?', o: ['Amarillo, azul (cian) y rojo (magenta)', 'Verde, naranja y morado', 'Blanco, negro y gris', 'Rosa, marrón y verde'], a: 0, e: 'Con los tres primarios se pueden mezclar los demás colores.' },
+          { t: 'Colores secundarios', q: '¿Qué color sale al mezclar AMARILLO + AZUL?', o: ['Verde', 'Naranja', 'Violeta', 'Marrón'], a: 0, e: 'Amarillo y azul forman el verde.' },
+          { t: 'Colores secundarios', q: '¿Qué color sale al mezclar ROJO + AMARILLO?', o: ['Naranja', 'Verde', 'Azul', 'Morado'], a: 0, e: 'Rojo y amarillo forman el naranja.' },
+          { t: 'Colores secundarios', q: '¿Qué color sale al mezclar AZUL + ROJO?', o: ['Violeta / Morado', 'Verde', 'Naranja', 'Amarillo'], a: 0, e: 'Azul y rojo forman el violeta o morado.' },
+          { t: 'Colores cálidos', q: '¿Cuál de estos colores es CÁLIDO?', o: ['Naranja', 'Azul', 'Verde oscuro', 'Violeta'], a: 0, e: 'Rojo, naranja y amarillo son colores cálidos.' },
+          { t: 'Colores fríos', q: '¿Cuál de estos colores es FRÍO?', o: ['Azul', 'Rojo', 'Amarillo', 'Naranja'], a: 0, e: 'Azul, verde y violeta transmiten frescor.' },
+          { t: 'Tonos y luz', q: '¿Qué ocurre si mezclamos color ROJO con pintura BLANCA?', o: ['Obtenemos color rosa (un tono más claro)', 'Obtenemos negro', 'Obtenemos verde', 'Se vuelve transparente'], a: 0, e: 'El blanco aclara los colores.' },
+          { t: 'Geometría', q: '¿Cuántos lados tiene un HEXÁGONO?', o: ['6 lados', '5 lados', '4 lados', '8 lados'], a: 0, e: 'Hexa significa seis: el hexágono tiene 6 lados.' },
+          { t: 'Geometría', q: '¿Cuántos lados tiene un PENTÁGONO?', o: ['5 lados', '6 lados', '3 lados', '4 lados'], a: 0, e: 'Penta significa cinco: 5 lados.' },
+          { t: 'Geometría', q: '¿Qué figura tiene 4 lados iguales y 4 ángulos rectos?', o: ['Cuadrado', 'Triángulo', 'Romboide', 'Círculo'], a: 0, e: 'El cuadrado tiene los 4 lados exactamente iguales.' },
+          { t: 'Simetría', q: 'Una mariposa con las dos alas idénticas es un ejemplo de...', o: ['Simetría', 'Perspectiva aérea', 'Textura rugosa', 'Collage'], a: 0, e: 'Ambos lados coinciden respecto al eje central.' },
+          { t: 'Texturas', q: 'El algodón o la lana tienen una textura...', o: ['Suave y blanda', 'Áspera como una lija', 'Dura como el hierro', 'Metálica'], a: 0, e: 'Las texturas pueden ser suaves, ásperas, lisas o rugosas.' },
+          { t: 'Técnicas', q: '¿Cómo se llama la técnica de pegar recortes de papeles, revistas o telas?', o: ['Collage', 'Acuarela', 'Grabado', 'Modelado'], a: 0, e: 'El collage combina distintos materiales pegados.' },
+          { t: 'Herramientas', q: '¿Qué herramienta sirve para trazar círculos perfectos?', o: ['El compás', 'La regla recta', 'La tijera', 'El sacapuntas'], a: 0, e: 'El compás dibuja circunferencias.' },
+          { t: 'Escultura', q: '¿Qué material moldeable usamos en clase para hacer figuras en 3D con volumen?', o: ['Plastilina o barro', 'Acuarela líquida', 'Tiza', 'Carboncillo'], a: 0, e: 'El modelado con barro o plastilina crea volumen.' },
+          { t: 'Líneas', q: '¿Cómo son las líneas en zigzag de un rayo o una sierra?', o: ['Líneas quebradas', 'Líneas curvas', 'Líneas paralelas rectas', 'Círculos'], a: 0, e: 'Las líneas quebradas cambian de dirección formando picos.' }
+        ],
+
+        efisica: [
+          { t: 'Calentamiento', q: '¿Qué debemos hacer siempre antes de empezar un juego intenso o deporte?', o: ['Calentar suavemente músculos y articulaciones', 'Correr a máxima velocidad desde el primer segundo', 'Sentarnos sin movernos', 'Comer mucho'], a: 0, e: 'Calentar prepara el cuerpo y evita lesiones.' },
+          { t: 'Vuelta a la calma', q: 'Al acabar una carrera intensa, ¿qué conviene hacer?', o: ['Caminar despacio, respirar hondo y estirar', 'Parar de golpe y tumbarse', 'Beber agua helada de golpe', 'Seguir esprintando'], a: 0, e: 'La vuelta a la calma baja las pulsaciones poco a poco.' },
+          { t: 'Hidratación', q: '¿Qué bebida es la mejor cuando hacemos Educación Física?', o: ['Agua', 'Refresco con gas', 'Zumo azucarado', 'Batido pesado'], a: 0, e: 'El agua hidrata de forma saludable.' },
+          { t: 'Higiene', q: 'Después de hacer deporte y sudar es muy importante...', o: ['Asearse y cambiarse la camiseta sudada', 'Quedarse con la ropa mojada todo el día', 'No lavarse las manos', 'No beber agua'], a: 0, e: 'La higiene evita resfriados y mantiene la piel sana.' },
+          { t: 'Juego limpio', q: 'Si un compañero se cae durante un partido en el patio, ¿qué es lo correcto?', o: ['Parar, ayudarle a levantarse y preguntar si está bien', 'Seguir jugando para marcar gol', 'Reírse', 'Echarle la culpa'], a: 0, e: 'El compañerismo es lo más importante en el deporte.' },
+          { t: 'Capacidades físicas', q: 'Estirar los brazos y piernas sin doblar las rodillas mejora la...', o: ['Flexibilidad', 'Velocidad', 'Fuerza máxima', 'Puntería'], a: 0, e: 'Los estiramientos mejoran la flexibilidad.' },
+          { t: 'Capacidades físicas', q: 'Correr una distancia corta en el menor tiempo posible es...', o: ['Velocidad', 'Resistencia', 'Flexibilidad', 'Relajación'], a: 0, e: 'La velocidad mide la rapidez de desplazamiento.' },
+          { t: 'Capacidades físicas', q: 'Aguantar jugando o trotando mucho tiempo sin cansarse es...', o: ['Resistencia', 'Equilibrio', 'Salto', 'Lanzamiento'], a: 0, e: 'La resistencia permite mantener el esfuerzo.' },
+          { t: 'Postura', q: '¿Cómo hay que llevar la mochila escolar para cuidar la espalda?', o: ['Colgada en ambos hombros con las dos asas ajustadas', 'Colgada de un solo hombro', 'Arrastrando con una mano', 'Muy suelta abajo'], a: 0, e: 'Repartir el peso en ambos hombros protege la espalda.' },
+          { t: 'Postura', q: 'Al levantar una caja pesada del suelo debemos...', o: ['Doblar las rodillas y mantener la espalda recta', 'Doblar la espalda con las piernas estiradas', 'Tirar de golpe con el cuello', 'Levantarlo con un pie'], a: 0, e: 'Hacer fuerza con las piernas protege la columna.' },
+          { t: 'Equilibrio', q: 'Mantenerse sobre un solo pie sin caerse trabaja el...', o: ['Equilibrio', 'Lanzamiento', 'Golpeo', 'Carrera'], a: 0, e: 'El equilibrio controla la estabilidad del cuerpo.' },
+          { t: 'Descanso', q: '¿Por qué es importante dormir unas 10 horas cada noche?', o: ['Para recuperar energía, crecer y concentrarnos', 'Para no hacer deberes', 'Para no jugar', 'Para ver la tele'], a: 0, e: 'El descanso nocturno es esencial para la salud.' },
+          { t: 'Calzado', q: '¿Qué calzado debemos usar en Educación Física?', o: ['Zapatillas deportivas bien atadas', 'Chanclas', 'Zapatos de suela dura', 'Calcetines solos'], a: 0, e: 'Evita resbalones y torceduras.' },
+          { t: 'Coordinación', q: 'Botar un balón mientras caminamos trabaja la coordinación...', o: ['Óculo-manual (ojo-mano)', 'Óculo-pédica (ojo-pie)', 'De sueño', 'De lectura'], a: 0, e: 'Coordinamos la vista con el movimiento de la mano.' },
+          { t: 'Deportes', q: 'En baloncesto, ¿cómo se avanza con el balón?', o: ['Botándolo con una mano', 'Corriendo con él abrazado sin botar', 'Dándole patadas', 'Lanzándolo fuera'], a: 0, e: 'En baloncesto hay que botar el balón para desplazarse.' },
+          { t: 'Alimentación', q: 'Antes de hacer deporte por la mañana es importante...', o: ['Haber tomado un desayuno saludable', 'Ir sin comer nada', 'Comer muchas chucherías', 'Beber refrescos'], a: 0, e: 'Un buen desayuno da energía para toda la mañana.' }
+        ],
+
+        religion: [
+          { t: 'Valores', q: '¿Qué significa ser solidario?', o: ['Ayudar y compartir con quien lo necesita', 'Guardar todo solo para uno mismo', 'Reírse de los demás', 'No escuchar a nadie'], a: 0, e: 'La solidaridad nos une y ayuda a los demás.' },
+          { t: 'Valores', q: 'Pedir perdón cuando nos equivocamos ayuda a...', o: ['Construir la paz y cuidar la amistad', 'Enfadarnos más', 'Tener siempre la razón', 'No volver a jugar'], a: 0, e: 'El perdón repara la amistad.' },
+          { t: 'Parábolas', q: '¿Qué nos enseña la Parábola del Buen Samaritano?', o: ['Que debemos ayudar a cualquier persona que nos necesite', 'Que hay que pasar de largo sin mirar', 'Que solo ayudamos a los conocidos', 'Que viajar es aburrido'], a: 0, e: 'El Buen Samaritano ayudó al herido del camino.' },
+          { t: 'Parábolas', q: 'En la parábola del Hijo Pródigo, ¿cómo recibe el padre a su hijo cuando vuelve arrepentido?', o: ['Con un abrazo lleno de alegría y perdón', 'Con un castigo severo', 'Cerrándole la puerta', 'Sin hablarle'], a: 0, e: 'Enseña el amor incondicional y el perdón.' },
+          { t: 'Parábolas', q: 'En la parábola de la Oveja Perdida, ¿qué hace el pastor cuando falta 1 oveja?', o: ['Va a buscarla hasta encontrarla y se alegra mucho', 'La abandona en el monte', 'Se enfada con las otras 99', 'Vende el rebaño'], a: 0, e: 'Cada persona es única y valiosa.' },
+          { t: 'Relatos bíblicos', q: '¿Qué señal apareció en el cielo al final del diluvio en el relato de Noé?', o: ['Un arcoíris', 'Una estrella fugaz', 'Un eclipse', 'Una nube negra'], a: 0, e: 'El arcoíris simboliza la paz y el cuidado de la vida.' },
+          { t: 'Relatos bíblicos', q: '¿Con qué venció el joven David al gigante Goliat?', o: ['Con una honda y una piedra', 'Con una espada gigante', 'Con un ejército', 'Con un escudo de hierro'], a: 0, e: 'David confió en Dios y usó su honda.' },
+          { t: 'Vida de Jesús', q: '¿Dónde nació Jesús según los Evangelios?', o: ['En Belén', 'En Roma', 'En Egipto', 'En Grecia'], a: 0, e: 'Jesús nació en Belén.' },
+          { t: 'Vida de Jesús', q: '¿Cómo se llamaban la madre y el padre adoptivo de Jesús en la Tierra?', o: ['María y José', 'Isabel y Zacarías', 'Marta y Lázaro', 'Ana y Joaquín'], a: 0, e: 'La Sagrada Familia está formada por Jesús, María y José.' },
+          { t: 'Fiestas', q: '¿Qué celebran los cristianos en Navidad?', o: ['El nacimiento de Jesús', 'El final del curso', 'El verano', 'Una carrera'], a: 0, e: 'Navidad celebra el nacimiento de Jesús.' },
+          { t: 'Fiestas', q: '¿Qué celebran los cristianos el Domingo de Pascua (Resurrección)?', o: ['La resurrección de Jesús y la alegría de la vida', 'El inicio del otoño', 'El carnaval', 'El fin de año'], a: 0, e: 'Es la fiesta más importante del calendario cristiano.' },
+          { t: 'La Biblia', q: '¿Cómo se llaman los libros que narran la vida y palabras de Jesús?', o: ['Los Evangelios', 'Los Cuentos', 'Las Enciclopedias', 'Los Diccionarios'], a: 0, e: 'Mateo, Marcos, Lucas y Juan escribieron los Evangelios.' },
+          { t: 'Cuidado del mundo', q: 'Cuidar las plantas, los animales y el agua es...', o: ['Respetar y agradecer la creación', 'Perder el tiempo', 'No hacer nada', 'Aburrirse'], a: 0, e: 'Cuidar la naturaleza es cuidar nuestra casa común.' },
+          { t: 'Convivencia', q: 'La Regla de Oro dice: "Haz a los demás..."', o: ['...lo que te gustaría que te hicieran a ti', '...lo que te dé la gana sin pensar', '...todo al revés', '...solo si te dan algo'], a: 0, e: 'Tratar a todos con respeto y cariño.' },
+          { t: 'Paz', q: '¿Qué ave blanca con una rama de olivo simboliza la paz?', o: ['La paloma', 'El águila', 'El cuervo', 'El búho'], a: 0, e: 'La paloma blanca es símbolo de paz.' },
+          { t: 'Gratitud', q: 'Dar las gracias cada día por lo que tenemos demuestra...', o: ['Gratitud', 'Envidia', 'Egoísmo', 'Pereza'], a: 0, e: 'Agradecer nos hace más felices.' }
+        ]
+      };
+
+      function getQuestionForSubject(subjId) {
+        if (subjId === 'mates') return genMatesQuestion();
+        if (subjId === 'lengua') return genLenguaQuestion();
+        if (subjId === 'valencia') return genValenciaQuestion();
+        if (subjId === 'ingles') return genInglesQuestion();
+        if (subjId === 'lectura') return genLecturaQuestion();
+
+        const list = STATIC_BANKS[subjId] || STATIC_BANKS.cmedio;
+        const item = pick(list);
+        const correctText = item.o[item.a];
+        const shuffledOpts = shuffle(item.o);
+        return {
+          subject: subjId,
+          type: 'choice',
+          topic: item.t,
+          q: item.q,
+          options: shuffledOpts,
+          answer: shuffledOpts.indexOf(correctText),
+          explanation: item.e
+        };
+      }
+
+      /* =====================================================================
+         4. ESTADO PERSISTENTE EN LOCALSTORAGE + COPIA DE SEGURIDAD
+         ===================================================================== */
+      function getTodayKey() {
+        const d = new Date();
+        return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+      }
+
+      function createDefaultProfile() {
+        const sp = {};
+        SUBJECTS.forEach(function (s) { sp[s.id] = 0; });
+        return {
+          initialized: false,
+          name: 'Campeón',
+          avatar: '🦁',
+          points: 0,
+          level: 1,
+          dailyCount: 0,
+          lastDailyDate: '',
+          subjectPoints: sp
+        };
+      }
+
+      let profile = createDefaultProfile();
+
+      const state = {
+        activeTab: 'home',
+        playMode: 'subject', // 'daily' | 'adventure' | 'subject'
+        currentSubject: 'mates',
+        matesMode: 'suma',
+        selectedMatesTable: 'all',
+        questions: [],
+        qIndex: 0,
+        correctInRound: 0,
+        pointsInRound: 0,
+        streak: 0,
+        mistakes: [],
+        isReviewingMistakes: false,
+        answered: false,
+        numericInput: '',
+        viewTableNum: 2,
+        hideTableResults: false,
+        revealedCells: {},
+        tempAvatar: '🦁'
+      };
+
+      function loadProfile() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            const def = createDefaultProfile();
+            profile = Object.assign({}, def, parsed);
+            profile.subjectPoints = Object.assign({}, def.subjectPoints, parsed.subjectPoints || {});
+          }
+        } catch (err) {
+          profile = createDefaultProfile();
+        }
+      }
+
+      function saveProfile() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+        } catch (err) {
+          // Ignorar si el almacenamiento está restringido
+        }
+        updateHeaderUI();
+      }
+
+      function updateHeaderUI() {
+        document.getElementById('header-avatar').textContent = profile.avatar || '🦁';
+        document.getElementById('header-greeting').textContent = '¡Hola, ' + (profile.name || 'Campeón') + '!';
+        document.getElementById('header-level-tag').textContent = 'Nivel ' + profile.level + ' · 3º de Primaria';
+        document.getElementById('header-points').textContent = profile.points;
+
+        const doneToday = profile.lastDailyDate === getTodayKey();
+        const dailyPill = document.getElementById('daily-status-pill');
+        if (doneToday) {
+          dailyPill.textContent = '✔ ¡Completado hoy!';
+          dailyPill.style.background = '#dcfce7';
+          dailyPill.style.color = '#15803d';
+        } else {
+          dailyPill.textContent = '⭐ +20 pts / acierto';
+          dailyPill.style.background = 'rgba(255,255,255,0.85)';
+          dailyPill.style.color = '#0f172a';
+        }
+
+        document.getElementById('adventure-level-pill').textContent = 'Nivel ' + profile.level;
+      }
+
+      /* =====================================================================
+         5. NAVEGACIÓN ENTRE PESTAÑAS
+         ===================================================================== */
+      function switchTab(tabName) {
+        state.activeTab = tabName;
+        document.querySelectorAll('.nav-btn').forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-tab') === tabName);
+        });
+
+        document.querySelectorAll('.view').forEach(function (v) {
+          v.classList.remove('active');
+        });
+
+        if (tabName === 'home') {
+          document.getElementById('view-home').classList.add('active');
+        } else if (tabName === 'subjects') {
+          renderSubjectsGrid();
+          document.getElementById('view-subjects').classList.add('active');
+        } else if (tabName === 'tables') {
+          renderTablesView();
+          document.getElementById('view-tables').classList.add('active');
+        } else if (tabName === 'points') {
+          renderPointsView();
+          document.getElementById('view-points').classList.add('active');
+        }
+      }
+
+      /* =====================================================================
+         6. INICIO DE PARTIDAS (RETO DEL DÍA, AVENTURA, ASIGNATURA LIBRE)
+         ===================================================================== */
+      function startRound(mode, subjectId) {
+        state.playMode = mode;
+        state.currentSubject = subjectId || 'mates';
+        state.isReviewingMistakes = false;
+        state.mistakes = [];
+        state.qIndex = 0;
+        state.correctInRound = 0;
+        state.pointsInRound = 0;
+        state.streak = 0;
+
+        const matesBar = document.getElementById('mates-toolbar');
+        if (mode === 'subject' && state.currentSubject === 'mates') {
+          matesBar.style.display = 'flex';
+          updateMatesToolbarUI();
+        } else {
+          matesBar.style.display = 'none';
+        }
+
+        // Generar 10 preguntas variadas
+        const list = [];
+        const allSubjIds = SUBJECTS.map(function (s) { return s.id; });
+        for (let i = 0; i < 10; i++) {
+          if (mode === 'subject') {
+            list.push(getQuestionForSubject(state.currentSubject));
+          } else {
+            const pickSubj = allSubjIds[i % allSubjIds.length];
+            list.push(getQuestionForSubject(pickSubj));
+          }
+        }
+        state.questions = mode === 'subject' ? list : shuffle(list);
+
+        document.querySelectorAll('.view').forEach(function (v) { v.classList.remove('active'); });
+        document.getElementById('view-play').classList.add('active');
+        renderCurrentQuestion();
+      }
+
+      function startMistakesReview() {
+        if (!state.mistakes.length) return;
+        state.isReviewingMistakes = true;
+        state.questions = state.mistakes.slice();
+        state.mistakes = [];
+        state.qIndex = 0;
+        state.correctInRound = 0;
+        state.pointsInRound = 0;
+        state.streak = 0;
+
+        document.getElementById('mates-toolbar').style.display = 'none';
+        document.querySelectorAll('.view').forEach(function (v) { v.classList.remove('active'); });
+        document.getElementById('view-play').classList.add('active');
+        renderCurrentQuestion();
+      }
+
+      function getMultiplier() {
+        if (state.playMode !== 'adventure') return 1;
+        if (state.streak >= 5) return 3;
+        if (state.streak >= 3) return 2;
+        return 1;
+      }
+
+      function renderCurrentQuestion() {
+        const total = state.questions.length;
+        const q = state.questions[state.qIndex];
+        state.answered = false;
+        state.numericInput = '';
+
+        const subjMeta = SUBJECTS.find(function (s) { return s.id === q.subject; }) || SUBJECTS[0];
+        let badgeLabel = subjMeta.icon + ' ' + subjMeta.name;
+        if (state.playMode === 'daily') badgeLabel = '☀️ Reto del Día · ' + subjMeta.name;
+        if (state.playMode === 'adventure') badgeLabel = '🚀 Aventura Nv.' + profile.level + ' · ' + subjMeta.name;
+        if (state.isReviewingMistakes) badgeLabel = '🔁 Repaso · ' + subjMeta.name;
+
+        document.getElementById('play-mode-badge').textContent = badgeLabel;
+        const mult = getMultiplier();
+        document.getElementById('play-streak-badge').textContent = '🔥 Racha: ' + state.streak + (state.playMode === 'adventure' ? (' (×' + mult + ')') : '');
+
+        document.getElementById('play-step-text').textContent = 'Pregunta ' + (state.qIndex + 1) + ' de ' + total;
+        document.getElementById('play-pts-round').textContent = '+' + state.pointsInRound + ' pts en esta ronda';
+        document.getElementById('play-progress-fill').style.width = Math.max(8, Math.round((state.qIndex / total) * 100)) + '%';
+
+        const storyBox = document.getElementById('play-story-box');
+        if (q.story) {
+          storyBox.classList.add('visible');
+          document.getElementById('play-story-title').textContent = q.storyTitle || '📖 Lee con atención:';
+          document.getElementById('play-story-text').textContent = q.story;
+        } else {
+          storyBox.classList.remove('visible');
+        }
+
+        document.getElementById('play-topic').textContent = q.topic || subjMeta.name;
+        document.getElementById('play-question').textContent = q.q;
+
+        document.getElementById('play-feedback').className = 'feedback-box';
+        document.getElementById('btn-play-next').classList.remove('visible');
+
+        const numArea = document.getElementById('play-numeric-area');
+        const optGrid = document.getElementById('play-options-grid');
+
+        if (q.type === 'numeric') {
+          numArea.classList.add('visible');
+          optGrid.style.display = 'none';
+          document.getElementById('play-math-expr').textContent = q.expr;
+          const ansEl = document.getElementById('play-math-ans');
+          ansEl.className = 'math-answer-box empty';
+          ansEl.textContent = '?';
+        } else {
+          numArea.classList.remove('visible');
+          optGrid.style.display = 'grid';
+          const letters = ['A', 'B', 'C', 'D'];
+          optGrid.innerHTML = q.options.map(function (opt, idx) {
+            return (
+              '<button type="button" class="option-btn" data-idx="' + idx + '">' +
+                '<span class="option-letter">' + letters[idx] + '</span>' +
+                '<span>' + opt + '</span>' +
+              '</button>'
+            );
+          }).join('');
+
+          optGrid.querySelectorAll('.option-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              evaluateChoice(parseInt(btn.getAttribute('data-idx'), 10));
+            });
+          });
+        }
+      }
+
+      /* =====================================================================
+         7. EVALUACIÓN DE RESPUESTAS Y PUNTUACIÓN
+         ===================================================================== */
+      function evaluateChoice(idx) {
+        if (state.answered) return;
+        state.answered = true;
+        const q = state.questions[state.qIndex];
+        const ok = idx === q.answer;
+
+        document.querySelectorAll('#play-options-grid .option-btn').forEach(function (btn, i) {
+          btn.disabled = true;
+          if (i === q.answer) btn.classList.add('correct');
+          else if (i === idx && !ok) btn.classList.add('wrong');
+        });
+
+        completeQuestionStep(ok, q, q.options[q.answer]);
+      }
+
+      function handleKeyInput(key) {
+        if (state.answered) return;
+        const ansEl = document.getElementById('play-math-ans');
+
+        if (key === 'DEL') {
+          state.numericInput = state.numericInput.slice(0, -1);
+          ansEl.textContent = state.numericInput || '?';
+          ansEl.classList.toggle('empty', state.numericInput === '');
+          return;
+        }
+
+        if (key === 'OK') {
+          if (state.numericInput === '') {
+            showToast('✍️ Escribe primero tu respuesta');
+            return;
+          }
+          state.answered = true;
+          const q = state.questions[state.qIndex];
+          const ok = parseInt(state.numericInput, 10) === q.answer;
+          ansEl.classList.remove('empty');
+          ansEl.classList.add(ok ? 'correct' : 'wrong', ok ? 'pop-anim' : 'shake-anim');
+          completeQuestionStep(ok, q, String(q.answer));
+          return;
+        }
+
+        if (state.numericInput.length < 4) {
+          state.numericInput = state.numericInput === '0' ? key : (state.numericInput + key);
+          ansEl.textContent = state.numericInput;
+          ansEl.classList.remove('empty');
+        }
+      }
+
+      function completeQuestionStep(isCorrect, q, correctLabel) {
+        const fbBox = document.getElementById('play-feedback');
+        const fbTitle = document.getElementById('play-feedback-title');
+        const fbExpl = document.getElementById('play-feedback-expl');
+
+        if (isCorrect) {
+          state.correctInRound++;
+          state.streak++;
+          let earned = 10;
+          if (state.playMode === 'daily') earned = 20;
+          if (state.playMode === 'adventure') earned = 10 * getMultiplier();
+
+          state.pointsInRound += earned;
+          profile.points += earned;
+          if (profile.subjectPoints[q.subject] !== undefined) {
+            profile.subjectPoints[q.subject] += earned;
+          }
+          saveProfile();
+
+          fbBox.className = 'feedback-box visible is-correct pop-anim';
+          fbTitle.textContent = '🎉 ¡Genial! +' + earned + ' puntos';
+          fbExpl.textContent = q.explanation || '¡Respuesta correcta!';
+        } else {
+          state.streak = 0;
+          state.mistakes.push(q);
+          fbBox.className = 'feedback-box visible is-wrong shake-anim';
+          fbTitle.textContent = '💡 ¡Casi! La respuesta correcta es: ' + correctLabel;
+          fbExpl.textContent = q.explanation || '';
+        }
+
+        const total = state.questions.length;
+        const mult = getMultiplier();
+        document.getElementById('play-streak-badge').textContent = '🔥 Racha: ' + state.streak + (state.playMode === 'adventure' ? (' (×' + mult + ')') : '');
+        document.getElementById('play-pts-round').textContent = '+' + state.pointsInRound + ' pts en esta ronda';
+        document.getElementById('play-progress-fill').style.width = Math.round(((state.qIndex + 1) / total) * 100) + '%';
+
+        const nextBtn = document.getElementById('btn-play-next');
+        nextBtn.querySelector('span').textContent = (state.qIndex + 1 < total) ? 'Siguiente pregunta' : 'Ver resultado final';
+        nextBtn.classList.add('visible');
+      }
+
+      function finishCurrentRound() {
+        const total = state.questions.length;
+        let bonusMsg = '';
+
+        if (!state.isReviewingMistakes) {
+          if (state.playMode === 'daily') {
+            const today = getTodayKey();
+            if (profile.lastDailyDate !== today) {
+              profile.lastDailyDate = today;
+              profile.dailyCount++;
+              profile.points += 100;
+              state.pointsInRound += 100;
+              bonusMsg = ' (+100 pts de bonus por Reto del Día)';
+            }
+          } else if (state.playMode === 'adventure' && state.correctInRound >= 6) {
+            profile.level++;
+            profile.points += 50;
+            state.pointsInRound += 50;
+            bonusMsg = ' ¡Subes al Nivel ' + profile.level + ' (+50 pts)!';
+          }
+          saveProfile();
+        }
+
+        const ratio = state.correctInRound / total;
+        document.getElementById('summary-emoji').textContent = ratio >= 0.8 ? '🏆' : (ratio >= 0.5 ? '🌟' : '💪');
+        document.getElementById('summary-title').textContent = ratio === 1 ? '¡Pleno de aciertos!' : (ratio >= 0.7 ? '¡Muy bien hecho!' : '¡Buen entrenamiento!');
+        document.getElementById('summary-subtitle').textContent = 'Has terminado la ronda' + bonusMsg;
+
+        document.getElementById('sum-correct').textContent = state.correctInRound + '/' + total;
+        document.getElementById('sum-points').textContent = '+' + state.pointsInRound;
+        document.getElementById('sum-level').textContent = 'Nv. ' + profile.level;
+
+        const mBtn = document.getElementById('btn-sum-mistakes');
+        if (state.mistakes.length > 0) {
+          mBtn.style.display = 'block';
+          document.getElementById('sum-mistakes-count').textContent = state.mistakes.length;
+        } else {
+          mBtn.style.display = 'none';
+        }
+
+        document.querySelectorAll('.view').forEach(function (v) { v.classList.remove('active'); });
+        document.getElementById('view-summary').classList.add('active');
+      }
+
+      /* =====================================================================
+         8. RENDERIZADO DE ASIGNATURAS, TABLAS Y PUNTOS
+         ===================================================================== */
+      function renderSubjectsGrid() {
+        const grid = document.getElementById('subjects-grid');
+        grid.innerHTML = SUBJECTS.map(function (s) {
+          const pts = profile.subjectPoints[s.id] || 0;
+          return (
+            '<button type="button" class="subject-card ' + s.bg + '" data-subj="' + s.id + '">' +
+              '<div class="subj-top">' +
+                '<div class="subj-icon">' + s.icon + '</div>' +
+                '<span class="subj-pts-tag">⭐ ' + pts + ' pts</span>' +
+              '</div>' +
+              '<div>' +
+                '<h3 class="subj-name">' + s.name + '</h3>' +
+                '<p class="subj-desc">' + s.desc + '</p>' +
+              '</div>' +
+            '</button>'
+          );
+        }).join('');
+
+        grid.querySelectorAll('.subject-card').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            startRound('subject', btn.getAttribute('data-subj'));
+          });
+        });
+      }
+
+      function initMatesToolbar() {
+        document.querySelectorAll('#mates-modes-grid .mode-btn[data-mmode]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            state.matesMode = btn.getAttribute('data-mmode');
+            updateMatesToolbarUI();
+            startRound('subject', 'mates');
+          });
+        });
+
+        const pills = document.getElementById('mates-table-pills');
+        let html = '<button type="button" class="pill-btn active" data-t="all">Todas</button>';
+        for (let i = 1; i <= 10; i++) {
+          html += '<button type="button" class="pill-btn" data-t="' + i + '">' + i + '</button>';
+        }
+        pills.innerHTML = html;
+
+        pills.querySelectorAll('.pill-btn').forEach(function (b) {
+          b.addEventListener('click', function () {
+            state.selectedMatesTable = b.getAttribute('data-t');
+            updateMatesToolbarUI();
+            startRound('subject', 'mates');
+          });
+        });
+
+        document.getElementById('btn-jump-tables').addEventListener('click', function () {
+          switchTab('tables');
+        });
+      }
+
+      function updateMatesToolbarUI() {
+        document.querySelectorAll('#mates-modes-grid .mode-btn[data-mmode]').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-mmode') === state.matesMode);
+        });
+        document.getElementById('mates-table-row').classList.toggle('visible', state.matesMode === 'multiplicar');
+        document.querySelectorAll('#mates-table-pills .pill-btn').forEach(function (p) {
+          p.classList.toggle('active', p.getAttribute('data-t') === String(state.selectedMatesTable));
+        });
+      }
+
+      function renderTablesView() {
+        const grid = document.getElementById('tables-num-grid');
+        let html = '';
+        for (let n = 1; n <= 10; n++) {
+          html += '<button type="button" class="table-num-btn' + (state.viewTableNum === n ? ' active' : '') + '" data-num="' + n + '">' + n + '</button>';
+        }
+        grid.innerHTML = html;
+        grid.querySelectorAll('.table-num-btn').forEach(function (b) {
+          b.addEventListener('click', function () {
+            state.viewTableNum = parseInt(b.getAttribute('data-num'), 10);
+            state.revealedCells = {};
+            renderTablesView();
+          });
+        });
+
+        const hideBtn = document.getElementById('btn-toggle-hide-tables');
+        hideBtn.textContent = state.hideTableResults ? 'Desactivar' : 'Activar';
+        hideBtn.classList.toggle('active', state.hideTableResults);
+
+        document.getElementById('tables-current-title').textContent = 'Tabla del ' + state.viewTableNum;
+
+        const rowsGrid = document.getElementById('tables-rows-grid');
+        let rHtml = '';
+        for (let i = 1; i <= 10; i++) {
+          const prod = state.viewTableNum * i;
+          const hidden = state.hideTableResults && !state.revealedCells[i];
+          rHtml += (
+            '<button type="button" class="table-row-btn" data-f="' + i + '">' +
+              '<span>' + state.viewTableNum + ' × ' + i + '</span>' +
+              '<span style="color:#94a3b8;">=</span>' +
+              (hidden ? '<span class="table-result-badge hidden-val">? Ver</span>' : '<span class="table-result-badge">' + prod + '</span>') +
+            '</button>'
+          );
+        }
+        rowsGrid.innerHTML = rHtml;
+        rowsGrid.querySelectorAll('.table-row-btn').forEach(function (rb) {
+          rb.addEventListener('click', function () {
+            if (!state.hideTableResults) return;
+            const f = parseInt(rb.getAttribute('data-f'), 10);
+            state.revealedCells[f] = !state.revealedCells[f];
+            renderTablesView();
+          });
+        });
+      }
+
+      function renderPointsView() {
+        document.getElementById('pts-student-name').textContent = profile.name || 'Campeón';
+        document.getElementById('pts-total-big').textContent = profile.points;
+        document.getElementById('pts-level-big').textContent = profile.level;
+        document.getElementById('pts-daily-big').textContent = profile.dailyCount;
+
+        const mGrid = document.getElementById('medals-grid');
+        mGrid.innerHTML = MEDALS.map(function (m) {
+          const unlocked = m.check(profile);
+          return (
+            '<div class="medal-card' + (unlocked ? ' unlocked' : '') + '">' +
+              '<div class="medal-icon">' + (unlocked ? m.icon : '🔒') + '</div>' +
+              '<div class="medal-name">' + m.name + '</div>' +
+              '<div class="medal-req">' + m.req + '</div>' +
+            '</div>'
+          );
+        }).join('');
+
+        const sList = document.getElementById('subj-progress-list');
+        const maxPts = Math.max(200, Math.max.apply(null, Object.values(profile.subjectPoints)));
+        sList.innerHTML = SUBJECTS.map(function (s) {
+          const val = profile.subjectPoints[s.id] || 0;
+          const pct = Math.min(100, Math.round((val / maxPts) * 100));
+          return (
+            '<div class="subj-prog-row">' +
+              '<div class="subj-prog-top">' +
+                '<span>' + s.icon + ' ' + s.name + '</span>' +
+                '<span style="color:var(--primary-dark);">' + val + ' pts</span>' +
+              '</div>' +
+              '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%;"></div></div>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      /* =====================================================================
+         9. MODALES: BIENVENIDA, PERFIL, COPIA DE SEGURIDAD Y RESTAURAR
+         ===================================================================== */
+      function renderAvatarPicker(containerId, currentAvatar, onSelect) {
+        const el = document.getElementById(containerId);
+        el.innerHTML = AVATARS.map(function (av) {
+          return '<button type="button" class="avatar-opt' + (av === currentAvatar ? ' selected' : '') + '" data-av="' + av + '">' + av + '</button>';
+        }).join('');
+        el.querySelectorAll('.avatar-opt').forEach(function (b) {
+          b.addEventListener('click', function () {
+            onSelect(b.getAttribute('data-av'));
+          });
+        });
+      }
+
+      function openWelcomeIfNeeded() {
+        if (profile.initialized) return;
+        state.tempAvatar = profile.avatar || '🦁';
+        renderAvatarPicker('welcome-avatar-picker', state.tempAvatar, function (av) {
+          state.tempAvatar = av;
+          renderAvatarPicker('welcome-avatar-picker', state.tempAvatar, arguments.callee);
+        });
+        document.getElementById('modal-welcome').classList.add('open');
+      }
+
+      function encodeBackup() {
+        try {
+          return btoa(unescape(encodeURIComponent(JSON.stringify(profile))));
+        } catch (e) {
+          return JSON.stringify(profile);
+        }
+      }
+
+      function decodeBackup(str) {
+        const trimmed = str.trim();
+        try {
+          return JSON.parse(decodeURIComponent(escape(atob(trimmed))));
+        } catch (e) {
+          return JSON.parse(trimmed);
+        }
+      }
+
+      function openProfileModal() {
+        document.getElementById('profile-name-input').value = profile.name || '';
+        state.tempAvatar = profile.avatar || '🦁';
+        function refreshPicker(av) {
+          state.tempAvatar = av;
+          renderAvatarPicker('profile-avatar-picker', state.tempAvatar, refreshPicker);
+        }
+        renderAvatarPicker('profile-avatar-picker', state.tempAvatar, refreshPicker);
+        document.getElementById('backup-code-area').value = encodeBackup();
+        document.getElementById('reset-confirm-box').style.display = 'none';
+        document.getElementById('modal-profile').classList.add('open');
+      }
+
+      let toastTimer = null;
+      function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2400);
+      }
+
+      /* =====================================================================
+         10. EVENTOS GLOBALES
+         ===================================================================== */
+      function bindEvents() {
+        document.querySelectorAll('.nav-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            switchTab(btn.getAttribute('data-tab'));
+          });
+        });
+
+        document.getElementById('card-daily-challenge').addEventListener('click', function () {
+          startRound('daily');
+        });
+        document.getElementById('card-adventure-mode').addEventListener('click', function () {
+          startRound('adventure');
+        });
+        document.getElementById('card-quick-subjects').addEventListener('click', function () {
+          switchTab('subjects');
+        });
+        document.getElementById('card-quick-tables').addEventListener('click', function () {
+          switchTab('tables');
+        });
+
+        document.getElementById('play-keypad').querySelectorAll('.key-btn').forEach(function (k) {
+          k.addEventListener('click', function () {
+            handleKeyInput(k.getAttribute('data-key'));
+          });
+        });
+
+        document.getElementById('btn-play-next').addEventListener('click', function () {
+          if (state.qIndex + 1 < state.questions.length) {
+            state.qIndex++;
+            renderCurrentQuestion();
+          } else {
+            finishCurrentRound();
+          }
+        });
+
+        document.getElementById('btn-sum-mistakes').addEventListener('click', startMistakesReview);
+        document.getElementById('btn-sum-again').addEventListener('click', function () {
+          startRound(state.playMode, state.currentSubject);
+        });
+        document.getElementById('btn-sum-home').addEventListener('click', function () {
+          switchTab('home');
+        });
+
+        document.getElementById('btn-toggle-hide-tables').addEventListener('click', function () {
+          state.hideTableResults = !state.hideTableResults;
+          state.revealedCells = {};
+          renderTablesView();
+        });
+
+        document.getElementById('btn-practice-selected-table').addEventListener('click', function () {
+          state.matesMode = 'multiplicar';
+          state.selectedMatesTable = String(state.viewTableNum);
+          startRound('subject', 'mates');
+        });
+
+        // Bienvenida
+        document.getElementById('btn-welcome-start').addEventListener('click', function () {
+          const val = document.getElementById('welcome-name-input').value.trim();
+          profile.name = val || 'Campeón';
+          profile.avatar = state.tempAvatar;
+          profile.initialized = true;
+          saveProfile();
+          document.getElementById('modal-welcome').classList.remove('open');
+          showToast('🎉 ¡Hola, ' + profile.name + '! ¡A jugar!');
+        });
+
+        // Perfil y ajustes
+        document.getElementById('btn-open-profile').addEventListener('click', openProfileModal);
+        document.getElementById('btn-close-profile').addEventListener('click', function () {
+          document.getElementById('modal-profile').classList.remove('open');
+        });
+
+        document.getElementById('btn-save-profile').addEventListener('click', function () {
+          const val = document.getElementById('profile-name-input').value.trim();
+          if (val) profile.name = val;
+          profile.avatar = state.tempAvatar;
+          profile.initialized = true;
+          saveProfile();
+          document.getElementById('modal-profile').classList.remove('open');
+          showToast('✅ Perfil actualizado');
+        });
+
+        document.getElementById('btn-copy-backup').addEventListener('click', function () {
+          const area = document.getElementById('backup-code-area');
+          area.value = encodeBackup();
+          area.select();
+          try {
+            document.execCommand('copy');
+            showToast('📋 Código copiado. Guárdalo en un lugar seguro.');
+          } catch (e) {
+            showToast('Selecciona el texto y cópialo manualmente.');
+          }
+        });
+
+        document.getElementById('btn-import-backup').addEventListener('click', function () {
+          try {
+            const data = decodeBackup(document.getElementById('backup-code-area').value);
+            if (!data || typeof data.points !== 'number') throw new Error('Invalid');
+            const def = createDefaultProfile();
+            profile = Object.assign({}, def, data);
+            profile.subjectPoints = Object.assign({}, def.subjectPoints, data.subjectPoints || {});
+            profile.initialized = true;
+            saveProfile();
+            document.getElementById('modal-profile').classList.remove('open');
+            switchTab('home');
+            showToast('🎉 ¡Progreso restaurado con éxito!');
+          } catch (e) {
+            showToast('⚠️ El código pegado no es válido.');
+          }
+        });
+
+        document.getElementById('btn-reset-progress').addEventListener('click', function () {
+          document.getElementById('reset-confirm-box').style.display = 'block';
+        });
+
+        document.getElementById('btn-cancel-reset').addEventListener('click', function () {
+          document.getElementById('reset-confirm-box').style.display = 'none';
+        });
+
+        document.getElementById('btn-confirm-reset').addEventListener('click', function () {
+          const keepName = profile.name;
+          const keepAvatar = profile.avatar;
+          profile = createDefaultProfile();
+          profile.name = keepName;
+          profile.avatar = keepAvatar;
+          profile.initialized = true;
+          saveProfile();
+          document.getElementById('modal-profile').classList.remove('open');
+          switchTab('home');
+          showToast('🔄 Progreso restaurado a 0 puntos.');
+        });
+
+        // Teclado físico
+        window.addEventListener('keydown', function (e) {
+          const playActive = document.getElementById('view-play').classList.contains('active');
+          const numVisible = document.getElementById('play-numeric-area').classList.contains('visible');
+          if (!playActive || !numVisible) return;
+
+          if (e.key >= '0' && e.key <= '9') {
+            e.preventDefault();
+            handleKeyInput(e.key);
+          } else if (e.key === 'Backspace' || e.key === 'Delete') {
+            e.preventDefault();
+            handleKeyInput('DEL');
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (state.answered) {
+              document.getElementById('btn-play-next').click();
+            } else {
+              handleKeyInput('OK');
+            }
+          }
+        });
+      }
+
+      /* ARRANQUE */
+      loadProfile();
+      updateHeaderUI();
+      initMatesToolbar();
+      bindEvents();
+      openWelcomeIfNeeded();
+    });
+  </script>
+</body>
+</html>
